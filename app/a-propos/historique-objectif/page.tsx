@@ -133,7 +133,7 @@ export default function HistoriqueObjectifPage() {
                 <div className="sticky top-14">
                   <div className="relative rounded-lg overflow-hidden shadow-xl mb-6">
                     <Image
-                      src="/images/Historique_Objectif/EQUIPE_DE_LA_CAPEC_CHERCHEURS_ET_PERSONNELS_D_APPUIS.jpg"
+                      src="/images/Historique_Objectif/EQUIPE_DE_LA_CAPEC_CHERCHEURS_ET_PERSONNELS_D_APPUI.jpg"
                       alt="Histoire du CAPEC"
                       width={400}
                       height={400}
