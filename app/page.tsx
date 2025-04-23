@@ -461,7 +461,7 @@ const recentNews = [
     excerpt:
       "Le CAPEC organise sa conférence annuelle sur les politiques économiques le 15 mars 2023. Inscrivez-vous dès maintenant pour participer à cet événement majeur.",
     date: "8 octobre 2024",
-      image: "/images/leçoninauguraledu30eanniversairedelacapecfaiteparmahoutouemmanuelkoffi1.jpg?text=Conférence+Annuelle&height=340&width=600",
+      image: "/images/img1 (2).jpg?text=Conférence+Annuelle&height=340&width=600",
   },
   {
     id: "2",
@@ -469,6 +469,6 @@ const recentNews = [
     excerpt:
       "Le CAPEC est fier d'annoncer un nouveau partenariat de recherche avec l'Université de Paris-Saclay pour étudier les impacts économiques du changement climatique.",
     date: "9 octobre 2024",
-    image: "/images/Actualites/dinerdes30eanniversairedelacapec.jpg",
+    image: "/images/img1 (3).jpg",
   },
 ]
