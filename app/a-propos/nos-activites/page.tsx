@@ -49,7 +49,7 @@ export default function NosActivitesPage() {
       description:
         "Organiser et participer à des conférences nationales et internationales sur les enjeux économiques.",
       imageSrc:
-        "/images/Nos_activités/Conference_JICA_JAPAN_CORNER_CAPEC_22_Février_2024.jpg",
+        "/images/Nos_activites/Conference_JICA_JAPAN_CORNER_CAPEC_22_Février_2024_.jpg",
       alt: "Conférences économiques",
     },
   ];
