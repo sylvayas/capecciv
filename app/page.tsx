@@ -37,7 +37,7 @@ const carouselEvents = [
   { //bon
     title: "Conference JICA-JAPAN CORNER-CAPEC",
     date: "22 Février 2024",
-    image: "/images/JICA JAPAN CORNER.jpg",
+    image: "/images/capec_image/japan.jpg",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
