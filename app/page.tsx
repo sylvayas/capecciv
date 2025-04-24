@@ -37,7 +37,7 @@ const carouselEvents = [
   { //bon
     title: "Conference JICA-JAPAN CORNER-CAPEC",
     date: "22 Février 2024",
-    image: "/images/conferencejicajapancornercapec22février2024.jpg",
+    image: "/images/Nos_activités/JICA JAPAN CORNER.jpg",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
@@ -215,28 +215,28 @@ export default function Home() {
                 <div className="relative h-48 md:h-64 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
                     src="/images/dgcapec.jpg"
-                    alt="Conférence du CAPEC"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Conférence annuelle</h3>
+                    
                   </div>
                 </div>
               </div>
               <div className="overflow-hidden rounded-lg shadow-lg group">
                 <div className="relative h-64 md:h-80 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
-                  src="/images/capecenimage1.jpg"
+                  src="/images/12.jpg"
                     //src="/placeholder.svg?text=Séminaire+Économique&height=400&width=300"
-                    alt="Séminaire économique"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Séminaire économique</h3>
+                
                   </div>
                 </div>
               </div>
@@ -245,28 +245,28 @@ export default function Home() {
               <div className="overflow-hidden rounded-lg shadow-lg group">
                 <div className="relative h-64 md:h-80 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
-                    src="/images/album4.jpg?text=Atelier+de+Formation&height=400&width=300"
-                    alt="Atelier de formation"
+                    src="/images/conf2.jpg?text=Atelier+de+Formation&height=400&width=300"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Atelier de formation</h3>
+                  
                   </div>
                 </div>
               </div>
               <div className="overflow-hidden rounded-lg shadow-lg group">
                 <div className="relative h-48 md:h-64 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
-                    src="/images/album1.jpg?text=Réunion+d'Experts&height=300&width=400"
-                    alt="Réunion d'experts"
+                    src="/images/capec_image/foto.jpg?text=Réunion+d'Experts&height=300&width=400"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Réunion d'experts</h3>
+             
                   </div>
                 </div>
               </div>
@@ -275,28 +275,28 @@ export default function Home() {
               <div className="overflow-hidden rounded-lg shadow-lg group">
                 <div className="relative h-48 md:h-64 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
-                    src="/images/album3.jpg"
-                    alt="Présentation de recherche"
+                    src="/images/actua2.jpg"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Présentation de recherche</h3>
+              
                   </div>
                 </div>
               </div>
               <div className="overflow-hidden rounded-lg shadow-lg group">
                 <div className="relative h-64 md:h-80 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
-                    src="/images/album4.jpg"
-                    alt="Visite officielle"
+                    src="/images/img1 (1).jpg"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Visite officielle</h3>
+               
                   </div>
                 </div>
               </div>
@@ -305,14 +305,14 @@ export default function Home() {
               <div className="overflow-hidden rounded-lg shadow-lg group">
                 <div className="relative h-64 md:h-80 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
-                    src="/images/album4.jpg?text=Équipe+de+Recherche&height=400&width=300"
-                    alt="Équipe de recherche"
+                    src="/images/img1 (2).jpg?text=Équipe+de+Recherche&height=400&width=300"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Équipe de recherche</h3>
+        
                   </div>
                 </div>
               </div>
@@ -320,13 +320,13 @@ export default function Home() {
                 <div className="relative h-48 md:h-64 w-full transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
                     src="/images/album6.jpg?text=Cérémonie+de+Remise+de+Prix&height=300&width=400"
-                    alt="Cérémonie de remise de prix"
+                    alt=""
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="font-bold text-sm">Cérémonie de remise de prix</h3>
+             
                   </div>
                 </div>
               </div>

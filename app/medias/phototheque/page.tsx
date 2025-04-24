@@ -252,6 +252,20 @@ const conferencesPhotos = [
     description: "Forum sur l'intégration économique régionale avec la participation de plusieurs pays africains.",
     src: "/images/leçoninaugurale8octobre.jpg?text=Forum+Économique+Régional&height=600&width=600",
   },
+  {
+    id: "conf3",
+    title: "restitution budget",
+    date: "12 janvier 2023",
+    description: "",
+    src: "/images/restitutionbudget1.jpg?text=Forum+Économique+Régional&height=600&width=600",
+  },
+  {
+    id: "conf4",
+    title: "Conférence Internationnal Japan Corner ",
+    date: "22 février 2024",
+    description: "Faire progresser l'indistrualisation et améliorer la productivité du travail.",
+    src: "/images/capec_image/japan.jpg?text=Forum+Économique+Régional&height=600&width=600",
+  },
 
 ]
 
@@ -271,6 +285,20 @@ const seminairesPhotos = [
     description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
     src: "/images/paneldehautniveau4.jpg?text=Atelier+Analyse+Données&height=600&width=600",
   },
+  {
+    id: "sem3",
+    title: "Atelier sur l'analyse des données économiques",
+    date: "12 janvier 2023",
+    description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
+    src: "/images/sem3.jpg?text=Atelier+Analyse+Données&height=600&width=600",
+  },
+  {
+    id: "sem4",
+    title: "Atelier sur l'analyse des données économiques",
+    date: "12 janvier 2023",
+    description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
+    src: "/images/sem4.jpg?text=Atelier+Analyse+Données&height=600&width=600",
+  },
  
 ]
 
@@ -289,6 +317,21 @@ const formationsPhotos = [
     description: "Atelier pratique sur les méthodes d'évaluation d'impact des politiques publiques.",
     src: "/images/10esommetdesthinkstankdafriquev1.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
   },
+  {
+    id: "form3",
+    title: "Formation avec les coréens",
+    date: "18 janvier 2023",
+    description: "Atelier pratique sur les méthodes d'évaluation d'impact des politiques publiques.",
+    src: "/images/capec_image/coree.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
+  },
+  {
+    id: "form4",
+    title: "Atelier sur l'évaluation des politiques publiques",
+    date: "18 janvier 2023",
+    description: "Atelier pratique sur les méthodes d'évaluation d'impact des politiques publiques.",
+    src: "/images/capec_image/reunion.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
+  },
+  
   
 ]
 
@@ -307,6 +350,22 @@ const equipesPhotos = [
     description: "L'équipe de chercheurs spécialisés en économie du développement lors d'une réunion de travail.",
     src: "/images/dgcapec.jpg?text=Équipe+Recherche+Développement&height=600&width=600",
   },
+  {
+    id: "eq3",
+    title: "Équipe de recherche en économie du développement",
+    date: "10 décembre 2022",
+    description: "L'équipe de chercheurs spécialisés en économie du développement lors d'une réunion de travail.",
+    src: "/images/img1 (1).jpg?text=Équipe+Recherche+Développement&height=600&width=600",
+  },
+  
+  {
+    id: "eq4",
+    title: "Équipe de recherche en économie du développement",
+    date: "10 décembre 2022",
+    description: "L'équipe de chercheurs spécialisés en économie du développement lors d'une réunion de travail.",
+    src: "/images/estherubo.jpg?text=Équipe+Recherche+Développement&height=600&width=600",
+  },
+  
  
 ]
 

@@ -36,13 +36,13 @@ export function MainNav() {
     
      <div className="flex items-center mt-36 mb-20 ml-10">
       <Link href="/" className="flex items-center space-x-2 ">
-        <div className="relative w-24 h-20 mb-3  rounded-sm flex items-center justify-center overflow-hidden">
+        <div className="relative w-[98px] h-[98px] mb-5  rounded-sm flex items-center justify-center overflow-hidden">
           <Image
             src={"/images/logocapec.png"}
            // src="/placeholder.svg?text=CAPEC&height=32&width=32&fontsize=10&bgcolor=FFFFFF"
             alt="CAPEC Logo"
-            width={98}
-            height={98}
+            width={95}
+            height={95}
             className="object-contain"
           />
         </div>
