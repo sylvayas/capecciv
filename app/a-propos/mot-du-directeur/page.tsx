@@ -26,11 +26,7 @@ export default function MotDuDirecteurPage() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="font-bold text-lg">Prof. AHOURE Alban A.E.</h3>
                 <p className="text-ci-orange">Directeur du CAPEC</p>
-                <div className="mt-2 text-sm text-muted-foreground">
-                  <p>Docteur en Économie</p>
-                  <p>Université Félix Houphouët-Boigny</p>
-                  <p>Email: directeur@capec.org</p>
-                </div>
+              
               </div>
             </div>
           </div>

@@ -93,7 +93,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
         </div>*/}
         
         {/* Icônes expertise - Version corrigée */}
-        {researcher.expertise && researcher.expertise.length > 0 && (
+        {/* {researcher.expertise && researcher.expertise.length > 0 && (
           <div className="mt-2 flex flex-wrap justify-center gap-3">
             {researcher.expertise.map((exp: string, index: number) => (
               <div key={`${researcher.id}-expertise-${index}`} className="flex flex-col items-center" title={exp}>
@@ -108,7 +108,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
               </div>
             ))}
           </div>
-        )}
+        )} */}
         
         {/* Tags expertise */}
         {researcher.expertise && researcher.expertise.length > 0 && (
@@ -150,7 +150,65 @@ const seniorResearchers = [
     title: "Chercheur- Responsable de la Gestion administrative",
     photo: "/images/chercheurresponsabledelagestionadministrative.jpg?text=Dr.+Jean+Touré&height=100&width=300",
     expertise: ["Administration", "Gestion", "Organisation"]
-  }
+  },
+  {
+    id: "4",
+    name: "Dr Isabelle BECHO-N’DRI  ",
+    title: "Chercheuse à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
+    photo: "/images/Dr BECHO .jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
+  },
+  {
+    id: "5",
+    name: "Prof BEKE TITE E.",
+    title: "Economiste de l’Environnement et Chercheur Senior à la CAPEC.",
+    photo: "/images/Prof TITE.jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    expertise: ["Economie"]
+  },
+  {
+    id: "6",
+    name: "Dr Nohoua TRAORE",
+    title: "Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques  du  Cires (CAPEC). ",
+    photo: "/images/Dr TRAORE.jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    expertise: ["Economie"]
+  },
+  {
+    id: "7",
+    name: "Dr Féissal ASSOUM",
+    title: "Chercheur et Economiste du développement à la  (CAPEC)",
+    photo: "/images/Dr ASSOUM.jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    expertise: ["Economie",]
+  },
+  {
+    id: "8",
+    name: "Dr BONI",
+    title: "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
+    photo: "/images/Dr BONI.jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
+  },
+  {
+    id: "9",
+    name: "Dr KACOU YVES THIERRY KACOU",
+    title: "Chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
+    photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
+    expertise: ["Macroéconomie",]
+  },
+  // {
+  //   id: "10",
+  //   name: "Dr Boniface KOUADIO",
+  //   title: "Chercheur à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC).",
+  //   photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
+  //   expertise: ["microéconomie et macroéconomie","Management de l’innovation","Techniques quantitatives"]
+  // },
+  // {
+  //   id: "11",
+  //   name: "Dr TOURÉ Talnan Aboulaye",
+  //   title: "chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
+  //   photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
+  //   expertise: ["l’économie monétaire, bancaire et financière","la politique fiscale"]
+  // },
+  
+
 ]
 
 const allResearchers = [...seniorResearchers]

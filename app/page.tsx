@@ -28,9 +28,9 @@ const carouselEvents = [
     registerLink: "/formations/inscription",
   },*/
   {
-    title: "Leçon inaugurale de la CAPEC",
-    image: "/images/leçoninaugurale8octobre.jpg",
-    date: "8 octobre 2024",
+    title: "Conference JAPAN CORNER-CAPEC-TODA CORPORATION-JICA ",
+    image: "/images/Conference JAPAN CORNER-CAPEC-TODA COR¨PORATION-JICA 4 MARS  2025.jpg",
+    date: "4 mars 2025",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
@@ -66,14 +66,15 @@ export default function Home() {
       {/*<section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-orange-50 to-orange-100">*/}
       <section className="w-full py-8 md:py-16 lg:py-4">  
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center mt-16 mb-14 justify-center space-y-4 text-center py-10 bg-orange-400 text-white">
-            
-            <div className="space-y-2">
-              <h2 className="text-3xl tracking-tighter mb-6 sm:text-4xl font-bold">Notre Mission</h2>
-              <p className="max-w-[1090px] text-justify  text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-white font-extralight">
-              La CAPEC a pour mission de fournir des analyses économiques approfondies pour éclairer les décisions de politique publique en Côte d'Ivoire. 
-              Nous œuvrons au renforcement des capacités des acteurs nationaux en matière de gestion économique, de planification stratégique et de mise en œuvre de réformes. 
-              Parallèlement, nous encourageons la recherche appliquée et l'innovation afin de promouvoir une croissance inclusive et durable, en répondant aux défis économiques locaux.
+        <div className="flex flex-col items-center mt-8 mb-8 justify-center space-y-4 text-center py-6 bg-orange-400 text-white sm:mt-16 sm:mb-14 sm:py-10">
+            <div className="space-y-2 px-4 sm:px-0">
+              <h2 className="text-2xl tracking-tighter mb-4 sm:text-3xl md:text-4xl font-bold">
+                Notre Mission
+              </h2>
+              <p className="max-w-[1090px] text-left sm:text-justify text-white font-extralight text-base sm:text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                La CAPEC a pour mission de fournir des analyses économiques approfondies pour éclairer les décisions de politique publique en Côte d'Ivoire. 
+                Nous œuvrons au renforcement des capacités des acteurs nationaux en matière de gestion économique, de planification stratégique et de mise en œuvre de réformes. 
+                Parallèlement, nous encourageons la recherche appliquée et l'innovation afin de promouvoir une croissance inclusive et durable, en répondant aux défis économiques locaux.
               </p>
             </div>
           </div>
@@ -114,11 +115,11 @@ export default function Home() {
                 en Côte d'Ivoire.
                 </p>
                 <Image 
-                  src="/images/cloturepep.jpg?text=Recherche+Économique&height=120&width=240"
+                  src="/images/Formation Agent DGI.jpg?text=Recherche+Économique&height=120&width=240"
                   alt="Formation académique"
                   width={240}
                   height={150}
-                  className="w-full h-auto rounded-md object-cover transition-all duration-300 ease-in-out hover:brightness-110 hover:opacity-90"
+                  className="w-full h-[185px] rounded-md object-cover transition-all duration-300 ease-in-out hover:brightness-110 hover:opacity-90"
                 />
               </CardContent>
             </Card>

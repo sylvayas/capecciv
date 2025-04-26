@@ -20,7 +20,7 @@ export default function NosActivitesPage() {
       bgColor: "bg-orange-100",
       title: "Recherche",
       description:
-        "Conduire des recherches de haute qualité sur les questions économiques pertinentes pour la Côte d'Ivoire et l'Afrique de l'Ouest.",
+        "Lien entre extremiste violent et activités illicites dans la région du folon ",
       imageSrc:
         "/images/Nos_activités/LIEN_ENTRE_EXTREMISME_VIOLENT_ET_ACTIVITES_ILLICITES_DANS_LA_REGION_DU_FOLON.jpeg",
       alt: "Recherche économique",
@@ -30,7 +30,7 @@ export default function NosActivitesPage() {
       bgColor: "bg-green-100",
       title: "Formation",
       description:
-        "Former la prochaine génération d'analystes et de chercheurs en économie à travers divers programmes éducatifs.",
+        " Séminaire de formation des agents de la DGI",
       imageSrc: "/images/Nos_activités/Formation_Agent_DGI.jpg",
       alt: "Formation académique",
     },
@@ -39,7 +39,7 @@ export default function NosActivitesPage() {
       bgColor: "bg-orange-100",
       title: "Étude",
       description:
-        "Fournir des conseils stratégiques aux décideurs politiques et aux parties prenantes sur les questions économiques.",
+        "l'Elaboration  de l'etude de la SMRT",
       imageSrc: "/images/Nos_activités/Elaboration_de_la_SRMT.jpeg",
       alt: "Conseil stratégique",
     },
@@ -48,7 +48,7 @@ export default function NosActivitesPage() {
       bgColor: "bg-orange-100",
       title: "Conférences",
       description:
-        "Organiser et participer à des conférences nationales et internationales sur les enjeux économiques.",
+        "Conference international JAPAN CORNER-JICA-CAPEC ",
       imageSrc:
         "/images/japanconferencecapec.jpg",
       alt: "Conférences économiques",
@@ -58,29 +58,18 @@ export default function NosActivitesPage() {
   // Data for calendar events
   const calendarEvents = [
     {
-      title: "Conférence annuelle de la CAPEC",
+      title: "Conférence JAPAN CORNER- JICA -CAPEC",
+      date: "4 Mars 2025",
+      description:
+        "Faire progresser l'industrialisation et améliorer la productivité du travail:une voie pour le développement de l'économie ivoirienne  ",
+    },
+    {
+      title: "Formation des agents de la DGI",
       date: "Mars 2025",
       description:
-        "Conférence internationale sur les politiques économiques post-pandémie, réunissant des experts de renommée mondiale.",
+        "Formation avancée sur les techniques économétriques.",
     },
-    {
-      title: "Séminaire de formation en économétrie",
-      date: "Juin 2025",
-      description:
-        "Formation avancée sur les techniques économétriques pour les chercheurs et doctorants.",
-    },
-    {
-      title: "Forum sur l'intégration économique régionale",
-      date: "Septembre 2025",
-      description:
-        "Forum réunissant des acteurs économiques et politiques pour discuter des enjeux de l'intégration régionale.",
-    },
-    {
-      title: "Atelier sur les politiques d'inclusion financière",
-      date: "Novembre 2025",
-      description:
-        "Atelier réunissant des acteurs du secteur financier et des décideurs politiques pour discuter des stratégies d'inclusion financière.",
-    },
+  
   ];
 
   return (
@@ -101,7 +90,7 @@ export default function NosActivitesPage() {
         </div>
 
         {/* Activities Grid */}
-        <div className="grid gap-8 mt-16 space-x-4sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 mt-18 space-x-4sm:grid-cols-2 lg:grid-cols-4">
           {activities.map((activity, index) => (
             <Card
               key={index}
