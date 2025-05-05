@@ -31,16 +31,31 @@ export function Header() {
         isAtTop ? "opacity-100 h-10" : "opacity-0 h-0"
       } overflow-hidden`}
     >
-     
-      <div className="flex items-center space-x-2">
-        <div className="w-5"></div>
-        <p className="text-xs whitespace-nowrap">(+225) 27 22 44 41 24</p>
-        <Link href="https://www.facebook.com/share/1EPYzPPHZ8/" target="_blank">
-          <Facebook
-            className="bg-white text-green-700 rounded-lg w-8 h-8 p-[2px]"
-          />
-        </Link>
-      </div>
+     <div className="flex items-center space-x-6 flex-wrap md:flex-nowrap">
+  <div className="w-5"></div>
+
+  {/* Adresse email */}
+  <a
+    href="mailto:infos@capec-ci.org"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm whitespace-nowrap"
+  >
+    infos@capec-ci.org
+  </a>
+
+  {/* Numéro de téléphone */}
+  <p className="text-xs whitespace-nowrap mt-1">
+    (+225) 27 22 44 41 24
+  </p>
+
+  {/* Lien Facebook */}
+  <Link href="https://www.facebook.com/share/1EPYzPPHZ8/" target="_blank">
+    <Facebook className="bg-white text-green-700 rounded-lg w-8 h-8 p-[2px]" />
+  </Link>
+</div>
+
+
     </div>
   );
 

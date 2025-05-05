@@ -30,36 +30,50 @@ export default function CapecEnChiffresPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
-        <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">La CAPEC en Chiffres</h1>
-          <div className="w-20 h-1 bg-ci-orange"></div>
-          <p className="text-muted-foreground md:text-xl max-w-[800px]">
+      <div className="container px-4 py-8 sm:py-12 md:py-16 lg:py-24 flex-grow">
+        <div className="space-y-4 mb-8 sm:mb-12">
+          <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+            La CAPEC en Chiffres
+          </h1>
+          <div className="w-16 sm:w-20 h-1 bg-ci-orange"></div>
+          <p className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-[800px]">
             Découvrez les chiffres clés qui illustrent l'impact et les réalisations du CAPEC depuis sa création.
           </p>
         </div>
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <div className="text-center space-y-4 mb-8 sm:mb-12">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl">
             Tableau des Activités (2002-2019)
           </h2>
-          <div className="w-24 h-1 bg-ci-orange mx-auto"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-20 sm:w-24 h-1 bg-ci-orange mx-auto"></div>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Résumé des activités du CAPEC, incluant les travaux de recherche, études, formations et assistance aux institutions.
           </p>
         </div>
 
         {/* Table */}
         <div className="overflow-x-auto rounded-xl shadow-lg">
-          <table className="w-full bg-white rounded-xl table-fixed">
+          <table className="w-full bg-white rounded-xl table-auto sm:table-fixed">
             {/* Table Header */}
             <thead>
               <tr className="bg-ci-orange/10 text-gray-900">
-                <th className="px-4 py-3 font-semibold text-sm uppercase tracking-wider text-center">Année</th>
-                <th className="px-4 py-3 font-semibold text-sm uppercase tracking-wider text-center">Travaux des chercheurs</th>
-                <th className="px-4 py-3 font-semibold text-sm uppercase tracking-wider text-center">Études</th>
-                <th className="px-4 py-3 font-semibold text-sm uppercase tracking-wider text-center">Nombre de formations</th>
-                <th className="px-4 py-3 font-semibold text-sm uppercase tracking-wider text-center">Nombre de personnes formées</th>
-                <th className="px-4 py-3 font-semibold text-sm uppercase tracking-wider text-center">Assistance aux institutions nationales et internationales</th>
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]">
+                  Année
+                </th>
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[120px]">
+                  Travaux des chercheurs
+                </th>
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[80px]">
+                  Études
+                </th>
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[120px]">
+                  Nombre de formations
+                </th>
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[140px]">
+                  Nombre de personnes formées
+                </th>
+                <th className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-center min-w-[180px]">
+                  Assistance aux institutions nationales et internationales
+                </th>
               </tr>
             </thead>
 
@@ -72,12 +86,24 @@ export default function CapecEnChiffresPage() {
                     row.year.includes("2002-") ? "bg-gray-100 font-semibold" : ""
                   } hover:bg-gray-50 transition-colors duration-200`}
                 >
-                  <td className="px-4 py-3 text-gray-900 text-center">{row.year}</td>
-                  <td className="px-4 py-3 text-gray-700 text-center">{row.travaux}</td>
-                  <td className="px-4 py-3 text-gray-700 text-center">{row.etudes}</td>
-                  <td className="px-4 py-3 text-gray-700 text-center">{row.formations}</td>
-                  <td className="px-4 py-3 text-gray-700 text-center">{row.personnes}</td>
-                  <td className="px-4 py-3 text-gray-700 text-center">{row.assistance}</td>
+                  <td className="px-2 sm:px-4 py-2 sm:py-3 text-gray-900 text-center text-sm sm:text-base">
+                    {row.year}
+                  </td>
+                  <td className="px-2 sm:px-4 py-2 sm:py-3 text-gray-700 text-center text-sm sm:text-base">
+                    {row.travaux}
+                  </td>
+                  <td className="px-2 sm:px-4 py-2 sm:py-3 text-gray-700 text-center text-sm sm:text-base">
+                    {row.etudes}
+                  </td>
+                  <td className="px-2 sm:px-4 py-2 sm:py-3 text-gray-700 text-center text-sm sm:text-base">
+                    {row.formations}
+                  </td>
+                  <td className="px-2 sm:px-4 py-2 sm:py-3 text-gray-700 text-center text-sm sm:text-base">
+                    {row.personnes}
+                  </td>
+                  <td className="px-2 sm:px-4 py-2 sm:py-3 text-gray-700 text-center text-sm sm:text-base">
+                    {row.assistance}
+                  </td>
                 </tr>
               ))}
             </tbody>

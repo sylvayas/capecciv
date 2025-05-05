@@ -22,12 +22,12 @@ export function MainNav() {
     <div className="flex flex-col items-center justify-center w-full">
       {/* Logo centered at the top */}
       <Link href="/" className="flex items-center mb-2 mt-0">
-        <div className="relative w-[135px] h-[135px] rounded-sm flex items-center justify-center overflow-hidden">
+        <div className="relative w-[136px] h-[136px] -mt-2 rounded-sm flex items-center justify-center overflow-hidden">
           <Image
             src="/images/logocapec.png"
             alt="CAPEC Logo"
-            width={135}
-            height={135}
+            width={136}
+            height={136}
             className="object-contain"
           />
         </div>
@@ -170,7 +170,7 @@ function MobileNav() {
                       onClick={() => toggleSubmenu(item.title)}
                       className={cn(
                         "flex items-center justify-between w-full text-base font-medium transition-colors hover:text-ci-orange",
-                        isActive ? "text-ci-orange" : "text-foreground"
+                        isActive ? "" : "text-foreground"
                       )}
                     >
                       {item.title}
