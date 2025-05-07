@@ -17,7 +17,7 @@ export default function MotDuDirecteurPage() {
             <div className="sticky top-24">
               <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4">
                 <Image
-                  src="/images/IMAGE 1.jpg?text=Dr.+Amadou+Diallo&height=400&width=400"
+                  src="/images/modif/IMAGE 1.jpg?text=Dr.+Amadou+Diallo&height=400&width=400"
                   alt="Dr. Amadou Diallo - Directeur du CAPEC"
                   fill
                   className="object-cover"

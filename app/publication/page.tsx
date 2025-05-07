@@ -1,12 +1,12 @@
-"use client"
+
+"use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, FileText, Search } from "lucide-react";
+import { FileText, Search } from "lucide-react";
 
 // Définir une interface pour le type des publications
 interface Publication {
@@ -16,12 +16,77 @@ interface Publication {
   pdfLink: string;
 }
 
+// Définir les types possibles pour selectedType
+type PublicationType =
+  | "Politique Économique et Développement (PED)"
+  | "Bulletin de Politique Économique et Développement (BUPED)"
+  | "Lettre de Politique Économique (LPE)"
+  | "Publications dans les revues spécialisées (PRS)";
+
+// Définir le type pour availableYearsByType et publicationsByType
+interface YearsByType {
+  [key: string]: string[];
+}
+
+interface PublicationsByType {
+  [key: string]: { [year: string]: Publication[] };
+}
+
 export default function PublicationsPage() {
-  const [selectedType, setSelectedType] = useState("Politique Économique et Développement (PED)")|| ("Bulletin de Politique Économique et Développement (BUPED)")||("Lettre de politique économique (LPE)");
-  const [selectedYear, setSelectedYear] = useState("Sélectionnez l’année");
-  const [showPublications, setShowPublications] = useState(false);
+  const [selectedType, setSelectedType] = useState<PublicationType>("Politique Économique et Développement (PED)");
+  const [selectedYear, setSelectedYear] = useState<string>("Sélectionnez l’année");
+  const [showPublications, setShowPublications] = useState<boolean>(false);
   const [currentPublications, setCurrentPublications] = useState<Publication[]>([]);
 
+  // Liste des années disponibles pour chaque type de publication
+  const availableYearsByType: YearsByType = {
+    "Politique Économique et Développement (PED)": [
+      "2005",
+      "2006",
+      "2008",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2017",
+    ],
+    "Bulletin de Politique Économique et Développement (BUPED)": [
+      "2003",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2018",
+    ],
+    "Lettre de Politique Économique (LPE)": [
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2018",
+      "2020",
+    ],
+    "Publications dans les revues spécialisées (PRS)": [],
+  };
+
+  // Données des publications
   const publications2015: Publication[] = [
     {
       title: "EFFETS REELS DE LA FUITE DES CAPITAUX EN COTE D’IVOIRE",
@@ -309,12 +374,11 @@ export default function PublicationsPage() {
       pdfLink: "https://capec-ci.org/docs/publications/PED_2013_KIMOU.pdf",
     },
     {
-      title: "ESSAI D'Ã‰VALUATION DE L'IMPACT DE LA CRÃ‰ATION DE L'UEMOA SUR LE NIVEAU DE DÃ‰VELOPPEMENT DES PAYS MEMBRES<",
-      author: "FE DOUKOURE CHARLES, ENSEA d'Abidjan et CAPEC",
+      title: "ESSAI D’ÉVALUATION DE L’IMPACT DE LA CRÉATION DE L’UEMOA SUR LE NIVEAU DE DÉVELOPPEMENT DES PAYS MEMBRES",
+      author: "FE DOUKOURE CHARLES, ENSEA d’Abidjan et CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/PED_Dr_FE_ESSAI_D_EVALUATION_DE_L_IMPACT_DE_LA_CREA_DE_L_UEMOA.pdf",
     },
-   
   ];
 
   const publications2014: Publication[] = [
@@ -364,12 +428,11 @@ export default function PublicationsPage() {
 
   const publications2017: Publication[] = [
     {
-      title: "IMPACT DU PROJET DE CONSEIL AGRICOLE SUR LES PERFORMANCES DES PRODUCTEURS Dâ€™ANACARDE DE COTE Dâ€™IVOIRE",
+      title: "IMPACT DU PROJET DE CONSEIL AGRICOLE SUR LES PERFORMANCES DES PRODUCTEURS D’ANACARDE DE COTE D’IVOIRE",
       author: "Dr FE Doukoure, Chercheur Junior CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/PED_Dr_FE_2017_Etude.pdf",
     },
-
   ];
 
   const bupedPublications2003: Publication[] = [
@@ -532,7 +595,6 @@ export default function PublicationsPage() {
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/BUPED87.pdf",
     },
- 
   ];
 
   const bupedPublications2008: Publication[] = [
@@ -681,6 +743,7 @@ export default function PublicationsPage() {
       pdfLink: "https://capec-ci.org/docs/publications/BUPED_3._2010_Dr_KEHO_YAYA.pdf",
     },
   ];
+
   const bupedPublications2011: Publication[] = [
     {
       title: "COMMENT REUSSIR LA PROMOTION DE L’INVESTISSEMENT PRIVE AU SERVICE DU DEVELOPPEMENT EN COTE D’IVOIRE EN PERIODE POST-CRISE ?",
@@ -795,9 +858,9 @@ export default function PublicationsPage() {
       author: "Prof. Zié BALLO, Chercheur - CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/BUPED_06.2011_Prof._BALLO_ZIE_ok.pdf",
-    }
+    },
   ];
-  
+
   const bupedPublications2014: Publication[] = [
     {
       title: "LES ENTREPRISES FAMILIALES IVOIRIENNES SONT-ELLES PERFORMANTES QUE LES ENTREPRISES NON FAMILIALES ?",
@@ -834,22 +897,22 @@ export default function PublicationsPage() {
       author: "FE Doukouré Charles, ENSEA et Chercheur CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/BUPED_2014_FE_DOUKOURE.pdf",
-    }
+    },
   ];
 
-  const bupedPublications2015: Publication[] =[
+  const bupedPublications2015: Publication[] = [
     {
-      title: "Analyse de la performance des exportations de cacao de la CÃ´te d'Ivoire : vers une diversification de lâ€™offre Ivoirienne",
-      author: "Dr FE DoukourÃ© Charles Enseignant Ã&nbsp; lâ€™ENSEA et Chercheur Junior Ã&nbsp;",
+      title: "Analyse de la performance des exportations de cacao de la Côte d'Ivoire : vers une diversification de l’offre Ivoirienne",
+      author: "Dr FE Doukouré Charles Enseignant à l’ENSEA et Chercheur Junior à",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/BUPED_2015_Dr_FE_docx_3_.pdf",
     },
   ];
 
-  const bupedPublications2016: Publication[] =[
+  const bupedPublications2016: Publication[] = [
     {
-      title: "COMMERCE INTRA UEMOA DE LA COTE Dâ€™IVOIRE : INFLUENCE DES INFRASTRUCTURES ET DE Lâ€™ENVIRONNEMENT ECONOMIQUE.",
-      author: "Dr FE DoukourÃ© Charles Enseignant Ã&nbsp; lâ€™ENSEA et Chercheur Junior Ã&nbsp;",
+      title: "COMMERCE INTRA UEMOA DE LA COTE D’IVOIRE : INFLUENCE DES INFRASTRUCTURES ET DE L’ENVIRONNEMENT ECONOMIQUE.",
+      author: "Dr FE Doukouré Charles Enseignant à l’ENSEA et Chercheur Junior à",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/BUPED_2016.pdf",
     },
@@ -873,9 +936,9 @@ export default function PublicationsPage() {
       author: "Prof. Esso Loesse Jacques, Chercheurs CAPEC – Dr Fé Doukouré Charles",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/BUPED_Dr_FE_Maquette.pdf",
-    }
+    },
   ];
-  
+
   const lpePublications2003: Publication[] = [
     {
       title: "Comment la Côte d'Ivoire s'adapte-t-elle aux Accords de l'OMC ?",
@@ -918,17 +981,16 @@ export default function PublicationsPage() {
       author: "BAMBA N'Galadjo Lambert",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/N_41_LPE_Bamba.pdf",
-    }
+    },
   ];
-  
+
   const lpePublications2004: Publication[] = [
     {
-      title: "ROLE  DES  INSTITUTIONS  DANS  LA  PROMOTION  DE  LA  CROISSANCE  EN  AFRIQUE  SUBSAHARIENNE",
+      title: "ROLE DES INSTITUTIONS DANS LA PROMOTION DE LA CROISSANCE EN AFRIQUE SUBSAHARIENNE",
       author: "Loesse Jacques ESSO",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/LPE75.pdf",
     },
-   
   ];
 
   const lpePublications2005: Publication[] = [
@@ -949,8 +1011,9 @@ export default function PublicationsPage() {
       author: "KACOU Kouamela",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/N_38_LPE_Kacou.pdf",
-    }
+    },
   ];
+
   const lpePublications2006: Publication[] = [
     {
       title: "AIDE, POLITIQUES ECONOMIQUES ET CROISSANCE DE LA COTE D'IVOIRE EN PERIODE POST-CRISE",
@@ -987,9 +1050,9 @@ export default function PublicationsPage() {
       author: "Prof. KEHO Yaya",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/LPE112.pdf",
-    }
+    },
   ];
-  
+
   const lpePublications2007: Publication[] = [
     {
       title: "EVOLUTION DE LA PAUVRETE ET DES INEGALITES EN COTE D'IVOIRE",
@@ -1026,9 +1089,9 @@ export default function PublicationsPage() {
       author: "Prof. KEHO Yaya",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/LPE_131.pdf",
-    }
+    },
   ];
-  
+
   const lpePublications2008: Publication[] = [
     {
       title: "CONTRIBUTION DES SUPERFICIES ET DU RENDEMENT A LA VARIATION DE LA PRODUCTION DE RIZ EN COTE D'IVOIRE",
@@ -1041,7 +1104,7 @@ export default function PublicationsPage() {
       author: "Dr. Loesse Jacques ESSO",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/LPE_N_12_2009_ESSO.pdf",
-    }
+    },
   ];
 
   const lpePublications2009: Publication[] = [
@@ -1086,9 +1149,9 @@ export default function PublicationsPage() {
       author: "Prof. Akée G. M. N'GBO",
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/1_LPE_N_21_2009_N_Gbo.pdf",
-    }
+    },
   ];
-  
+
   const lpePublications2010: Publication[] = [
     {
       title: "CORRUPTION, INVESTISSEMENTS PRIVES ET CROISSANCE ECONOMIQUE EN COTE D'IVOIRE",
@@ -1132,469 +1195,262 @@ export default function PublicationsPage() {
       authorLink: "https://capec-ci.org/publications/Search_pub",
       pdfLink: "https://capec-ci.org/docs/publications/LPE_N_06_2010_Dr_KEHO_YAYA.pdf",
     },
-    {
-      title: "UNE ANALYSE DE LA STRUCTURE DES RECETTES FISCALES ET LES IMPLICATIONS",
-      author: "KEHO Yaya, Chercheur CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_N_05_2010_Dr_KEHO_YAYA.pdf",
-    }
   ];
-  
+
   const lpePublications2011: Publication[] = [
     {
-      title: "QUELS SECTEURS PRIORITAIRES POUR DES INVESTISSEMENTS PRIVÉS EN CÔTE D’IVOIRE ?",
-      author: "OUATTARA WAUTABOUNA",
+      title: "COMMENT RÉUSSIR LA PROMOTION DE L’INVESTISSEMENT PRIVÉ AU SERVICE DU DÉVELOPPEMENT EN CÔTE D’IVOIRE EN PÉRIODE POST-CRISE ?",
+      author: "Prof. Wautabouna OUATTARA, Chercheur CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_N_013_2011_WAUTABOUNA.pdf",
+      pdfLink: "https://capec-ci.org/docs/publications/LPE_2011_Prof._OUATTARA.pdf",
     },
-    {
-      title: "QUELQUES PISTES DE RÉFLEXION À LA PROMOTION DE L’INVESTISSEMENT PRIVÉ EN CÔTE D’IVOIRE EN PÉRIODE POST-CRISE",
-      author: "OUATTARA WAUTABOUNA",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_014_2011_WAUTABOUNA.pdf",
-    },
-    {
-      title: "IMPACT DU CONFLIT ARME EN CÔTE D’IVOIRE SUR LES TAUX D’ACHEVEMENTS DU PRIMAIRE ET DU SECONDAIRE",
-      author: "Prof. BALLO Zié, Chercheur CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_N_12_2011_Prof._Ballo_Ziy_.pdf",
-    },
-    {
-      title: "IMPACT DU CONFLIT ARME EN CÔTE D’IVOIRE SUR LE NOMBRE D’ANNEES DE SCOLARITE ACHEVEES",
-      author: "Prof. BALLO Zié, Chercheur CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_N_11_2011_Prof._Ballo_Ziy_.pdf",
-    }
   ];
-  
+
   const lpePublications2012: Publication[] = [
     {
-      title: "COMMENT L’AIDE PUBLIQUE AU DEVELOPPEMENT ET LA BONNE GOUVERNANCE PEUVENT-ELLE RELANCER LA CROISSANCE EN COTE D’IVOIRE ?",
-      author: "YOHOU Djédjé Hermann et KAMAGATE Tidiane",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_019_2011_YOHOU_ET_KAMAGATE.pdf",
+      title: "GOUVERNANCE, CLIMAT DES AFFAIRES ET PERFORMANCE PRODUCTIVE DU SECTEUR PRIVÉ IVOIRIEN",
+      author: "N'GUESSAN Dieu-Donné Melagne, Chercheur Associé CAPEC",      authorLink: "https://capec-ci.org/publications/Search_pub",
+      pdfLink: "https://capec-ci.org/docs/publications/LPE_2012_NGUESSAN.pdf",
     },
-    {
-      title: "L’AIDE PEUT-ELLE CONTRIBUER A LA RELANCE POST CRISE EN COTE D’IVOIRE ?",
-      author: "YOHOU Djédjé Hermann et KAMAGATE Tidiane",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_018_2011_YOHOU_ET_KAMAGATE.pdf",
-    }
   ];
+
   const lpePublications2013: Publication[] = [
     {
-      title: "CRIMINALITE, AUTO-PROTECTION ET PERFORMANCE DES ENTREPRISES EN COTE D'IVOIRE",
-      author: "Assi J. C. KIMOU, Chercheur CAPEC",
+      title: "CRIME, SELF-PROTECTION AND BUSINESS GROWTH IN CÔTE D’IVOIRE",
+      author: "ASSI J. C. KIMOU & KWABENA GYIMAH-BREMPONG",
       authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_04_2013_KIMOU_CRIMINALITE_URBAINE_ET_DEMANDE_PROTECT_PRIVEE_VERSION_2.pdf",
+      pdfLink: "https://capec-ci.org/docs/publications/LPE_2013_KIMOU.pdf",
     },
-    {
-      title: "CRIMINALITE URBAINE ET DEMANDE DE PROTECTION PRIVEE PAR LES ENTREPRISES EN COTE D'IVOIRE",
-      author: "Assi J. C. KIMOU, Chercheur CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_03_2013_KIMOU_CRIMINALITE_URBAINE_ET_DEMANDE_PROTECT_PRIVEE_VERSION1.pdf",
-    },
-    {
-      title: "QU'EST-CE QUI FREINE L'AMELIORATION DU NIVEAU DE DÉVELOPPEMENT DANS LES PAYS MEMBRES DE L'UEMOA ?",
-      author: "FE DOUKOURE CHARLES, ENSEA d'Abidjan et CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_02_2013_FE_ESSAI_D_EVALUATION_DE_L_IMPACT_DE_LA_CREATION_DE.pdf",
-    },
-    {
-      title: "CRÉATION DE L'UEMOA ET NIVEAU DE DÉVELOPPEMENT DES PAYS MEMBRES",
-      author: "FE Doukouré Charles, ENSEA d'Abidjan et CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_01_2013_FE_ESSAI_D_EVALUATION_DE_L_IMPACT_DE_LA_CREATION_DE.pdf",
-    }
   ];
-  
+
   const lpePublications2014: Publication[] = [
     {
-      title: "LOGIQUES SOCIALES ET ENJEUX DE L’UTILISATION DE LA MAIN D’ŒUVRE FAMILIALE DANS LES PME EN COTE D’IVOIRE",
-      author: "Dr. Jean-Louis LOGNON Sociologue Chercheur associé à la CAPEC",
+      title: "LES ENTREPRISES FAMILIALES IVOIRIENNES SONT-ELLES PLUS PERFORMANTES QUE LES ENTREPRISES NON FAMILIALES ?",
+      author: "BALLO Zié, Chercheur CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_010_2014_LOGNON_LOGIQUES_SOCIALES.pdf",
+      pdfLink: "https://capec-ci.org/docs/publications/LPE_2014_BALLO.pdf",
     },
-    {
-      title: "LES FIRMES IVOIRIENNES SONT-ELLES IMPORTANTES",
-      author: "Dr. N’GOTTA CELAINE",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_013_2014_N_GOTTA_CELAINE_LES_FIRMES_IVOIRIENNES_SONT_ELLES_IMPORTANTES.pdf",
-    },
-    {
-      title: "ANALYSE DE LA PERFORMANCE ECONOMIQUE ET TECHNIQUE DES FIRMES EN COTE D’IVOIRE",
-      author: "Dr. N’GOTTA CELAINE",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_012_2014_N_GOTTA_CELAINE_ANALYSE_DE_LA_PERFRMANCES_ECO_ET_TECH_DES_FIRMES_EN_CI.pdf",
-    },
-    {
-      title: "INEGALITE DE GENRE ENTRE ENTREPRENEURS EN COTE D’IVOIRE",
-      author: "Dr. N’DEDE BOSOMA FLORANCE Epse DAGNAN, Université Félix Houphouët",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_011_2014_N_DEDE_INEGALITES_DE_GENRE.pdf",
-    },
-    {
-      title: "LES EFFETS DE LA MAIN D’ŒUVRE FAMILIALE SUR LA PERFORMANCE DES ENTREPRISES EN COTE D’IVOIRE",
-      author: "Dr. Jean-Louis LOGNON, Sociologue, Chercheur associé à la CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_09_2014_LOGNON_EFFETS_DE_LA_MAIN_D_OEUVRE_FAMILIALE.pdf",
-    },
-    {
-      title: "L’INVESTISSEMENT COMBINÉ DANS LA TIC ET LE CAPITAL HUMAIN, PEUT-IL ÊTRE UN LEVIER DE PERFORMANCE POUR LES ENTREPRISES MODERNES EN CÔTE D’IVOIRE ?",
-      author: "KOUADIO Kouassi Boniface, Doctorant",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_08_2014_KOUAD_BONI_EFFET_DES_INVESTISSEMENTS_EN_TIC.pdf",
-    },
-    {
-      title: "QUELS EFFETS DES INVESTISSEMENTS EN TIC SUR LA PERFORMANCE DES ENTREPRISES MODERNES EN CÔTE D’IVOIRE?",
-      author: "KOUADIO Kouassi Boniface, Doctorant",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_07_2014_KOUAD_BONI_EFFET_DES_INVESTISSEMENTS_EN_TIC.pdf",
-    },
-    {
-      title: "IMPACTS SOCIAUX DES ACCORDS DE PARTENARIAT SUR L’ÉCONOMIE IVOIRIENNE",
-      author: "Chercheur CAPEC, Enseignant à l’ENSEA",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_06_2014_FE_IMPACT_SOCIAUX_DES_ACCORDS_DE_PARTENARIAT_SUR_L_ECO_IV.pdf",
-    },
-    {
-      title: "COTE D’IVOIRE : COMMENT TIRER PROFIT DES ACCORDS DE PARTENARIAT ECONOMIQUE?",
-      author: "FE Doukouré Charles Chercheur CAPEC, Enseignant à l’ENSEA",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_05_2014_FE_MACROECONOMIC_AND_SOCIAL_IMPACTS_OF_ECONOMIC.pdf",
-    }
   ];
 
   const lpePublications2015: Publication[] = [
     {
-      title: "COMMENT LA DYNAMIQUE INTERNE DES ENTREPRISES INFORMELLES INFLUENCE LA DISPOSITION DES MANAGERS A LES FORMALISER",
-      author: "TRAORE NOHOUA, Doctorant, Chercheur Associé CAPEC",
+      title: "ANALYSE DE LA PERFORMANCE DES EXPORTATIONS DE CACAO DE LA CÔTE D’IVOIRE",
+      author: "Dr. FE Doukouré Charles, ENSEA et Chercheur CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_03_2015_EFFET_DE_L_ENVIRONNEMENT_DES_AFFAIRES_T_NOHOUA.pdf",
+      pdfLink: "https://capec-ci.org/docs/publications/LPE_2015_FE.pdf",
     },
-    {
-      title: "ANALYSE DES AVANTAGES COMPARATIFS DE LA COTE D’IVOIRE SUR LE MARCHE INTERNATIONAL DU CACAO",
-      author: "Dr. FE DOUKOURE CHARLES, Enseignant à l’ENSEA et Chercheur Junior",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_02_2015_COMPETITIVITE_DES_EXPORTATIONS_DE_LA_CI_FE.pdf",
-    },
-    {
-      title: "ANALYSE DES AVANTAGES COMPARATIFS DE LA COTE D’IVOIRE SUR LE MARCHE INTERNATIONAL DU CACAO",
-      author: "Dr. FE DOUKOURE CHARLES, Enseignant à l’ENSEA et Chercheur Junior",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_01_2015_ANALYSE_DES_AVANTAGES_COMPARATIFS_DE_LA_CI_SUR_LE_MARCHE_INTER_DU_CACAO_FE.pdf",
-    }
   ];
 
   const lpePublications2018: Publication[] = [
     {
-      title: "DETTE ET CROISSANCE EN COTE D’IVOIRE: QUELS LIENS",
-      author: "Dr FE DOUKOURE CHARLES, Chercheur CAPEC",
+      title: "ANALYSE DES EFFETS DE L’ENDETTEMENT ET DU DÉFICIT BUDGÉTAIRE SUR LA CROISSANCE À LONG TERME",
+      author: "Prof. Esso Loesse Jacques & Dr. FE Doukouré Charles, Chercheurs CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_02_2018_ETUDE_BAD_ACBF_DETTE_ET_CROISSANCE_EN_CI_QUELS_LIENS_FE.pdf",
-    },
-    {
-      title: "POLITIQUE DE LA DETTE ET ANALYSE DE LA SOUTENABILITE POST-PPTTE EN COTE D’IVOIRE",
-      author: "Dr FE DOUKOURE CHARLES, Chercheur CAPEC",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_01_2018_ETUDE_BAD_ACBF_ENDETTEMENT_FE.pdf",
-    },
-    {
-      title: "DETTE ET CROISSANCE EN COTE D’IVOIRE: QUELS LIENS",
-      author: "Dr FE DOUKOURE CHARLES",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_2_N_02_2018_ETUDE_BAD_ACBF_DETTE_ET_CROISSANCE_EN_CI_QUELS_LIENS_FE.pdf",
-    },
-    {
-      title: "POLITIQUE DE LA DETTE ET ANALYSE DE LA SOUTENABILITE POST-PPTTE EN COTE D’IVOIRE",
-      author: "Dr FE DOUKOURE CHARLES",
-      authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/LPE_1_N_01_2018_ETUDE_BAD_ACBF_ENDETTEMENT_FE.pdf",
+      pdfLink: "https://capec-ci.org/docs/publications/LPE_2018_ESSO_FE.pdf",
     },
   ];
-  
+
   const lpePublications2020: Publication[] = [
     {
-      title: "Stratégie pour le Développement Industriel en Côte d'Ivoire: Kaïzen comme Première Etape",
-      author: "CAPEC",
+      title: "IMPACT DE LA PANDÉMIE DE COVID-19 SUR L’ÉCONOMIE IVOIRIENNE",
+      author: "Dr. FE Doukouré Charles, Chercheur CAPEC",
       authorLink: "https://capec-ci.org/publications/Search_pub",
-      pdfLink: "https://capec-ci.org/docs/publications/2020_1_.pdf",
-    }
+      pdfLink: "https://capec-ci.org/docs/publications/LPE_2020_FE.pdf",
+    },
   ];
-  
-  const handleShowPublications = () => {
-    if (selectedType === "Politique Économique et Développement (PED)") {
-      if (selectedYear === "2015") {
-        setCurrentPublications(publications2015);
-        setShowPublications(true);
-      } else if (selectedYear === "2005") {
-        setCurrentPublications(publications2005);
-        setShowPublications(true);
-      } else if (selectedYear === "2006") {
-        setCurrentPublications(publications2006);
-        setShowPublications(true);
-      } else if (selectedYear === "2008") {
-        setCurrentPublications(publications2008);
-        setShowPublications(true);
-      } else if (selectedYear === "2012") {
-        setCurrentPublications(publications2012);
-        setShowPublications(true);
-      } else if (selectedYear === "2013") {
-        setCurrentPublications(publications2013);
-        setShowPublications(true);
-      } else if (selectedYear === "2014") {
-        setCurrentPublications(publications2014);
-        setShowPublications(true);
-      } else if (selectedYear === "2017") {
-        setCurrentPublications(publications2017);
-        setShowPublications(true);
-      } else {
-        setShowPublications(false);
-      }
-    } else if (selectedType === "Bulletin de Politique Économique et Développement (BUPED)") {
-      if (selectedYear === "2003") {
-        setCurrentPublications(bupedPublications2003);
-        setShowPublications(true);
-      } else if (selectedYear === "2005") {
-        setCurrentPublications(bupedPublications2005);
-        setShowPublications(true);
-      } else if (selectedYear === "2006") {
-        setCurrentPublications(bupedPublications2006);
-        setShowPublications(true);
-      }else if (selectedYear === "2007") {
-        setCurrentPublications(bupedPublications2007);
-        setShowPublications(true);
-      }else if (selectedYear === "2008") {
-        setCurrentPublications(bupedPublications2008);
-        setShowPublications(true);
-      }else if (selectedYear === "2009") {
-        setCurrentPublications(bupedPublications2009);
-        setShowPublications(true);
-      }else if (selectedYear === "2010") {
-        setCurrentPublications(bupedPublications2010);
-        setShowPublications(true);
-      }else if (selectedYear === "2011") {
-        setCurrentPublications(bupedPublications2011);
-        setShowPublications(true);
-      }else if (selectedYear === "2012") {
-        setCurrentPublications(bupedPublications2012);
-        setShowPublications(true);
-      }else if (selectedYear === "2013") {
-        setCurrentPublications(bupedPublications2013);
-        setShowPublications(true);
-      }else if (selectedYear === "2014") {
-        setCurrentPublications(bupedPublications2014);
-        setShowPublications(true);
-      }else if (selectedYear === "2015") {
-        setCurrentPublications(bupedPublications2015);
-        setShowPublications(true);
-      }else if (selectedYear === "2016") {
-        setCurrentPublications(bupedPublications2016);
-        setShowPublications(true);
-      }else if (selectedYear === "2018") {
-        setCurrentPublications(bupedPublications2018);
-        setShowPublications(true);
-      }else {
-        setShowPublications(false);
-      }
-    } else if (selectedType === "Lettre de politique économique (LPE)") {
-      if (selectedYear === "2003") {
-        setCurrentPublications(lpePublications2003);
-        setShowPublications(true);
-      } else if (selectedYear === "2005") {
-        setCurrentPublications(lpePublications2005);
-        setShowPublications(true);
-      }else if (selectedYear === "2004") {
-        setCurrentPublications(lpePublications2004);
-        setShowPublications(true);
-      }  else if (selectedYear === "2006") {
-        setCurrentPublications(lpePublications2006);
-        setShowPublications(true);
-      }else if (selectedYear === "2007") {
-        setCurrentPublications(lpePublications2007);
-        setShowPublications(true);
-      }else if (selectedYear === "2008") {
-        setCurrentPublications(lpePublications2008);
-        setShowPublications(true);
-      }else if (selectedYear === "2009") {
-        setCurrentPublications(lpePublications2009);
-        setShowPublications(true);
-      }else if (selectedYear === "2010") {
-        setCurrentPublications(lpePublications2010);
-        setShowPublications(true);
-      }else if (selectedYear === "2011") {
-        setCurrentPublications(lpePublications2011);
-        setShowPublications(true);
-      }else if (selectedYear === "2012") {
-        setCurrentPublications(lpePublications2012);
-        setShowPublications(true);
-      }else if (selectedYear === "2013") {
-        setCurrentPublications(lpePublications2013);
-        setShowPublications(true);
-      }else if (selectedYear === "2014") {
-        setCurrentPublications(lpePublications2014);
-        setShowPublications(true);
-      }else if (selectedYear === "2015") {
-        setCurrentPublications(lpePublications2015);
-        setShowPublications(true);
-      }else if (selectedYear === "2016") {
-        setCurrentPublications(lpePublications2018);
-        setShowPublications(true);
-      }else if (selectedYear === "2018") {
-        setCurrentPublications(lpePublications2020);
-        setShowPublications(true);
-      }else {
-        setShowPublications(false);
-      }
-    } else {
-      setShowPublications(false);
-    }
+
+  // Structure des publications par type et année
+  const publicationsByType: PublicationsByType = {
+    "Politique Économique et Développement (PED)": {
+      "2005": publications2005,
+      "2006": publications2006,
+      "2008": publications2008,
+      "2012": publications2012,
+      "2013": publications2013,
+      "2014": publications2014,
+      "2015": publications2015,
+      "2017": publications2017,
+    },
+    "Bulletin de Politique Économique et Développement (BUPED)": {
+      "2003": bupedPublications2003,
+      "2005": bupedPublications2005,
+      "2006": bupedPublications2006,
+      "2007": bupedPublications2007,
+      "2008": bupedPublications2008,
+      "2009": bupedPublications2009,
+      "2010": bupedPublications2010,
+      "2011": bupedPublications2011,
+      "2012": bupedPublications2012,
+      "2013": bupedPublications2013,
+      "2014": bupedPublications2014,
+      "2015": bupedPublications2015,
+      "2016": bupedPublications2016,
+      "2018": bupedPublications2018,
+    },
+    "Lettre de Politique Économique (LPE)": {
+      "2003": lpePublications2003,
+      "2004": lpePublications2004,
+      "2005": lpePublications2005,
+      "2006": lpePublications2006,
+      "2007": lpePublications2007,
+      "2008": lpePublications2008,
+      "2009": lpePublications2009,
+      "2010": lpePublications2010,
+      "2011": lpePublications2011,
+      "2012": lpePublications2012,
+      "2013": lpePublications2013,
+      "2014": lpePublications2014,
+      "2015": lpePublications2015,
+      "2018": lpePublications2018,
+      "2020": lpePublications2020,
+    },
+    "Publications dans les revues spécialisées (PRS)": {},
   };
+
+  // Gestion de l'affichage des publications
+  const handleShowPublications = () => {
+    if (selectedYear === "Sélectionnez l’année") {
+      setShowPublications(false);
+      setCurrentPublications([]);
+      return;
+    }
+
+    const publications = publicationsByType[selectedType]?.[selectedYear] || [];
+    setCurrentPublications(publications);
+    setShowPublications(true);
+  };
+
+  // Rendu des années disponibles pour le type sélectionné
+  const availableYears = availableYearsByType[selectedType] || [];
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+    <Header />
+    <main className="flex-grow">
+    <div className="max-w-5xl mx-auto mt-24 mb-52 p-6 bg-white rounded-lg">
+    <h2 className="text-4xl font-bold text-gray-800 mb-2">Publications</h2>
+        <div className="h-1 w-12 bg-orange-500 mb-6"></div>
 
-      {/* Contenu principal */}
-      <main className="flex-grow">
-        <div className="max-w-5xl mx-auto mt-24 mb-52 p-6 bg-white rounded-lg">
-          {/* Titre principal */}
-          <h2 className="text-4xl font-bold text-gray-800 mb-2">Publications</h2>
-          <div className="h-1 w-12 bg-orange-500 mb-6"></div>
+        {/* Section PED */}
+        <section className="mb-6">
+          <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
+            <FileText className="w-5 h-5 mr-2" />
+            Politique Économique et Développement (PED)
+          </h3>
+          <p className="text-gray-600">
+            Le PED rend compte des résultats des études et recherches dans leur intégralité sans aucune restriction, avec toute la technicité et la rigueur nécessaires. Sa distribution se fait sur demande expresse quand les lecteurs ne le consultent pas sur place.
+          </p>
+        </section>
 
-          {/* Section PED */}
-          <section className="mb-6">
-            <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
-              <FileText className="w-5 h-5 mr-2" />
-              Politique Économique et Développement (PED)
-            </h3>
-            <p className="text-gray-600">
-              Le PED rend compte des résultats des études et recherches dans leur intégralité sans aucune restriction, avec toute la technicité et la rigueur nécessaires. Sa distribution se fait sur demande expresse quand les lecteurs ne le consultent pas sur place.
-            </p>
-          </section>
+        {/* Section BUPED */}
+        <section className="mb-6">
+          <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
+            <FileText className="w-5 h-5 mr-2" />
+            Bulletin de Politique Économique et Développement (BUPED)
+          </h3>
+          <p className="text-gray-600">
+            Le BUPED, à la différence du PED, résume en une vingtaine de pages au plus et sans détail technique, les conclusions et recommandations des études.
+          </p>
+        </section>
 
-          {/* Section BUPED */}
-          <section className="mb-6">
-            <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
-              <FileText className="w-5 h-5 mr-2" />
-              Bulletin de Politique Économique et Développement (BUPED)
-            </h3>
-            <p className="text-gray-600">
-              Le BUPED, à la différence du PED, résume en une vingtaine de pages au plus et sans détail technique, les conclusions et recommandations des études.
-            </p>
-          </section>
+        {/* Section LPE */}
+        <section className="mb-6">
+          <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
+            <FileText className="w-5 h-5 mr-2" />
+            Lettre de Politique Économique (LPE)
+          </h3>
+          <p className="text-gray-600">
+            La LPE rend compte de l’essentiel des résultats des recherches et des recommandations de politiques économiques qui en découlent. Elle est aussi utilisée comme support pour les chroniques économiques. Elle ne comporte que quatre pages et reste spécialement destinée aux décideurs.
+          </p>
+        </section>
 
-          {/* Section LPE */}
-          <section className="mb-6">
-            <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
-              <FileText className="w-5 h-5 mr-2" />
-              Lettre de Politique Économique (LPE)
-            </h3>
-            <p className="text-gray-600">
-              La LPE rend compte de l’essentiel des résultats des recherches et des recommandations de politiques économiques qui en découlent. Elle est aussi utilisée comme support pour les chroniques économiques. Elle ne comporte que quatre pages et reste spécialement destinée aux décideurs.
-            </p>
-          </section>
 
-          {/* Section PRS */}
-          <section className="mb-6">
-            <h3 className="text-lg font-semibold text-orange-600 mb-2 flex items-center">
-              <FileText className="w-5 h-5 mr-2" />
-              Publications dans les Revues Spécialisées (PRS)
-            </h3>
-          </section>
-
-          {/* Section Recherche */}
-          <section className="mt-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Recherche</h3>
-            <Card>
-              <CardContent className="p-4">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  {/* Dropdown 1 */}
-                  <select
-                    value={selectedType}
-                    onChange={(e) => setSelectedType(e.target.value)}
-                    className="border border-gray-300 rounded-md p-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  >
-                    <option>Politique Économique et Développement (PED)</option>
-                    <option>Bulletin de Politique Économique et Développement (BUPED)</option>
-                    <option>Lettre de Politique Économique (LPE)</option>
-                    <option>Publications dans les revues spécialisées (PRS)</option>
-                  </select>
-
-                  {/* Dropdown 2 */}
-                  <select
-                    value={selectedYear}
-                    onChange={(e) => setSelectedYear(e.target.value)}
-                    className="border border-gray-300 rounded-md p-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  >
-                    <option>Sélectionnez l’année</option>
-                    <option>2020</option>
-                    <option>2018</option>
-                    <option>2017</option>
-                    <option>2015</option>
-                    <option>2014</option>
-                    <option>2013</option>
-                    <option>2012</option>
-                    <option>2011</option>
-                    <option>2010</option>
-                    <option>2009</option>
-                    <option>2008</option>
-                    <option>2007</option>
-                    <option>2006</option>
-                    <option>2005</option>
-                    <option>2004</option>
-                    <option>2003</option>
-                  </select>
-
-                  {/* Bouton Afficher */}
-                  <Button
-                    onClick={handleShowPublications}
-                    className="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300"
-                  >
-                    Afficher
-                    <Search className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Section Publications */}
-          {showPublications && (
-            <section className="mt-6">
-              {currentPublications.map((pub, index) => (
-                <div key={index} className="rounded border py-3 px-4 mb-4">
-                  <div className="flex items-center">
-                    <FileText className="w-5 h-5 mr-2 text-gray-800" />
-                    <h5 className="text-lg font-semibold text-gray-800">{pub.title}</h5>
-                  </div>
-                  <h6 className="text-gray-600 mt-1">
-                    Auteur : <a href={pub.authorLink} className="text-orange-500 hover:underline">{pub.author}</a>
-                  </h6>
-                  <div className="flex items-center mt-2">
-                    < Image
-                      src="/images/pdf.png"
-                      width="30"
-                      height="30"
-                      className="shadow"
-                      alt="PDF icon"
-                    />
-                    <a
-                      href={pub.pdfLink}
-                      target="_blank"
-                      className="text-orange-500 hover:underline ml-4"
-                    >
-                      Télécharger le pdf
-                    </a>
-                  </div>
-                </div>
+      <div className="bg-white shadow-md rounded-lg p-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div>
+            <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-2">
+              Type de publication
+            </label>
+            <select
+              id="type"
+              value={selectedType}
+              onChange={(e) => setSelectedType(e.target.value as PublicationType)}
+              className="block w-full border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            >
+              
+              <option>Politique Économique et Développement (PED)</option>
+              <option>Bulletin de Politique Économique et Développement (BUPED)</option>
+              <option>Lettre de Politique Économique (LPE)</option>
+              <option>Publications dans les revues spécialisées (PRS)</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="year" className="block text-sm font-medium text-gray-700 mb-2">
+              Année
+            </label>
+            <select
+              id="year"
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(e.target.value)}
+              className="block w-full border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option>Sélectionnez l’année</option>
+              {availableYears.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
               ))}
-            </section>
-          )}
+            </select>
+          </div>
+          <div className="flex items-end">
+          <Button
+                  onClick={handleShowPublications}
+                  className="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300"
+                >
+                  Rechercher
+                  <Search className="w-4 h-4 ml-2" />
+                </Button>
+          </div>
         </div>
-      </main>
+      </div>
 
-      <Footer />
-    </div>
+      {showPublications && (
+          <section className="mt-6">
+            {currentPublications.map((pub, index) => (
+              <div key={index} className="rounded border py-3 px-4 mb-4">
+                <div className="flex items-center">
+                  <FileText className="w-5 h-5 mr-2 text-gray-800" />
+                  <h5 className="text-lg font-semibold text-gray-800">{pub.title}</h5>
+                </div>
+                <h6 className="text-gray-600 mt-1">
+                  Auteur : <a href={pub.authorLink} className="text-orange-500 hover:underline">{pub.author}</a>
+                </h6>
+                <div className="flex items-center mt-2">
+                  < Image
+                    src="/images/pdf.png"
+                    width="30"
+                    height="30"
+                    className="shadow"
+                    alt="PDF icon"
+                  />
+                  <a
+                    href={pub.pdfLink}
+                    target="_blank"
+                    className="text-orange-500 hover:underline ml-4"
+                  >
+                    Télécharger le pdf
+                  </a>
+                </div>
+              </div>
+            ))}
+          </section>
+        )}
+
+
+   </div>
+    </main>
+    <Footer />
+  </div>
+
   );
 }
