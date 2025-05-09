@@ -57,7 +57,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
           src={researcher.photo || "/placeholder.svg"}
           alt={researcher.name}
           fill
-          className="object-cover"
+          className="object-contain inset-0"
         />
       </div>
 
@@ -176,7 +176,7 @@ const seniorResearchers = [
     id: "7",
     name: "Dr Féissal ASSOUM",
     title: "Chercheur et Economiste du développement à la  (CAPEC)",
-    photo: "/images/drchercheur.jpg",
+    photo: "/images/Feissalassoum.jpg",
     expertise: ["Economie",]
   },
   {
