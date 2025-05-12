@@ -176,7 +176,7 @@ const seniorResearchers = [
     id: "7",
     name: "Dr Féissal ASSOUM",
     title: "Chercheur et Economiste du développement à la  (CAPEC)",
-    photo: "/images/chercheurs/drchercheurfeissalassoum.jpg",
+    photo: "/images/Feissalassoum.jpg",
     expertise: ["Economie",]
   },
   {

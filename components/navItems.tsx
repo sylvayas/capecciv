@@ -63,27 +63,27 @@ export const navItems: NavItem[] = [
   },
   {
     title: "NOS REALISATIONS",
-    href: "",
+    href: "/realisation",
     submenu: [
       {
         title: "PROGRAMME D'ACTIVITES",
-        href: "",
+        href: "/activites/programme",
       },
       {
         title: "RAPPORT D'ACTIVITES",
-        href: "",
+        href: "/activites/rapport",
       },
       {
         title: "CR d'ACTIVITES",
-        href: "",
+        href: "/activites/compte-rendu",
       },
       {
         title: "INTERVIEW / QUESTION",
-        href: "",
+        href: "/activites/interview",
       },
       {
         title: "ACTUALITES",
-        href: "",
+        href: "/activites/actualites",
       },
     ],
   },
