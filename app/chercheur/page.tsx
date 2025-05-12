@@ -141,7 +141,7 @@ const seniorResearchers = [
     id: "2",
     name: "Prof KIMOU ASSI JOSE CARLOS",
     title: "Directeur Adjoint de la CAPEC",
-    photo: "/images/directeuradjointdelacapec.jpg?text=Dr.+Marie+Koné&height=300&width=300",
+    photo: "/images/chercheurs/kimou24.jpg?text=Dr.+Marie+Koné&height=300&width=300",
     expertise: ["Macroéconomie", "Développement", "Analyse économique"]
   },
   {
