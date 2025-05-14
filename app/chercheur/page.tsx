@@ -8,11 +8,12 @@ import { MailIcon, Search } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FaFacebook as FacebookIcon, FaTwitter as TwitterIcon, FaLinkedin as LinkedInIcon, FaGoogle as GoogleIcon } from 'react-icons/fa';
+import { MainNav } from "@/components/main-nav"
 
 export default function ChercheurPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nos Chercheurs</h1>

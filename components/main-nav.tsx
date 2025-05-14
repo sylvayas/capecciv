@@ -1,10 +1,11 @@
+
 "use client";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Facebook } from "lucide-react";
 import { navItems } from "./navItems";
 
 export type NavItem = {
@@ -18,11 +19,35 @@ export function MainNav() {
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const [hoverItem, setHoverItem] = useState<string | null>(null);
 
+  const isHomePage = pathname === "/";
+  const barColor = isHomePage ? "bg-green-700" : "bg-orange-400";
+
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      {/* Logo centered at the top */}
-      <Link href="/" className="flex items-center mb-2 mt-0">
-        <div className="relative w-[136px] h-[136px] -mt-2 rounded-sm flex items-center justify-center overflow-hidden">
+      {/* Colored Info Bar */}
+      <div
+        className={`${barColor} text-white flex items-center justify-end px-4 sm:px-6 lg:px-8 h-10 w-full overflow-hidden transition-all duration-500 ease-in-out`}
+      >
+        <div className="flex items-center space-x-6 flex-wrap md:flex-nowrap">
+          <div className="w-5" />
+          <a
+            href="mailto:infos@capec-ci.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm whitespace-nowrap"
+          >
+            infos@capec-ci.org
+          </a>
+          <p className="text-xs whitespace-nowrap mt-1">(+225) 27 22 44 41 24</p>
+          <Link href="https://www.facebook.com/share/1EPYzPPHZ8/" target="_blank">
+            <Facebook className="bg-white text-green-700 rounded-lg w-8 h-8 p-[2px]" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Logo centered below */}
+      <Link href="/" className="flex items-center mb-2 mt-2">
+        <div className="relative w-[136px] h-[140px] -mt-2 rounded-sm flex items-center justify-center overflow-hidden">
           <Image
             src="/images/logocapec.png"
             alt="CAPEC Logo"
@@ -34,84 +59,85 @@ export function MainNav() {
       </Link>
 
       {/* Menu centered below */}
-      <nav className="hidden md:flex items-center space-x-8">
-  {navItems.map((item) => {
-    const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+      <nav className="hidden md:flex items-center space-x-8 bg-white/90 rounded-md px-4 py-2">
+        {navItems.map((item) => {
+          const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
 
-    if (item.submenu) {
-      return (
-        <div
-          key={item.title}
-          className="relative group"
-          onMouseEnter={() => setHoverItem(item.title)}
-          onMouseLeave={() => setHoverItem(null)}
-        >
-          <Link
-            href={item.href}
-            className={cn(
-              "flex items-center text-base font-medium transition-colors hover:text-ci-orange py-1.5",
-              isActive ? "" : "text-foreground"
-            )}
-          >
-            {item.title}
-            <ChevronDown className="ml-1 h-5 w-5" />
-          </Link>
+          if (item.submenu) {
+            return (
+              <div
+                key={item.title}
+                className="relative group"
+                onMouseEnter={() => setHoverItem(item.title)}
+                onMouseLeave={() => setHoverItem(null)}
+              >
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "flex items-center text-base font-medium transition-colors hover:text-ci-orange py-1.5",
+                    isActive ? "" : "text-foreground"
+                  )}
+                >
+                  {item.title}
+                  <ChevronDown className="ml-1 h-5 w-5" />
+                </Link>
 
-          <div
-            className={cn(
-              "absolute left-0 top-full pt-2 z-50",
-              hoverItem === item.title ? "block" : "hidden group-hover:block"
-            )}
-          >
-            <div className="w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div className="py-1" role="menu" aria-orientation="vertical">
-                {item.submenu.map((subItem) => {
-                  const isSubActive = pathname === subItem.href;
-                  return (
-                    <Link
-                      key={subItem.title}
-                      href={subItem.href}
-                      className={cn(
-                        "block px-4 py-2 text-base relative group/item transition-all duration-200",
-                        isSubActive ? "bg-ci-green text-white" : "text-gray-700 hover:text-white"
-                      )}
-                      role="menuitem"
-                    >
-                      <span
-                        className={cn(
-                          "absolute inset-0 bg-ci-green transform origin-left transition-transform duration-300 ease-out",
-                          isSubActive ? "scale-x-100" : "scale-x-0 group-hover/item:scale-x-100"
-                        )}
-                        aria-hidden="true"
-                      ></span>
-                      <span className="relative z-10">{subItem.title}</span>
-                    </Link>
-                  );
-                })}
+                <div
+                  className={cn(
+                    "absolute left-0 top-full pt-2 z-50",
+                    hoverItem === item.title ? "block" : "hidden group-hover:block"
+                  )}
+                >
+                  <div className="w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div className="py-1" role="menu" aria-orientation="vertical">
+                      {item.submenu.map((subItem) => {
+                        const isSubActive = pathname === subItem.href;
+                        return (
+                          <Link
+                            key={subItem.title}
+                            href={subItem.href}
+                            className={cn(
+                              "block px-4 py-2 text-base relative group/item transition-all duration-200",
+                              isSubActive ? "bg-ci-green text-white" : "text-gray-700 hover:text-white"
+                            )}
+                            role="menuitem"
+                          >
+                            <span
+                              className={cn(
+                                "absolute inset-0 bg-ci-green transform origin-left transition-transform duration-300 ease-out",
+                                isSubActive ? "scale-x-100" : "scale-x-0 group-hover/item:scale-x-100"
+                              )}
+                              aria-hidden="true"
+                            ></span>
+                            <span className="relative z-10">{subItem.title}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      );
-    }
+            );
+          }
 
-    return (
-      <Link
-        key={item.title}
-        href={item.href}
-        className={cn(
-          "text-base font-medium transition-colors hover:text-ci-orange py-1.5",
-          isActive ? "" : "text-foreground"
-        )}
-      >
-        {item.title}
-      </Link>
-    );
-  })}
-</nav>
+          return (
+            <Link
+              key={item.title}
+              href={item.href}
+              className={cn(
+                "text-base font-medium transition-colors hover:text-ci-orange py-1.5",
+                isActive ? "" : "text-foreground"
+              )}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
+      </nav>
+      <hr className="w-full border-solid border-green-700"></hr>
 
       {/* Mobile Navigation Toggle */}
-      <div className="md:hidden absolute right-4">
+      <div className="md:hidden relative">
         <MobileNav />
       </div>
     </div>
@@ -170,7 +196,7 @@ function MobileNav() {
                       onClick={() => toggleSubmenu(item.title)}
                       className={cn(
                         "flex items-center justify-between w-full text-base font-medium transition-colors hover:text-ci-orange",
-                        isActive ? "" : "text-foreground"
+                        isActive ? "text-ci-orange" : "text-foreground"
                       )}
                     >
                       {item.title}

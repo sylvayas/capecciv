@@ -2,11 +2,12 @@ import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
+import { MainNav } from "@/components/main-nav"
 
 export default function ReferencesPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Quelques Références</h1>

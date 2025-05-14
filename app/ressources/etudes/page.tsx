@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Search, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { MainNav } from "@/components/main-nav";
 
 interface Etude {
   title: string;
@@ -26,35 +27,35 @@ export default function EtudePage() {
         {
           title: "CRIME, SELF PROTECTION AND BUSINESS GROWTH IN COTE D'IVOIRE",
           date: "2020",
-          pdfLink: "https://capec-ci.org/docs/publications/PED_2013_KIMOU.pdf",
+          pdfLink: "/images/ETUDE PDF/Analyse d'impact/2020/crime self.pdf",
         },
       ],
       "2018": [
         {
           title: "ETUDE DE L'IMPACT DES INVESTISSEMENTS DANS LES SECTEURS DES HYDROCARBURES ET DE L'ENERGIE SUR L'ECONOMIE IVOIRIENNE",
           date: "2018",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_synthy_tique_etude_d_impact_des_investissements_dans_les_secteurs_des_hydrocarbures_et_de_l_energie_su_l_y_conomie_ivoirienne_MPEDER_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Analyse d'impact/2018/etude impact des investissements.pdf",
         },
       ],
       "2017": [
         {
           title: "Impacts sanitaire et financier du financement de la lutte contre le SIDA en Côte d'Ivoire : Modélisation de Scénarii de financement.",
           date: "2017",
-          pdfLink: "https://capec-ci.org/docs/etudes/Impacts_sanitaire_et_financier_du_financement_de_la_lutte_contre_le_SIDA_en_Cy_te_d_Ivoire_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Analyse d'impact/2017/impact sanitaire.pdf",
         },
       ],
       "2016": [
         {
           title: "Etude d'impact des radios de proximité en côte d'ivoire",
           date: "2016",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Etude_d_Aoimpact_des_radios_de_proximity_en_cy_te_d_Aoivoire_HACA_2016_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Analyse d'impact/2016/etude impact des radios.pdf",
         },
       ],
       "2015": [
         {
           title: "ETUDE D'IMPACT SOCIO-ECONOMIQUE DU RETOUR DE LA BANQUE AFRICAINE DE DEVELOPPEMENT EN COTE D'IVOIRE",
           date: "2015",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Etude_d_impact_socio_y_conomique_du_retour_de_la_banque_africaine_de_dy_veloppement_en_Cy_te_d_Ivoire_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Analyse d'impact/2015/etude impact.pdf",
         },
       ],
     },
@@ -63,35 +64,35 @@ export default function EtudePage() {
         {
           title: "Rapport national d'auto évaluation Gouvernance d'entreprise",
           date: "2017",
-          pdfLink: "https://capec-ci.org/docs/etudes/Gouvernance_des_entreprise_Rapport_national_d_Aoauto_y_valuation_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Institution et gouvernance/2017/rapport.pdf",
         },
       ],
       "2016": [
         {
           title: "Emergence Gouvernance Et Planification",
           date: "2016",
-          pdfLink: "https://capec-ci.org/docs/etudes/ETUDE_EMERGENCE_GOUVERNANCE_ET_PLANIFICATION_version_finale.pdf",
+          pdfLink: "/images/ETUDE PDF/Institution et gouvernance/2016/EMERGENCE.pdf",
         },
       ],
       "2015": [
         {
           title: "INDICATEURS DE CAPACITéS EN AFRIQUE 2015",
           date: "2015",
-          pdfLink: "https://capec-ci.org/docs/etudes/Conclusion_INDICATEURS_DES_CAPACITES_EN_AFRIQUE_RAPPORT_D_EVALUATION_DES_POLITIQUES_ET_INSTITUTIONS.pdf",
+          pdfLink: "/images/ETUDE PDF/Institution et gouvernance/2015/INDICATEUR.pdf",
         },
       ],
       "2014": [
         {
           title: "GOUVERNANCE ET PLANIFICATION : QUEL ROLE DANS L'EMERGENCE DES PAYS",
           date: "2014",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Gouvernance_et_planification_quel_ry_le_dans_l_y_mergence_des_pays_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Institution et gouvernance/2014/GOUVERNANCE.pdf",
         },
       ],
       "2013": [
         {
           title: "STRATEGIES D'AMELIORATION DES INDICATEURS DE GOUVERNANCE EN COTE D'IVOIRE",
           date: "2013",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Straty_gies_d_Amy_lioration_des_Indicateurs_de_Gouvernance_en_Cy_te_d_Ivoire.pdf",
+          pdfLink: "/images/ETUDE PDF/Institution et gouvernance/2013/STRACTEGIE AMELIORATION.pdf",
         },
       ],
     },
@@ -100,21 +101,21 @@ export default function EtudePage() {
         {
           title: "STRATEGIE NATIONALE DE DIALOGUE PUBLIC-PRIVE (SNDPP) 2016-2020 EN COTE D'IVOIRE",
           date: "2017",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Straty_gie_Nationale_de_Dialogue_Public_Privy_SNDPP_2016_2020_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Transformation structurelle/2017/stractegie nationale.pdf",
         },
       ],
       "2015": [
         {
           title: "PROFIL PAYS COTE D'IVOIRE",
           date: "2015",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_PROFIL_PAYS_COTE_D_IVOIRE_2015_CEA_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Transformation structurelle/2015/profil pays.pdf",
         },
       ],
       "2014": [
         {
           title: "EMERGENCE ET DEVELOPPEMENT HUMAIN DURABLE",
           date: "2014",
-          pdfLink: "https://capec-ci.org/docs/etudes/Emergence_et_Dy_veloppement_Humain_Durable_1_.pdf",
+          pdfLink: "/images/ETUDE PDF/Transformation structurelle/2014/emergence et developpemnt.pdf",
         },
       ],
     },
@@ -123,28 +124,28 @@ export default function EtudePage() {
         {
           title: "ELABORATION DE LA STRATEGIE NATIONALE DE DEVELOPPEMENT DES STATISTIQUES (SNDS) 2017-2021 DE LA COTE D'IVOIRE",
           date: "2017",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_ELABORATION_DE_LA_STRATEGIE_NATIONALE_DE_DEVELOPPEMENT_DES_STATISTIQUES.pdf",
+          pdfLink: "/images/ETUDE PDF/finance publique/2017/elaboration.pdf",
         },
       ],
       "2016": [
         {
           title: "REVUE DES DEPENSES PUBLIQUES AGRICOLES (SOMMAIRE)",
           date: "2016",
-          pdfLink: "https://capec-ci.org/docs/etudes/RESUME_REVUE_DES_DEPENSES_PUBLIQUES_AGRICOLES.pdf",
+          pdfLink: "/images/ETUDE PDF/finance publique/2016/revue des depenses.pdf",
         },
       ],
       "2015": [
         {
           title: "ANALYSE DIAGNOSTIQUE DES LOYERS DE L'ETAT ET PROPOSITION D'UNE STRATEGIE DE POLITIQUE PUBLIQUE IMMOBILIERE COMPATIBLE AVEC LE CONTEXTE BUDGETAIRE",
           date: "2015",
-          pdfLink: "https://capec-ci.org/docs/etudes/RESUME_ANALYSE_DIAGNOSTIC_DES_LOYERS_DE_L_ETAT_ET_PROPOSITION_D_UNE_STRATEGIE_DE_POLITIQUE_PUBLIQUE_IMMOBILIERE.pdf",
+          pdfLink: "/images/ETUDE PDF/finance publique/2015/analyse diagnostique.pdf",
         },
       ],
       "2014": [
         {
           title: "Evaluation des régies financières en Côte d'Ivoire",
           date: "2014",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Evaluation_des_Ry_gies_financiy_res_en_Cy_te_d_Ivoire.pdf",
+          pdfLink: "/images/ETUDE PDF/finance publique/2014/evaluation.pdf",
         },
       ],
     },
@@ -153,30 +154,23 @@ export default function EtudePage() {
         {
           title: "Etude de faisabilité pour la mise en place du statut de l'entreprenant en Côte d'Ivoire",
           date: "2016",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Etude_de_faisability_pour_la_mise_en_place_du_statut_de_l_Aoentreprenant_en_Cy_te_d_Ivoire.pdf",
+          pdfLink: "/images/ETUDE PDF/entrepreneuriat/2016/etude de faisabilité.pdf",
         },
       ],
       "2015": [
         {
           title: "PARTENARIAT ETAT-SECTEUR PRIVE",
           date: "2015",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Partenariat_ETAT_SECTEUR_PRIVE.pdf",
+          pdfLink: "/images/ETUDE PDF/entrepreneuriat/2015/partenariat.pdf",
         },
       ],
     },
     "Pauvrété, inégalité et rédistribution": {
-      "2016": [
-        {
-          title: "Etude de faisabilité pour la mise en place du statut de l'entreprenant en Côte d'Ivoire",
-          date: "2016",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Etude_de_faisability_pour_la_mise_en_place_du_statut_de_l_Aoentreprenant_en_Cy_te_d_Ivoire.pdf",
-        },
-      ],
       "2015": [
         {
           title: "PARTENARIAT ETAT-SECTEUR PRIVE",
           date: "2015",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Partenariat_ETAT_SECTEUR_PRIVE.pdf",
+          pdfLink: "/images/ETUDE PDF/pauvrete/partenariat.pdf",
         },
       ],
     },
@@ -185,21 +179,21 @@ export default function EtudePage() {
         {
           title: "Examen stratégique nationale FAIM ZERO Côte d'Ivoire",
           date: "2018",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Examen_straty_gique_national_Faim_Zy_ro_Cy_te_d_Ivoire.pdf",
+          pdfLink: "/images/agriculture et nutrition/2018/examen stractegique.pdf",
         },
       ],
       "2015": [
         {
           title: "Diagnostic du Secteur des Pêches : Efficacité Economique et Environnementale de l'Aménagement des Pêches et des Droits",
           date: "2015",
-          pdfLink: "https://capec-ci.org/docs/etudes/Ry_sumy_Diagnostic_du_Secteur_des_Py_ches.pdf",
+          pdfLink: "/images/agriculture et nutrition/2015/diagnostic du secteur peche.pdf",
         },
       ],
       "2012": [
         {
           title: "L'accès à l'eau potable: bilan et perspectives",
           date: "2012",
-          pdfLink: "https://capec-ci.org/docs/etudes/conclusion_et_recommandations_L_accy_s_yy_l_eau_potable_bilan_et_perspectives.pdf",
+          pdfLink: "/images/agriculture et nutrition/2012/eau potable.pdf",
         },
       ],
     },
@@ -208,7 +202,63 @@ export default function EtudePage() {
         {
           title: "Les problèmes énergétiques en CI: bilan et perspectives (1960-2060)",
           date: "2010",
-          pdfLink: "https://capec-ci.org/docs/etudes/Conclus_et_Rec_Les_probly_mes_y_nergy_tiques_en_Cy_te_d_Ivoire_Bilan_et_perspectives_1960_2060_Cinquentenaire_2010.pdf",
+          pdfLink: "/images/ETUDE PDF/suivi/cinquantenaire.pdf",
+        },
+      ],
+    },
+    "Modélisation économique":{
+      "2019": [
+        {
+          title:"Projet de modélisation GEMMES pour la Côte d'Ivoire",
+          date:"2019",
+          pdfLink:"/images/ETUDE PDF/modélisation economique/2019/modelisation.pdf",
+        }
+      ]
+    },
+    "Commerce international": {
+      "2013": [
+        {
+          title: "Politique Commerciale et Enjeux pour l'éligibilité de La Côte d'Ivoire au Programme Millenium Challenge Corporation",
+          date: "2013",
+          pdfLink: "/images/ETUDE PDF/commerce international/2013/politique commerciale.pdf",
+        },
+          {
+          title: " PROJET RéGIONAL DE RECHERCHE-ACTION SUR LA TAXATION DES PRODUITS DE TABAC EN AFRIQUE DE L'OUEST",
+          date: "2013",
+          pdfLink: "/images/ETUDE PDF/commerce international/2013/projet regional.pdf",
+        },
+      ],
+      "2014": [
+        {
+          title: " ETUDE SUR LES MECANISMES INNOVANTS POUR LE FINANCEMENT DU DEVELOPPEMENT REGIONAL DE LA CEDEAO",
+          date: "2014",
+          pdfLink: "/images/ETUDE PDF/commerce international/2014/dynamique de la dette.pdf",
+        },
+             {
+          title: "REVUE DES DEPENSES PUBLIQUES AGRICOLES (SOMMAIRE)",
+          date: "2014",
+          pdfLink: "/images/ETUDE PDF/commerce international/2014/etude sur le mecanisme.pdf",
+        },
+      ],
+      "2015": [
+        {
+          title: "ANALYSE DIAGNOSTIQUE DES LOYERS DE L'ETAT ET PROPOSITION D'UNE STRATEGIE DE POLITIQUE PUBLIQUE IMMOBILIERE COMPATIBLE AVEC LE CONTEXTE BUDGETAIRE",
+          date: "2015",
+          pdfLink: "/images/ETUDE PDF/commerce international/2015/determinants.pdf",
+        },
+      ],
+      "2016": [
+        {
+          title: "Evaluation des régies financières en Côte d'Ivoire",
+          date: "2016",
+          pdfLink: "/images/ETUDE PDF/commerce international/2016/etude des consequences.pdf",
+        },
+      ],
+      "2017": [
+        {
+          title: " LES MOTEURS DE LA CROISSANCE ET L'OUVERTURE COMMERCIALE EN COTE D'IVOIRE",
+          date: "2017",
+          pdfLink: "/images/ETUDE PDF/commerce international/2017/les moteurs de la croissnaces.pdf",
         },
       ],
     },
@@ -229,7 +279,7 @@ export default function EtudePage() {
 
   return (
     <div className="min-h-screen flex flex-col w-full">
-      <Header />
+      <MainNav />
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto mt-24 mb-24 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-8">

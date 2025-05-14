@@ -11,6 +11,7 @@ import {
   Globe,
   BarChart,
 } from "lucide-react";
+import { MainNav } from "@/components/main-nav";
 
 export default function NosActivitesPage() {
   // Data for activity cards
@@ -74,7 +75,7 @@ export default function NosActivitesPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      <Header />
+      <MainNav />
 
       {/* Hero Section */}
       <section className="container px-4 py-12 md:px-6 md:py-24 flex-grow">

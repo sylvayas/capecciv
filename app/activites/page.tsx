@@ -5,11 +5,12 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Calendar, FileText, Users, MessageSquare, Newspaper } from "lucide-react"
+import { MainNav } from "@/components/main-nav"
 
 export default function ActivitesPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Activités</h1>

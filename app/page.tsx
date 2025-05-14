@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { EventCarousel } from "@/components/carousel"
 import { date } from "zod"
+import { MainNav } from "@/components/main-nav"
 
 
 
@@ -52,7 +53,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      
+      <MainNav/>
 
       {/* Carousel Section */}
       <section className="w-full">

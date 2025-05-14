@@ -62,8 +62,8 @@ export const navItems: NavItem[] = [
     href: "/publication",
   },
   {
-    title: "NOS REALISATIONS",
-    href: "/realisation",
+    title: "ACTIVITES",
+    href: "",
     submenu: [
       {
         title: "PROGRAMME D'ACTIVITES",

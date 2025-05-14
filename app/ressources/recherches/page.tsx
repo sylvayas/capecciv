@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronRight, FileText, Users, BarChart, Search } from "lucide-react";
 import { useState } from "react";
+import { MainNav } from "@/components/main-nav";
 
 interface Study {
   year: number;
@@ -112,7 +113,7 @@ export default function RecherchesPage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <Header />
+      <MainNav />
 
       {/* Main Content */}
       <main className="p-6 max-w-7xl mx-auto mt-16 mb-24 flex-grow">

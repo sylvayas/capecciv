@@ -5,11 +5,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, Video, Mic, ChevronRight } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { MainNav } from "@/components/main-nav"
 
 export default function InterviewPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Interviews & Questions</h1>
@@ -192,10 +193,10 @@ function QuestionCard({ question }  : { question: any }) {
 const interviews = [
   {
     id: "int1",
-    title: "Les défis économiques post-COVID en Côte d'Ivoire",
+    title: "« Nos réflexions aideront à  établir un lien entre la violence juvénile et les opportunités économiques »",
     description:
       "Interview du Dr. Amadou Diallo sur les défis économiques auxquels fait face la Côte d'Ivoire après la pandémie de COVID-19 et les stratégies de relance.",
-    date: "15 mars 2023",
+    date: "Publié le 18 Août, 2020",
     speaker: "Dr. Amadou Diallo, Directeur du CAPEC",
     media: "RTI (Radio Télévision Ivoirienne)",
     type: "video",
@@ -214,6 +215,17 @@ const interviews = [
   },
   {
     id: "int3",
+    title: "Les enjeux de l'intégration économique régionale",
+    description:
+      "Interview de Dr. Jean Touré sur les opportunités et défis de l'intégration économique en Afrique de l'Ouest et son impact sur l'économie ivoirienne.",
+    date: "5 janvier 2023",
+    speaker: "Dr. Jean Touré, Chercheur Senior au CAPEC",
+    media: "Jeune Afrique",
+    type: "video",
+    image: "/placeholder.svg?text=Interview+Intégration&height=300&width=400",
+  },
+  {
+    id: "int4",
     title: "Les enjeux de l'intégration économique régionale",
     description:
       "Interview de Dr. Jean Touré sur les opportunités et défis de l'intégration économique en Afrique de l'Ouest et son impact sur l'économie ivoirienne.",

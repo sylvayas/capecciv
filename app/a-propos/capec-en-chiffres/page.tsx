@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { FileText, Users, Calendar, BookOpen, Globe, Award } from "lucide-react"
+import { MainNav } from "@/components/main-nav";
 
 export default function CapecEnChiffresPage() {
   const tableData = [
@@ -29,7 +30,7 @@ export default function CapecEnChiffresPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <MainNav />
       <div className="container px-4 py-8 sm:py-12 md:py-16 lg:py-24 flex-grow">
         <div className="space-y-4 mb-8 sm:mb-12">
           <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
