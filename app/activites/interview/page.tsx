@@ -118,10 +118,10 @@ function InterviewCard({ interview, isFirst = false }: { interview: Interview; i
             <Link href={`/activites/interview/${interview.id}`}>
               <Button className="bg-ci-green hover:bg-green-700 text-white w-full md:w-auto">
                 {interview.type === "video"
-                  ? "Regarder la vidéo"
+                  ? "Voir plus"
                   : interview.type === "audio"
-                  ? "Écouter l'audio"
-                  : "Lire l'interview"}
+                  ? "Voir plus"
+                  : "Voir l'interview"}
               </Button>
             </Link>
           </div>
@@ -152,7 +152,7 @@ function DebatCard({ debat }: { debat: Debat }) {
           </div>
           <div className="mt-4">
                 <Link href={`/activites/interview/${debat.id}`}>
-              <Button className="bg-ci-green hover:bg-green-700 text-white">Lire la réponse</Button>
+              <Button className="bg-ci-green hover:bg-green-700 text-white">Voir plus</Button>
 
                </Link>
           </div>
