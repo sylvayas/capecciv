@@ -20,31 +20,31 @@ export default function NewsPage() {
         </div>
 
         {/* Featured News */}
-        <div className="mt-12">
+        <div className="mt-10">
           <Card className="overflow-hidden border-l-4 border-l-ci-orange">
             <div className="grid md:grid-cols-2">
               <div className="relative aspect-video md:aspect-auto">
                 <Image
-                  src="/placeholder.svg?text=Conférence+Internationale+CAPEC&height=500&width=800"
+                  src="/images/12.jpg?text=Conférence+Internationale+CAPEC&height=500&width=800"
                   alt={featuredNews.title}
                   fill
                   className="object-cover"
                 />
               </div>
               <CardContent className="p-6 md:p-8 flex flex-col justify-center">
-                <div className="space-y-4">
+                <div className="space-y-12">
                   <div className="flex items-center text-muted-foreground">
                     <Calendar className="mr-2 h-4 w-4" />
                     <span>{featuredNews.date}</span>
                   </div>
                   <h2 className="text-2xl font-bold">{featuredNews.title}</h2>
                   <p className="text-muted-foreground">{featuredNews.excerpt}</p>
-                  <Link href={`/actualites/${featuredNews.id}`}>
-                    <Button className="bg-ci-orange hover:bg-orange-600 text-white">
+                  {/* <Link href={`/actualites/${featuredNews.id}`}>
+                    <Button className="bg-ci-orange mt-5 hover:bg-orange-600 text-white">
                       Lire l'article complet
                       <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
               </CardContent>
             </div>
@@ -62,7 +62,7 @@ export default function NewsPage() {
         </div>
 
         {/* Pagination */}
-        <div className="mt-12 flex justify-center">
+        {/* <div className="mt-12 flex justify-center">
           <div className="flex space-x-2">
             <Button variant="outline" size="icon" disabled>
               <ChevronRight className="h-4 w-4 rotate-180" />
@@ -82,7 +82,7 @@ export default function NewsPage() {
               <span className="sr-only">Page suivante</span>
             </Button>
           </div>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>
@@ -91,7 +91,7 @@ export default function NewsPage() {
 
 function NewsCard({ news } : { news: { id: string; title: string; excerpt: string; date: string; image?: string } }) {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden mb-20">
       {news.image && (
         <div className="aspect-video w-full overflow-hidden">
           <Image
@@ -112,12 +112,12 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
           <h3 className="font-bold">{news.title}</h3>
           <p className="text-sm text-muted-foreground line-clamp-3">{news.excerpt}</p>
           <div className="pt-2">
-            <Link href={`/actualites/${news.id}`}>
+            {/* <Link href={`/actualites/${news.id}`}>
               <Button variant="link" className="p-0 h-auto">
                 Lire plus
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </CardContent>
@@ -128,76 +128,39 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
 // Sample data with updated image placeholders
 const featuredNews = {
   id: "1",
-  title: "Conférence internationale sur les politiques économiques post-pandémie",
+  title: "30e anniversaire de la CAPEC",
   excerpt:
-    "Le CAPEC organise une conférence internationale réunissant des experts de renommée mondiale pour discuter des stratégies économiques dans l'ère post-pandémie. L'événement se tiendra les 15 et 16 mars 2023 et accueillera des intervenants de plus de 15 pays.",
-  date: "20 février 2023",
+    "Les 8 et 9 octobre 2024, la CAPEC a célébré ses 30 ans d’existence à Abidjan. L'événement, placé sous le haut patronage du Vice-Président de la République, Tiémoko Meyliet Koné, a été l'occasion de faire le bilan des contributions de la CAPEC à la transformation structurelle de la Côte d'Ivoire et à l'intégration sous-régionale entre 1993 et 2023.",
+  date: "Publié le 8 et 9 octobre 2024",
 }
 
 const newsList = [
   {
     id: "2",
-    title: "Nouveau partenariat avec l'Université de Paris-Saclay",
+    title: "CONFERENCE DE HAUT NIVEAU",
     excerpt:
-      "Le CAPEC est fier d'annoncer un nouveau partenariat de recherche avec l'Université de Paris-Saclay pour étudier les impacts économiques du changement climatique.",
-    date: "5 février 2023",
-    image: "/placeholder.svg?text=Partenariat+Université+Paris-Saclay&height=340&width=600",
+      "La Banque Africaine de Développement (BAD), avec l’appui de la Cellule d’Analyse de Politiques Economiques du CIRES organise, le mardi 10 mai de 10h00 à 12h30.",
+    date: "Publié le 06 Mai, 2022",
+    image: "/images/conf2.jpg?text=Partenariat+Université+Paris-Saclay&height=340&width=600",
   },
   {
     id: "3",
-    title: "Publication du rapport annuel sur l'état de l'économie",
+    title: "La CAPEC se félicite pour la validation de la vision prospectrice 2050 de la CEDEAO.",
     excerpt:
-      "Le CAPEC vient de publier son rapport annuel analysant les tendances économiques de l'année écoulée et présentant des perspectives pour l'année à venir.",
-    date: "20 janvier 2023",
-    image: "/placeholder.svg?text=Rapport+Annuel+Économie&height=340&width=600",
+      "A la suite de plusieurs rencontres de validation technique puis de validation par le Conseil des Ministres de la CEDEAO (le 10 décembre 2021).",
+    date: "Publié le 21 Déc, 2021",
+    image: "/images/actua1.jpg?text=Rapport+Annuel+Économie&height=340&width=600",
   },
   {
     id: "4",
-    title: "Séminaire de formation sur l'analyse des données économiques",
+    title: "RECRUTEMENT DE DEUX (2) CHERCHEURS JUNIORS MICROECONOMISTES ET D'UN (1) CHERCHEUR JUNIOR MACROECONOMISTE</a>",
     excerpt:
-      "Le CAPEC organise un séminaire de formation de trois jours sur les méthodes avancées d'analyse des données économiques à destination des chercheurs et analystes.",
-    date: "10 janvier 2023",
-    image: "/placeholder.svg?text=Séminaire+Analyse+Données&height=340&width=600",
+      "Ce recrutement visait à renforcer l'équipe de recherche de la CAPEC en intégrant de jeunes talents spécialisés en microéconomie et macroéconomie.",
+    date: "Publié le 22 Avr, 2022",
+    image: "/images/recrutement.png?text=Séminaire+Analyse+Données&height=340&width=600",
   },
-  {
-    id: "5",
-    title: "Recrutement de nouveaux chercheurs",
-    excerpt:
-      "Dans le cadre de son expansion, le CAPEC lance une campagne de recrutement pour intégrer de nouveaux chercheurs spécialisés en économie du développement et en économie environnementale.",
-    date: "15 décembre 2022",
-    image: "/placeholder.svg?text=Recrutement+Chercheurs&height=340&width=600",
-  },
-  {
-    id: "6",
-    title: "Participation au Forum Économique Mondial",
-    excerpt:
-      "Une délégation du CAPEC a participé au Forum Économique Mondial où elle a présenté ses travaux sur les stratégies de développement inclusif.",
-    date: "5 décembre 2022",
-    image: "/placeholder.svg?text=Forum+Économique+Mondial&height=340&width=600",
-  },
-  {
-    id: "7",
-    title: "Lancement d'un nouveau programme de recherche sur l'économie verte",
-    excerpt:
-      "Le CAPEC lance un ambitieux programme de recherche sur l'économie verte et la transition écologique, financé par une subvention internationale.",
-    date: "20 novembre 2022",
-    image: "/placeholder.svg?text=Programme+Économie+Verte&height=340&width=600",
-  },
-  {
-    id: "8",
-    title: "Atelier sur les politiques d'inclusion financière",
-    excerpt:
-      "Le CAPEC a organisé un atelier réunissant des acteurs du secteur financier et des décideurs politiques pour discuter des stratégies d'inclusion financière.",
-    date: "10 novembre 2022",
-    image: "/placeholder.svg?text=Atelier+Inclusion+Financière&height=340&width=600",
-  },
-  {
-    id: "9",
-    title: "Visite d'une délégation de la Banque Mondiale",
-    excerpt:
-      "Une délégation de la Banque Mondiale a visité le CAPEC pour discuter de collaborations potentielles sur des projets de développement économique.",
-    date: "25 octobre 2022",
-    image: "/placeholder.svg?text=Délégation+Banque+Mondiale&height=340&width=600",
-  },
+  
+ 
+  
 ]
 

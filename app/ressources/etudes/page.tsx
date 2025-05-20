@@ -372,7 +372,7 @@ export default function EtudePage() {
                       <div className="p-4">
                         <h6 className="text-orange-500 font-semibold text-sm mb-2">21 Sept, 2020</h6>
                         <a
-                          href="https://capec-ci.org/seminaires/seminaire_view-18.html"
+                          href="/activites/compte-rendu/conf1"
                           className="text-gray-900 font-semibold text-base hover:underline mb-2 block"
                         >
                           METHODES ET TECHNIQUES MARKETING : DES CADRES DU BNETD A L'ECOLE DE LA CAPEC
@@ -388,7 +388,7 @@ export default function EtudePage() {
                       <div className="p-4">
                         <h6 className="text-orange-500 font-semibold text-sm mb-2">09 Avr, 2019</h6>
                         <a
-                          href="https://capec-ci.org/seminaires/seminaire_view-17.html"
+                          href="/activites/compte-rendu/conf2"
                           className="text-gray-900 font-semibold text-base hover:underline mb-2 block"
                         >
                           Un atelier de méthodologie et d'écriture scientifique s'est tenu à Abidjan du 1er au 05 avril
@@ -404,7 +404,7 @@ export default function EtudePage() {
                       <div className="p-4">
                         <h6 className="text-orange-500 font-semibold text-sm mb-2">12 Juill, 2017</h6>
                         <a
-                          href="https://capec-ci.org/seminaires/seminaire_view-15.html"
+                          href="/activites/compte-rendu/conf3"
                           className="text-gray-900 font-semibold text-base hover:underline mb-2 block"
                         >
                           DEVELOPPEMENT INDUSTRIEL: Des cadres outillés à l'Analyse de filières et aux techniques d'élaboration et de mise en œuvre
@@ -430,7 +430,7 @@ export default function EtudePage() {
                   <h6 className="text-base font-semibold mb-1">
                     <a
                       className="text-blue-600 hover:underline"
-                      href="https://capec-ci.org/news/details_news-121.html"
+                      href="/activites/actualites"
                     >
                       CELEBRATION DES 30 ANS DE LA CAPEC
                     </a>
@@ -441,7 +441,7 @@ export default function EtudePage() {
                   <h6 className="text-base font-semibold mb-1">
                     <a
                       className="text-blue-600 hover:underline"
-                      href="https://capec-ci.org/news/details_news-117.html"
+                      href="/activites/actualites"
                     >
                       CONFERENCE DE HAUT NIVEAU
                     </a>
@@ -452,35 +452,14 @@ export default function EtudePage() {
                   <h6 className="text-base font-semibold mb-1">
                     <a
                       className="text-blue-600 hover:underline"
-                      href="https://capec-ci.org/news/details_news-115.html"
+                      href="/activites/actualites"
                     >
                       RECRUTEMENT DE DEUX (2) CHERCHEURS JUNIORS...
                     </a>
                   </h6>
                   <p className="text-sm text-gray-600">22 Avr, 2022</p>
                 </div>
-                <div className="border-b border-gray-200 pb-4">
-                  <h6 className="text-base font-semibold mb-1">
-                    <a
-                      className="text-blue-600 hover:underline"
-                      href="https://capec-ci.org/news/details_news-116.html"
-                    >
-                      RECRUTEMENT D'UN COMPTABLE
-                    </a>
-                  </h6>
-                  <p className="text-sm text-gray-600">22 Avr, 2022</p>
-                </div>
-                <div className="border-b border-gray-200 pb-4">
-                  <h6 className="text-base font-semibold mb-1">
-                    <a
-                      className="text-blue-600 hover:underline"
-                      href="https://capec-ci.org/news/details_news-114.html"
-                    >
-                      Journée Internationale des Droits de la Femme
-                    </a>
-                  </h6>
-                  <p className="text-sm text-gray-600">08 Mars, 2022</p>
-                </div>
+             
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function OrganigrammePage() {
       <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Organigramme</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl">Organigramme</h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
             Découvrez la structure organisationnelle du CAPEC et les différentes équipes qui composent notre centre de

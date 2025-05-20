@@ -80,7 +80,7 @@ export default function NosActivitesPage() {
       {/* Hero Section */}
       <section className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="text-center space-y-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-gray-900">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-4xl text-gray-900">
             Nos Activités
           </h1>
           <div className="w-24 h-1 bg-ci-orange mx-auto"></div>

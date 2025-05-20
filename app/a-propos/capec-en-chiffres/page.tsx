@@ -33,7 +33,7 @@ export default function CapecEnChiffresPage() {
       <MainNav />
       <div className="container px-4 py-8 sm:py-12 md:py-16 lg:py-24 flex-grow">
         <div className="space-y-4 mb-8 sm:mb-12">
-          <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-4xl">
             La CAPEC en Chiffres
           </h1>
           <div className="w-16 sm:w-20 h-1 bg-ci-orange"></div>

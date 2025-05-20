@@ -69,36 +69,23 @@ export default function RecherchesPage() {
       title: "CELEBRATION DES 30 ANS DE LA CAPEC",
       date: "10 Août, 2024",
       image: "https://capec-ci.org/images/news/thumbs/30_ans_de_la_CAPEC.jpeg",
-      link: "https://capec-ci.org/news/details_news-121.html",
+      link: "/activites/actualites",
     },
     {
       id: 117,
       title: "CONFERENCE DE HAUT NIVEAU",
       date: "06 Mai, 2022",
       image: "https://capec-ci.org/images/news/thumbs/crea_conference_UFR-SEG_(2)_(2).jpg",
-      link: "https://capec-ci.org/news/details_news-117.html",
+      link: "/activites/actualites",
     },
     {
       id: 115,
       title: "RECRUTEMENT DE DEUX (2) CHERCHEURS JUNIORS...",
       date: "22 Avr, 2022",
       image: "https://capec-ci.org/images/news/thumbs/recrute.jpg",
-      link: "https://capec-ci.org/news/details_news-115.html",
+      link: "/activites/actualites",
     },
-    {
-      id: 116,
-      title: "RECRUTEMENT D'UN COMPTABLE",
-      date: "22 Avr, 2022",
-      image: "https://capec-ci.org/images/news/thumbs/recrute.jpg",
-      link: "https://capec-ci.org/news/details_news-116.html",
-    },
-    {
-      id: 114,
-      title: "Journée Internationale des Droits de la Femme",
-      date: "08 Mars, 2022",
-      image: "https://capec-ci.org/images/news/thumbs/declinaison_fb_8_MARS.jpg",
-      link: "https://capec-ci.org/news/details_news-114.html",
-    },
+   
   ];
 
   const handleFilter = () => {

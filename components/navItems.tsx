@@ -66,23 +66,23 @@ export const navItems: NavItem[] = [
     href: "",
     submenu: [
       {
-        title: "PROGRAMME D'ACTIVITES",
+        title: "Programme d'activités",
         href: "/activites/programme",
       },
       {
-        title: "RAPPORT D'ACTIVITES",
+        title: "Rapport d'activités",
         href: "/activites/rapport",
       },
       {
-        title: "CR d'ACTIVITES",
+        title: "CR d'actualités",
         href: "/activites/compte-rendu",
       },
       {
-        title: "INTERVIEW / QUESTION",
+        title: "Interview - Question",
         href: "/activites/interview",
       },
       {
-        title: "ACTUALITES",
+        title: "Actualités",
         href: "/activites/actualites",
       },
     ],
