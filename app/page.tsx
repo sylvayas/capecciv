@@ -15,21 +15,22 @@ const carouselEvents = [
   {
     title: "10e SOMMET DES THINKS TANK d'Afrique",
     date: "8 au 11 Octobre 2024",
-    image: "/images/10esommetdesthinkstankdafriquev1.jpg",
+    image: "/images/10esommetdesthinkstankdafrique.jpg",
     learnMoreLink: "/activites/programme#event1",
     registerLink: "/activites/programme/inscription",
   },
   {
     title: "Conference JAPAN CORNER-CAPEC-TODA CORPORATION-JICA",
-    image: "/images/JICA JAPAN CORNER.jpg",
+    image: "/images/Conference JAPAN CORNER-CAPEC-TODA CORPORATION-JICA 4 MARS2025.jpg",
     date: "4 mars 2025",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
+
   {
     title: "Conference JICA-JAPAN CORNER-CAPEC",
     date: "22 Février 2024",
-    image: "/images/capec_image/japan.jpg",
+    image: "/images/jicajapan.jpg",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
