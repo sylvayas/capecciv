@@ -30,7 +30,7 @@ const carouselEvents = [
   {
     title: "Conference JICA-JAPAN CORNER-CAPEC",
     date: "22 Février 2024",
-    image: "/images/jicajapancorner.jpg",
+    image: "/images/japancornerjica.jpg",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
@@ -103,11 +103,11 @@ const recentPublications = [
 const recentNews = [
   {
     id: "1",
-    title: "Leçon inaugurale du 30e anniversaire de la CAPEC faite par Mahoutou Emmanuel Koffi",
+    title: "Leçon inaugurale du 30e anniversaire de la CAPEC faite par AHOUTOU KOFFI EMMANUEL",
     excerpt:
-      "Le CAPEC organise sa conférence annuelle sur les politiques économiques le 15 mars 2023. Inscrivez-vous dès maintenant pour participer à cet événement majeur.",
+      "La CAPEC a célébré ses 30 ans les 8 et 9 octobre 2024 à Abidjan, en présence du Ministre Directeur de Cabinet du Vice-Président, M. Emmanuel Ahoutou KOFFI, qui a prononcé une leçon inaugurale marquante. Il a salué l’impact de la CAPEC sur les politiques publiques en Côte d’Ivoire et dans l’UEMOA-CEDEAO, tout en l’invitant à innover face aux défis climatiques, technologiques et industriels. Cet anniversaire a été l’occasion de dresser le bilan de trois décennies d’expertise et de tracer des perspectives pour un développement durable inclusif.",
     date: "8 octobre 2024",
-    image: "/images/img1 (2).jpg?text=Conférence+Annuelle&height=340&width=600",
+    image: "/images/Ahoutou image.jpg?text=Conférence+Annuelle&height=340&width=600",
   },
   {
     id: "2",
@@ -115,7 +115,7 @@ const recentNews = [
     excerpt:
       "Le CAPEC est fier d'annoncer un nouveau partenariat de recherche avec l'Université de Paris-Saclay pour étudier les impacts économiques du changement climatique.",
     date: "9 octobre 2024",
-    image: "/images/img1 (3).jpg",
+    image: "/images/PHOTO 10.jpg",
   },
 ];
 
