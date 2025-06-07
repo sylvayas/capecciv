@@ -30,7 +30,7 @@ const carouselEvents = [
   {
     title: "Conference JICA-JAPAN CORNER-CAPEC",
     date: "22 Février 2024",
-    image: "/images/japancornerjica.jpg",
+    image: "/images/conferencejicajapancorner.jpg",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
@@ -107,7 +107,7 @@ const recentNews = [
     excerpt:
       "La CAPEC a célébré ses 30 ans les 8 et 9 octobre 2024 à Abidjan, en présence du Ministre Directeur de Cabinet du Vice-Président, M. Emmanuel Ahoutou KOFFI, qui a prononcé une leçon inaugurale marquante. Il a salué l’impact de la CAPEC sur les politiques publiques en Côte d’Ivoire et dans l’UEMOA-CEDEAO, tout en l’invitant à innover face aux défis climatiques, technologiques et industriels. Cet anniversaire a été l’occasion de dresser le bilan de trois décennies d’expertise et de tracer des perspectives pour un développement durable inclusif.",
     date: "8 octobre 2024",
-    image: "/images/Ahoutou image.jpg?text=Conférence+Annuelle&height=340&width=600",
+    image: "/images/img1 (1).jpg",
   },
   {
     id: "2",
@@ -115,7 +115,7 @@ const recentNews = [
     excerpt:
       "Joyeux 30e anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
     date: "9 octobre 2024",
-    image: "/images/PHOTO 10.jpg",
+    image: "/images/photodestrentes.jpg",
   },
 ];
 
