@@ -30,7 +30,7 @@ const carouselEvents = [
   {
     title: "Conference JICA-JAPAN CORNER-CAPEC",
     date: "22 Février 2024",
-    image: "/images/conferencejicajapancorner.jpg",
+    image: "/images/japancorner.jpg",
     learnMoreLink: "/formations/econometrie",
     registerLink: "/formations/inscription",
   },
@@ -115,7 +115,7 @@ const recentNews = [
     excerpt:
       "Joyeux 30e anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
     date: "9 octobre 2024",
-    image: "/images/photodestrentes.jpg",
+    image: "/images/19.jpg",
   },
 ];
 
