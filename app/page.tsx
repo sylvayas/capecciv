@@ -113,7 +113,7 @@ const recentNews = [
     id: "2",
     title: "Diner des 30e anniversaire de la CAPEC",
     excerpt:
-      "Le CAPEC est fier d'annoncer un nouveau partenariat de recherche avec l'Université de Paris-Saclay pour étudier les impacts économiques du changement climatique.",
+      "Joyeux 30e anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
     date: "9 octobre 2024",
     image: "/images/PHOTO 10.jpg",
   },
