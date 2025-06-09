@@ -142,8 +142,8 @@ export function Footer() {
           {/* Bloc navigation */}
           <nav aria-label="Navigation secondaire" className="md:w-1/3">
             <div className="flex flex-col gap-3 text-sm text-gray-400">
-              <Link href="/activites/rapport" className="hover:text-white transition-colors duration-300">
-                Nos réalisations
+              <Link href="/a-propos/nos-activites" className="hover:text-white transition-colors duration-300">
+                Nos activités
               </Link>
               <Link href="/ressources/recherches" className="hover:text-white transition-colors duration-300">
                 Recherche

@@ -153,7 +153,7 @@ const newsList = [
   },
   {
     id: "4",
-    title: "RECRUTEMENT DE DEUX (2) CHERCHEURS JUNIORS MICROECONOMISTES ET D'UN (1) CHERCHEUR JUNIOR MACROECONOMISTE</a>",
+    title: "RECRUTEMENT DE DEUX CHERCHEURS JUNIORS MICROECONOMISTES ET D'UN CHERCHEUR JUNIOR MACROECONOMISTE",
     excerpt:
       "Ce recrutement visait à renforcer l'équipe de recherche de la CAPEC en intégrant de jeunes talents spécialisés en microéconomie et macroéconomie.",
     date: "Publié le 22 Avr, 2022",
