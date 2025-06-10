@@ -163,28 +163,28 @@ const seniorResearchers = [
     id: "5",
     name: "Prof BEKE TITE E.",
     title: "Economiste de l’Environnement et Chercheur Senior à la CAPEC.",
-    photo: "/images/tite.jpg",
+    photo: "/images/placeholder-icon.png",
     expertise: ["Economie"]
   },
   {
     id: "6",
     name: "Dr Nohoua TRAORE",
     title: "Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques  du  Cires (CAPEC). ",
-    photo: "/images/traore.jpg",
+    photo: "/images/placeholder-icon.png",
     expertise: ["Economie"]
   },
   {
     id: "7",
     name: "Dr Féissal ASSOUM",
     title: "Chercheur et Economiste du développement à la  (CAPEC)",
-    photo: "/images/feissalassoume.jpg",
+    photo: "/images/placeholder-icon.png",
     expertise: ["Economie",]
   },
   {
     id: "8",
     name: "Dr BONI",
     title: "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
-    photo: "/images/drbonichercheurcap.jpg",
+    photo: "/images/placeholder-icon.png",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
   },
   {
