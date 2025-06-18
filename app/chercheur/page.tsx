@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { MailIcon, Search } from "lucide-react"
@@ -13,6 +12,7 @@ import { MainNav } from "@/components/main-nav"
 export default function ChercheurPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Header />
       <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">

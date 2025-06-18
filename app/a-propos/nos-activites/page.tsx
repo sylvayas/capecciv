@@ -79,13 +79,13 @@ export default function NosActivitesPage() {
 
       {/* Hero Section */}
       <section className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
-        <div className="text-center space-y-6">
+        <div className="text-center mb-8 mt-0 space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-4xl text-gray-900">
             Nos Activités
           </h1>
           <div className="w-24 h-1 bg-ci-orange mx-auto"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto md:text-xl">
-            Découvrez les principales activités du CAPEC, de la recherche à la
+            Découvrez les principales activités de la CAPEC, de la recherche à la
             formation en passant par le conseil et la diffusion des connaissances.
           </p>
         </div>

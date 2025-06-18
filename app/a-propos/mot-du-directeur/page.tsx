@@ -19,14 +19,14 @@ export default function MotDuDirecteurPage() {
               <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4">
                 <Image
                   src="/images/dg.jpg"
-                  alt="Dr. Amadou Diallo - Directeur du CAPEC"
+                  alt="Dr. Amadou Diallo - Directeur de la CAPEC"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="font-bold text-lg">Prof. AHOURE Alban A.E.</h3>
-                <p className="text-ci-orange">Directeur du CAPEC</p>
+                <p className="text-ci-orange">Directeur de la CAPEC</p>
               
               </div>
             </div>

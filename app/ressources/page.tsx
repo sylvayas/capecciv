@@ -15,7 +15,7 @@ export default function RessourcesPage() {
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ressources</h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Découvrez l'ensemble des ressources du CAPEC, incluant nos recherches, publications et programmes de
+            Découvrez l'ensemble des ressources de la CAPEC, incluant nos recherches, publications et programmes de
             formation.
           </p>
         </div>
@@ -24,7 +24,7 @@ export default function RessourcesPage() {
         <div className="mt-8 relative rounded-lg overflow-hidden">
           <Image
             src="/placeholder.svg?text=Ressources+du+CAPEC&height=300&width=1200"
-            alt="Ressources du CAPEC"
+            alt="Ressources de la CAPEC"
             width={1200}
             height={300}
             className="object-cover w-full"

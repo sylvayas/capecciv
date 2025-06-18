@@ -44,7 +44,7 @@ export default function InterviewPage() {
           <h1 className="text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl">Interviews & Questions</h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
           <p className="text-mutedthemed-foreground md:text-xl max-w-[800px]">
-            Découvrez les interviews et interventions médiatiques des chercheurs du CAPEC sur les questions économiques
+            Découvrez les interviews et interventions médiatiques des chercheurs de la CAPEC sur les questions économiques
             d'actualité.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function InterviewPage() {
             <div>
               <h2 className="text-2xl font-bold mb-2">Demande d'interview</h2>
               <p className="text-muted-foreground">
-                Vous êtes journaliste ou représentant d'une organisation et souhaitez interviewer un chercheur du CAPEC ?
+                Vous êtes journaliste ou représentant d'une organisation et souhaitez interviewer un chercheur de la CAPEC ?
               </p>
             </div>
            <Link href={"/"}>

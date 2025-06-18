@@ -13,20 +13,20 @@ export default function OrganigrammePage() {
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl">Organigramme</h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Découvrez la structure organisationnelle du CAPEC et les différentes équipes qui composent notre centre de
+            Découvrez la structure organisationnelle de la CAPEC et les différentes équipes qui composent notre centre de
             recherche.
           </p>
         </div>
 
         <div className="mt-12">
           <div className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-8 text-center">Structure organisationnelle du CAPEC</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">Structure organisationnelle de la CAPEC</h2>
 
             {/* Organigramme visuel */}
             <div className="relative w-full h-[600px] mb-8 hidden md:block">
               <Image
                 src="/images/organigramme_CAPEC.png"
-                alt="Organigramme du CAPEC"
+                alt="Organigramme de la CAPEC"
                 fill
                 className="object-contain"
               />

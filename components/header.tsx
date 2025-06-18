@@ -1,4 +1,3 @@
-
 "use client";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -43,8 +42,11 @@ export function Header() {
           <div className="container flex flex-col items-center py-2">
             <MainNav />
           </div>
+          
         </div>
       </div>
+      
     </header>
+  
   );
-}
+} 

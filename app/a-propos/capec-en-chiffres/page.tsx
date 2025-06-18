@@ -38,7 +38,7 @@ export default function CapecEnChiffresPage() {
           </h1>
           <div className="w-16 sm:w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-[800px]">
-            Découvrez les chiffres clés qui illustrent l'impact et les réalisations du CAPEC depuis sa création.
+            Découvrez les chiffres clés qui illustrent l'impact et les réalisations de la CAPEC depuis sa création.
           </p>
         </div>
         <div className="text-center space-y-4 mb-8 sm:mb-12">
@@ -47,7 +47,7 @@ export default function CapecEnChiffresPage() {
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-ci-orange mx-auto"></div>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Résumé des activités du CAPEC, incluant les travaux de recherche, études, formations et assistance aux institutions.
+            Résumé des activités de la CAPEC, incluant les travaux de recherche, études, formations et assistance aux institutions.
           </p>
         </div>
 

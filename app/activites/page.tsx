@@ -16,7 +16,7 @@ export default function ActivitesPage() {
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Activités</h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Découvrez les différentes activités du CAPEC, incluant nos programmes, rapports, comptes rendus, interviews
+            Découvrez les différentes activités de la CAPEC, incluant nos programmes, rapports, comptes rendus, interviews
             et actualités.
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function ActivitesPage() {
         <div className="mt-8 relative rounded-lg overflow-hidden">
           <Image
             src="/placeholder.svg?text=Activités+du+CAPEC&height=300&width=1200"
-            alt="Activités du CAPEC"
+            alt="Activités de la CAPEC"
             width={1200}
             height={300}
             className="object-cover w-full"
@@ -74,7 +74,7 @@ export default function ActivitesPage() {
           <ActivityCard
             icon={<Newspaper className="h-8 w-8 text-ci-orange" />}
             title="Actualités"
-            description="Restez informé des derniers événements, annonces et activités du CAPEC."
+            description="Restez informé des derniers événements, annonces et activités de la CAPEC."
             href="/activites/actualites"
             color="orange"
           />

@@ -87,7 +87,7 @@ export function EventCarousel({ events }: {
                             variant="outline"
                             className="border-ci-green text-ci-green hover:bg-green-50"
                           >
-                            En savoir plus sur le CAPEC
+                            En savoir plus sur la CAPEC
                           </Button>
                         </Link>
                       )}

@@ -83,7 +83,7 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-3">
               <Image
                 src="/images/logocapec.png"
-                alt="Logo du CAPEC"
+                alt="Logo de la CAPEC"
                 width={100}
                 height={100}
                 priority

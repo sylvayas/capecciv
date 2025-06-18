@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { ChevronDown, Facebook, Linkedin, Youtube } from "lucide-react";
+import { ChevronDown, Facebook, Linkedin, Youtube, Search } from "lucide-react";
 import { navItems } from "./navItems";
 
 export type NavItem = {
@@ -17,181 +17,131 @@ export function MainNav() {
   const pathname = usePathname();
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const [hoverItem, setHoverItem] = useState<string | null>(null);
+  const [showHeader, setShowHeader] = useState<boolean>(true);
 
-  const isHomePage = pathname === "/";
-  const barColor = isHomePage ? "bg-green-700" : "bg-orange-400";
-
-  // Determine the current page title
-  const getCurrentPageTitle = () => {
-    for (const item of navItems) {
-      if (item.href === pathname) return `Accueil / ${item.title}`;
-      if (item.submenu) {
-        for (const subItem of item.submenu) {
-          if (subItem.href === pathname) return `Accueil / ${subItem.title}`;
-        }
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const isScrollingUp = currentScrollY < lastScrollY;
+          setShowHeader(isScrollingUp || currentScrollY <= 5);
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
       }
-    }
-    return ""; // Fallback title
-  };
-
-  const currentPageTitle = getCurrentPageTitle();
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="flex w-full flex-col items-center justify-center">
-      {/* Colored Info Bar - Shown on all pages */}
-      <div
-        className={`${barColor} text-white flex h-10 w-full items-center justify-end overflow-hidden px-4 transition-all duration-500 ease-in-out sm:px-6 lg:px-8`}
-      >
-        <div className="flex items-center space-x-6 flex-wrap md:flex-nowrap">
-          <div className="w-5" />
-          <a
-            href="mailto:infos@capec-ci.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whitespace-nowrap text-sm"
-          >
-            infos@capec-ci.org
-          </a>
-          <p className="mt-1 whitespace-nowrap text-xs">(+225) 27 22 44 41 24</p>
-         <div className="flex gap-2">
-           <Link href="https://www.facebook.com/share/1EPYzPPHZ8/" target="_blank">
-            <Facebook className="h-7 w-7 rounded-xl bg-white p-[2px] text-green-700" />
-          </Link>
-           <Link href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/">
-            <Linkedin
-              className="h-7 w-7 rounded-xl  bg-white  p-[4px] text-green-700 transform hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
-          <Link href="https://www.youtube.com/@capeccotedivoire8917">
-            <Youtube
-              className="h-7 w-7 rounded-xl bg-white p-[4px] text-green-700 transform hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
-         </div>
-        </div>
-      </div>
+  
+      <div className=" shadow-sm w-full flex flex-col">
+        {/* Ligne principale : logo, recherche, réseaux sociaux, bouton */}
+        <div className=" text-center bg-green-700 w-full flex items-center  px-4 py-2 gap-4">
+        <p className=" ml-auto text-white italic">la recherche au service du développement</p>
 
-      {/* Logo and Mobile Menu Button Container */}
-      <div className="w-full flex flex-col items-center px-4 py-2">
-        <Link href="/" className="flex items-center">
-          <div className="relative flex h-[140px] w-[136px] items-center justify-center overflow-hidden rounded-sm">
-            <Image
-              src="/images/logocapec.png"
-              alt="CAPEC Logo"
-              width={136}
-              height={136}
-              className="object-contain"
-            />
+          {/* Réseaux sociaux */}
+          <div className="ml-auto flex items-end gap-3">
+            <Link href="https://www.facebook.com/share/1EPYzPPHZ8/" target="_blank">
+              <Facebook className="h-6 w-6 text-white hover:text-ci-orange" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/" target="_blank">
+              <Linkedin className="h-6 w-6 text-white hover:text-ci-orange" />
+            </Link>
+            <Link href="https://www.youtube.com/@capeccotedivoire8917" target="_blank">
+              <Youtube className="h-6 w-6 text-white hover:text-ci-orange" />
+            </Link>
           </div>
-        </Link>
 
-        {/* Mobile Navigation Toggle */}
-        <div className="md:hidden self-end">
-          <MobileNav />
+        
         </div>
-      </div>
-
-      {/* Desktop Menu */}
-      <nav className="hidden items-center space-x-8 rounded-md bg-white/90 px-4 py-2 md:flex">
-        {navItems.map((item) => {
-          const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
-
-          if (item.submenu) {
-            return (
-              <div
-                key={item.title}
-                className="group relative"
-                onMouseEnter={() => setHoverItem(item.title)}
-                onMouseLeave={() => setHoverItem(null)}
-              >
+        {/* Menu principal sur barre verte */}
+        <nav className="w-full text-black flex items-center justify-center min-h-[180px] px-2 md:px-8">
+        <Link href="/" className="flex items-center">
+            <div className="absolute top-0 left-0 flex h-[180px] w-[220px] items-center justify-center overflow-visible">
+              <Image
+                src="/images/logocapec.png"
+                alt="CAPEC Logo"
+                width={170}
+                height={170}
+                className="object-contain"
+                priority
+              />
+            </div>
+          </Link>
+          <div className="flex flex-wrap items-center gap-2 md:gap-6 w-full max-w-screen-xl">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              if (item.submenu) {
+                return (
+                  <div
+                    key={item.title}
+                    className="group relative"
+                    onMouseEnter={() => setHoverItem(item.title)}
+                    onMouseLeave={() => setHoverItem(null)}
+                  >
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "flex items-center px-3 py-2 text-base font-medium transition-colors  hover:text-orange-300 rounded-md",
+                        isActive ? " text-black" : ""
+                      )}
+                    >
+                      {item.title}
+                      <ChevronDown className="ml-1 h-5 w-5" />
+                    </Link>
+                    <div
+                      className={cn(
+                        "absolute left-0 top-full z-50 pt-2",
+                        hoverItem === item.title ? "block" : "hidden group-hover:block"
+                      )}
+                    >
+                      <div className="w-56 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                        <div className="py-1" role="menu" aria-orientation="vertical">
+                          {item.submenu.map((subItem) => {
+                            const isSubActive = pathname === subItem.href;
+                            return (
+                              <Link
+                                key={subItem.title}
+                                href={subItem.href}
+                                className={cn(
+                                  "relative block px-4 py-1.5 text-base transition-all duration-200 group/item",
+                                  isSubActive ? " text-black" : "text-gray-700 hover:text-green-700"
+                                )}
+                                role="menuitem"
+                              >
+                                <span className="relative z-10">{subItem.title}</span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
                 <Link
+                  key={item.title}
                   href={item.href}
                   className={cn(
-                    "flex items-center py-1.5 text-base font-medium transition-colors hover:text-ci-orange",
-                    isActive ? "" : "text-foreground"
+                    "px-3 py-2 text-base font-medium transition-colors  hover:text-orange-300 rounded-md",
+                    isActive ? " text-black" : ""
                   )}
                 >
                   {item.title}
-                  <ChevronDown className="ml-1 h-5 w-5" />
                 </Link>
-
-                <div
-                  className={cn(
-                    "absolute left-0 top-full z-50 pt-2",
-                    hoverItem === item.title ? "block" : "hidden group-hover:block"
-                  )}
-                >
-                  <div className="w-56 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="py-1" role="menu" aria-orientation="vertical">
-                      {item.submenu.map((subItem) => {
-                        const isSubActive = pathname === subItem.href;
-                        return (
-                          <Link
-                            key={subItem.title}
-                            href={subItem.href}
-                            className={cn(
-                              "relative block px-4 py-1.5 text-base transition-all duration-200 group/item",
-                              isSubActive ? "bg-ci-green text-white" : "text-gray-700 hover:text-white"
-                            )}
-                            role="menuitem"
-                          >
-                            <span
-                              className={cn(
-                                "absolute inset-0 bg-ci-green ease-out",
-                                isSubActive
-                                  ? "scale-x-100"
-                                  : "scale-x-0 group-hover/item:scale-x-100"
-                              )}
-                              aria-hidden="true"
-                            />
-                            <span className="relative z-10">{subItem.title}</span>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          }
-
-          return (
-            <Link
-              key={item.title}
-              href={item.href}
-              className={cn(
-                "py-1.5 text-base font-medium transition-colors hover:text-ci-orange",
-                isActive ? "" : "text-foreground"
-              )}
-            >
-              {item.title}
-            </Link>
-          );
-        })}
-      </nav>
-
-      <hr className="w-full border-solid border-green-700" />
-
-      {/* Section with background image - Hidden on homepage */}
-      {!isHomePage && (
-        <section className="relative w-full ">
-          <div className="relative mx-auto h-[320px] max-w-[1800px] px-4 py-4">
-            <Image
-              src="/images/salles confe.png"
-              alt="Vue d'un espace de travail moderne"
-              fill
-              className="absolute inset-0 h-full w-full object-cover"
-              quality={100}
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/25 to-black/50" />
-            <div className="absolute bottom-36 left-1/2 -translate-x-1/2 text-white text-center">
-              <h2 className="text-2xl font-bold">{currentPageTitle}</h2>
-            </div>
+              );
+            })}
           </div>
-        </section>
-      )}
-    </div>
+        </nav>
+      </div>
+ 
   );
 }
 
@@ -243,7 +193,7 @@ function MobileNav() {
                       onClick={() => toggleSubmenu(item.title)}
                       className={cn(
                         "flex w-full items-center justify-between text-base font-medium transition-colors hover:text-ci-orange py-1",
-                        isActive ? "text-ci-orange" : "text-foreground"
+                        isActive ? "text-black" : "text-foreground"
                       )}
                     >
                       {item.title}
@@ -265,8 +215,8 @@ function MobileNav() {
                               className={cn(
                                 "relative block rounded px-3 py-1 text-base font-medium transition-colors group/mobile",
                                 isSubActive
-                                  ? "bg-ci-green text-white"
-                                  : "text-foreground hover:bg-ci-green hover:text-white"
+                                  ? " text-black"
+                                  : "text-foreground  hover:text-white"
                               )}
                               onClick={() => setOpen(false)}
                             >

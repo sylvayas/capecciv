@@ -50,7 +50,7 @@ export default function PhotothequePage() {
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Photothèque</h1>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Découvrez les moments forts des activités du CAPEC à travers notre galerie de photos.
+            Découvrez les moments forts des activités de la CAPEC à travers notre galerie de photos.
           </p>
         </div>
 
@@ -241,7 +241,7 @@ export default function PhotothequePage() {
 const conferencesPhotos = [
   {
     id: "conf1",
-    title: "Conférence annuelle du CAPEC 2023",
+    title: "Conférence annuelle de la CAPEC 2023",
     date: "15 mars 2023",
     description: "Conférence internationale sur les politiques économiques post-pandémie organisée par le CAPEC.",
     src: "/images/estherubo.jpg?text=Conférence+Annuelle+2023&height=600&width=600",
@@ -339,9 +339,9 @@ const formationsPhotos = [
 const equipesPhotos = [
   {
     id: "eq1",
-    title: "Équipe de direction du CAPEC",
+    title: "Équipe de direction de la CAPEC",
     date: "15 janvier 2023",
-    description: "Photo officielle de l'équipe de direction du CAPEC lors de la cérémonie des vœux.",
+    description: "Photo officielle de l'équipe de direction de la CAPEC lors de la cérémonie des vœux.",
     src: "/images/introduction.jpg?text=Équipe+Direction+CAPEC&height=600&width=600",
   },
   {

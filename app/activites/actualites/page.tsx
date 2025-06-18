@@ -15,7 +15,7 @@ export default function NewsPage() {
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Actualités</h1>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Restez informé des derniers événements, annonces et activités du CAPEC.
+            Restez informé des derniers événements, annonces et activités de la CAPEC.
           </p>
         </div>
 

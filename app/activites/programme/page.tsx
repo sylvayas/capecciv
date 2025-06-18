@@ -14,7 +14,7 @@ export default function ProgrammeActivitesPage() {
           <h1 className="text-4xl font-bold text-gray-900 tracking-wide">Programme d'Activités</h1>
           <div className="w-24 h-1 bg-orange-500 mx-auto mt-2 rounded-full"></div>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto italic">
-            Voyagez à travers les années et découvrez les programmes d'activités du CAPEC de 2008 à 2021.
+            Voyagez à travers les années et découvrez les programmes d'activités de la CAPEC de 2008 à 2021.
           </p>
         </div>
 

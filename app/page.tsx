@@ -103,7 +103,7 @@ const recentPublications = [
 const recentNews = [
   {
     id: "1",
-    title: "Leçon inaugurale du 30e anniversaire de la CAPEC faite par AHOUTOU KOFFI EMMANUEL",
+    title: "Leçon inaugurale du 30ᵉ anniversaire de la CAPEC faite par M. AHOUTOU KOFFI EMMANUEL",
     excerpt:
       "La CAPEC a célébré ses 30 ans les 8 et 9 octobre 2024 à Abidjan, en présence du Ministre Directeur de Cabinet du Vice-Président, M. Emmanuel Ahoutou KOFFI, qui a prononcé une leçon inaugurale marquante. Il a salué l’impact de la CAPEC sur les politiques publiques en Côte d’Ivoire et dans l’UEMOA-CEDEAO, tout en l’invitant à innover face aux défis climatiques, technologiques et industriels. Cet anniversaire a été l’occasion de dresser le bilan de trois décennies d’expertise et de tracer des perspectives pour un développement durable inclusif.",
     date: "8 octobre 2024",
@@ -111,7 +111,7 @@ const recentNews = [
   },
   {
     id: "2",
-    title: "Diner des 30e anniversaire de la CAPEC",
+    title: "Diner des 30ᵉ anniversaire de la CAPEC",
     excerpt:
       "Joyeux 30e anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
     date: "9 octobre 2024",
@@ -237,17 +237,17 @@ export default function Home() {
         >
           <div className="container px-4 md:px-6">
             <motion.div
-              className="flex flex-col items-center mt-8 mb-8 justify-center space-y-4 text-center py-6 bg-orange-400 text-white sm:mt-16 sm:mb-14 sm:py-10"
+              className="flex flex-col items-center mt-8 mb-8 justify-center space-y-4 text-center py-6 bg-orange-200 text-white sm:mt-16 sm:mb-14 sm:py-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
               <div className="space-y-2 px-4 sm:px-0">
-                <h2 className="text-2xl tracking-tighter mb-4 sm:text-3xl md:text-4xl font-bold">
+                <h2 className="text-2xl text-black tracking-tighter mb-4 sm:text-3xl md:text-4xl font-bold">
                   Notre Mission
                 </h2>
-                <p className="max-w-[1090px] text-left sm:text-justify text-white font-extralight text-base sm:text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[1090px] text-left sm:text-justify  text-black  text-base sm:text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   La CAPEC a pour mission de fournir des analyses économiques approfondies pour éclairer les décisions de politique publique en Côte d'Ivoire. 
                   Nous œuvrons au renforcement des capacités des acteurs nationaux en matière de gestion économique, de planification stratégique et de mise en œuvre de réformes. 
                   Parallèlement, nous encourageons la recherche appliquée et l'innovation afin de promouvoir une croissance inclusive et durable, en répondant aux défis économiques locaux.
@@ -383,7 +383,7 @@ export default function Home() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Actualités</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Restez informé des derniers événements et annonces du CAPEC.
+                Restez informé des derniers événements et annonces de la CAPEC.
               </p>
             </motion.div>
             <motion.div

@@ -14,7 +14,7 @@ export default function RapportActivitePage() {
           <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Rapport d'Activité</h1>
           <div className="w-24 h-1 bg-orange-400  mx-auto mt-2 rounded-full"></div>
           <p className="mt-4 text-gray-600 max-w-xl mx-auto text-lg">
-            Explorez les rapports d'activités du CAPEC de 2007 à 2020 avec élégance.
+            Explorez les rapports d'activités de la CAPEC de 2007 à 2020 avec élégance.
           </p>
         </div>
 
