@@ -12,7 +12,7 @@ import { MainNav } from "@/components/main-nav"
 export default function ChercheurPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      
       <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">

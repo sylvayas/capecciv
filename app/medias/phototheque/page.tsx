@@ -265,7 +265,7 @@ const conferencesPhotos = [
     title: "Conférence Internationnal Japan Corner ",
     date: "22 février 2024",
     description: "Faire progresser l'indistrualisation et améliorer la productivité du travail.",
-    src: "/images/capec_image/japan.jpg?text=Forum+Économique+Régional&height=600&width=600",
+    src: "/images/japanconferencecapec.jpg?text=Forum+Économique+Régional&height=600&width=600",
   },
 
 ]
@@ -313,10 +313,10 @@ const formationsPhotos = [
   },
   {
     id: "form2",
-    title: "Atelier sur l'évaluation des politiques publiques",
-    date: "18 janvier 2023",
-    description: "Atelier pratique sur les méthodes d'évaluation d'impact des politiques publiques.",
-    src: "/images/10esommetdesthinkstankdafriquev1.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
+    title: "Diner des 30ᵉ anniversaire de la CAPEC",
+    date: "09 octobre 2024",
+    description: "Joyeux 30e anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
+    src: "/images/28.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
   },
   {
     id: "form3",
