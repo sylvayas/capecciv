@@ -45,7 +45,7 @@ export default function RapportActivitePage() {
 }
 
 const annualReports = [
-  { id: "report2020", title: "Rapport d'Activité 2020", year: "2020", pdfUrl: "/images/rapport activite/rapport 2020.pdf" },
+  { id: "report2020", title: "Rapport d'Activité 2020", year: "2020", },
   { id: "report2019", title: "Rapport d'Activité 2019", year: "2019", pdfUrl: "/images/rapport activite/rapport 2019.pdf" },
   { id: "report2018", title: "Rapport d'Activité 2018", year: "2018", pdfUrl: "/images/rapport activite/rapport 2018.pdf" },
   { id: "report2017", title: "Rapport d'Activité 2017", year: "2017", pdfUrl: "/images/rapport activite/rapport 2017.pdf" },
