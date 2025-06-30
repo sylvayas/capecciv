@@ -32,45 +32,30 @@ export default function MotDuDirecteurPage() {
             </div>
           </div>
           <div className="md:col-span-2 space-y-6 text-muted-foreground">
-            <p className="text-xl font-medium text-foreground">Chers visiteurs, partenaires et collaborateurs,</p>
-            <p>
-              C'est avec un grand plaisir que je vous souhaite la bienvenue sur le site web de la Cellule d'Analyse de
-              Politiques Économiques du CIRES (CAPEC). En tant que directeur, je suis honoré de vous présenter notre
-              institution, ses missions et ses réalisations.
+            <p className="text-xl font-medium text-foreground">Chers visiteurs,</p>
+            <p className="text-justify">
+             C’est avec un immense plaisir que je vous souhaite la bienvenue sur le site officiel de la Cellule d’Analyse de Politiques Économiques du CIRES, (CAPEC). Cet espace numérique se veut une vitrine dynamique de notre institution, un lieu de partage, d’informations et de dialogue au service de la recherche économique appliquée et de l’aide à la décision publique.
+            </p>
+            <p className="text-justify">
+              Depuis sa création en 1993, la CAPEC s’est positionnée comme un acteur majeur de l’analyse des politiques économiques en Côte d’Ivoire et en Afrique. Notre mission est de produire des analyses rigoureuses, basées sur des données probantes et fiables, pour éclairer les choix stratégiques des décideurs publics, des acteurs du secteur privé et de la société civile, des partenaires au développement et de l’ensemble des parties prenantes engagées dans le développement économique et social. Elle s’est positionnée comme un pont entre le monde académique et tous les acteurs du développement. 
+            </p>
+            <p className="text-justify">
+             Ainsi, notre site internet, rénové pour l’adapter à vos besoins, est désormais le canal à privilégier pour vous tenir informés au quotidien sur nos réalisations. À travers ce site, nous vous invitons à découvrir nos travaux de recherche, nos publications, nos projets en cours, nos outils d’analyse, ainsi que nos activités de formation et de diffusion des connaissances. Je vous invite donc à visiter régulièrement notre site web afin de disposer des informations actualisées sur nos activités.
+            </p>
+            <p className="text-justify">
+              Nous croyons fermement que la connaissance partagée est un levier puissant de transformation. C’est pourquoi la CAPEC s’engage à rester accessible, ouverte et à l’écoute des besoins de la société.
+            </p>
+            <p className="text-justify">
+             Bonne navigation à toutes et à tous,
+             et merci de votre intérêt pour notre travail.
+
             </p>
             <p>
-              Depuis sa création en 1998, la CAPEC s'est imposé comme un centre d'excellence en matière d'analyse
-              économique et de recherche appliquée. Notre mission principale est de contribuer au développement
-              économique et social à travers la recherche, l'analyse et la formulation de politiques économiques fondées
-              sur des données probantes.
+             Professeur Alban AHOURE
             </p>
-            <p>
-              Dans un monde en constante évolution, marqué par des défis économiques, sociaux et environnementaux
-              complexes, le rôle des institutions de recherche comme la CAPEC est plus crucial que jamais. Nous nous
-              efforçons de produire des analyses rigoureuses et pertinentes pour éclairer les décisions politiques et
-              contribuer au débat public sur les enjeux économiques majeurs.
-            </p>
-            <p>
-              Notre équipe, composée de chercheurs et d'analystes hautement qualifiés, travaille sur un large éventail
-              de thématiques, notamment la macroéconomie, le développement durable, les politiques sociales, l'économie
-              internationale et l'intégration régionale. Nous accordons une importance particulière à la formation de la
-              prochaine génération d'économistes et d'analystes, contribuant ainsi au renforcement des capacités
-              nationales et régionales.
-            </p>
-            <p>
-              La CAPEC entretient des partenariats fructueux avec de nombreuses institutions nationales et
-              internationales, ce qui nous permet d'enrichir nos perspectives et d'élargir notre champ d'action. Ces
-              collaborations sont essentielles pour relever les défis économiques actuels et futurs.
-            </p>
-            <p>
-              Je vous invite à explorer notre site web pour découvrir nos publications, nos activités et nos projets en
-              cours. N'hésitez pas à nous contacter pour toute question ou proposition de collaboration.
-            </p>
-            <p className="text-xl font-medium text-foreground">
-              Je vous remercie de votre intérêt pour la CAPEC et vous souhaite une excellente visite.
-            </p>
-            <div className="pt-4">
-              <p className="font-medium">Prof. AHOURE Alban A.E.</p>
+         
+            <div className="pt-4 font-bold text-black text-lg">
+             
               <p>Directeur de la CAPEC</p>
             </div>
           </div>

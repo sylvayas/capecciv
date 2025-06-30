@@ -232,26 +232,7 @@ export default function OrganigrammePage() {
           </Card>
         </div> */}
         <div className="mt-8 grid gap-8 md:grid-cols-4">
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="font-bold text-lg mb-4">ÉQUIPE DE DIRECTION</h3>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Prof. AHOURE Alban A.E.</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Prof. KIMOU Assi José Carlos</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Dr KRAMO Kouakou Germain</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
+        
           <Card>
             <CardContent className="p-6">
               <h3 className="font-bold text-lg mb-4">COMITÉ DE PILOTAGE</h3>
@@ -291,6 +272,29 @@ export default function OrganigrammePage() {
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
                   <span>Dr DIARRA Ibrahim</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="font-bold text-lg mb-4">ÉQUIPE DE DIRECTION</h3>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center space-x-2">
+                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
+                  <span>Prof. AHOURE Alban A.E.</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
+                  <span>Prof. KIMOU Assi José Carlos</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
+                  <span>Dr KRAMO Kouakou Germain</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
+                  <span>M. NEZIT Denis</span>
                 </li>
               </ul>
             </CardContent>
@@ -336,10 +340,6 @@ export default function OrganigrammePage() {
             <CardContent className="p-6">
               <h3 className="font-bold text-lg mb-4">PERSONNEL D'APPUI</h3>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>M. NEZIT Denis</span>
-                </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
                   <span>M. MEL Trihji Juste S</span>

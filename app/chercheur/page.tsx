@@ -76,41 +76,7 @@ function ResearcherCard({ researcher }: { researcher: any }) {
         
         {/* trait de séparation */}
         <div className="w-full h-px bg-gray-200 my-3"></div>
-
-        {/* Icônes  */}
-       {/* <div className="flex justify-center space-x-4 mb-4">
-          <a href="#" className="text-gray-400 hover:text-ci-orange transition-colors">
-            <FacebookIcon className="w-5 h-5" />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-ci-orange transition-colors">
-            <TwitterIcon className="w-5 h-5" />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-ci-orange transition-colors">
-            <LinkedInIcon className="w-5 h-5" />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-ci-orange transition-colors">
-            <MailIcon className="w-5 h-5" />
-          </a>
-        </div>*/}
-        
-        {/* Icônes expertise - Version corrigée */}
-        {/* {researcher.expertise && researcher.expertise.length > 0 && (
-          <div className="mt-2 flex flex-wrap justify-center gap-3">
-            {researcher.expertise.map((exp: string, index: number) => (
-              <div key={`${researcher.id}-expertise-${index}`} className="flex flex-col items-center" title={exp}>
-                <div className="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-ci-orange/20 flex items-center justify-center transition-colors">
-                  <span className="text-xs text-gray-500 group-hover:text-ci-orange transition-colors">
-                    {exp[0].toUpperCase()}
-                  </span>
-                </div>
-                <span className="text-xs mt-1 text-gray-500 group-hover:text-ci-orange">
-                  {exp.length > 8 ? `${exp.substring(0, 6)}...` : exp}
-                </span>
-              </div>
-            ))}
-          </div>
-        )} */}
-        
+  
         {/* Tags expertise */}
         {researcher.expertise && researcher.expertise.length > 0 && (
           <div className="mt-3 flex flex-wrap gap-2">
@@ -163,7 +129,7 @@ const seniorResearchers = [
     id: "5",
     name: "Prof BEKE TITE E.",
     title: "Economiste de l’Environnement et Chercheur Senior à la CAPEC.",
-    photo: "/images/photoscapec/photosa/photoa07.jpg",
+    photo: "/images/converted_img1.png",
     expertise: ["Economie"]
   },
   {
@@ -194,13 +160,7 @@ const seniorResearchers = [
     photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
     expertise: ["Macroéconomie",]
   },
-  // {
-  //   id: "10",
-  //   name: "Dr Boniface KOUADIO",
-  //   title: "Chercheur à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC).",
-  //   photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
-  //   expertise: ["microéconomie et macroéconomie","Management de l’innovation","Techniques quantitatives"]
-  // },
+ 
   // {
   //   id: "11",
   //   name: "Dr TOURÉ Talnan Aboulaye",
