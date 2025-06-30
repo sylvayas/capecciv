@@ -136,7 +136,7 @@ const seniorResearchers = [
     id: "6",
     name: "Dr Nohoua TRAORE",
     title: "Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques  du  Cires (CAPEC). ",
-    photo: "/images/placeholder-icon.png",
+    photo: "/images/userimage.webp",
     expertise: ["Economie"]
   },
   {
