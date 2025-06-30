@@ -1,10 +1,9 @@
 import type React from "react"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = { className: "" }
 
 export const metadata = {
   title: "CAPEC - Cellule d'Analyse de Politiques Économiques du CIRES",
@@ -22,7 +21,7 @@ export default function RootLayout({
 
     <html lang="fr" suppressHydrationWarning>
      <head>
-     <link rel="" href="/logocapec.ico" />
+     <link rel="icon" href="/logocapec.ico" />
      </head>
         <body className={inter.className}>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -36,4 +35,3 @@ export default function RootLayout({
 
 
 
-import './globals.css'
