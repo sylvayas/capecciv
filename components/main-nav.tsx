@@ -208,81 +208,83 @@ export function MainNav() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden absolute top-[100px] right-0 z-50 w-64 sm:w-64 border-t border-gray-200 bg-white px-2 sm:px-4 py-2 sm:py-4 shadow-2xl rounded-md">
-          <nav className="flex flex-col space-y-1 sm:space-y-2">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
-              if (item.submenu) {
-                return (
-                  <div key={item.title} className="space-y-0.5 sm:space-y-1">
-                    <button
-                      onClick={() => setOpenMobileSubmenu(openMobileSubmenu === item.title ? null : item.title)}
-                      className={cn(
-                        "flex w-full items-center justify-between text-sm sm:text-base font-medium transition-colors hover:text-ci-orange py-0.5 sm:py-1",
-                        isActive ? "text-black" : "text-foreground"
-                      )}
-                    >
-                      {item.title}
-                      <ChevronDown
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black bg-opacity-30 sm:hidden"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setOpenMobileSubmenu(null);
+            }}
+          />
+          <div className="sm:hidden fixed top-[100px] left-0 z-50 w-full h-[calc(100vh-100px)] border-t border-gray-200 bg-white px-4 py-4 shadow-2xl rounded-b-md overflow-y-auto">
+            <nav className="flex flex-col space-y-2">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+                if (item.submenu) {
+                  return (
+                    <div key={item.title} className="space-y-1">
+                      <button
+                        onClick={() => setOpenMobileSubmenu(openMobileSubmenu === item.title ? null : item.title)}
                         className={cn(
-                          "h-3 w-3 sm:h-4 sm:w-4 transition-transform",
-                          openMobileSubmenu === item.title ? "rotate-180" : ""
+                          "flex w-full items-center justify-between text-base font-medium transition-colors hover:text-ci-orange py-2 px-2 rounded-md bg-gray-50",
+                          isActive ? "text-black" : "text-foreground"
                         )}
-                      />
-                    </button>
-                    {openMobileSubmenu === item.title && (
-                      <div className="space-y-0.5 sm:space-y-1 border-l-2 border-gray-200 pl-2 sm:pl-4">
-                        {item.submenu.map((subItem) => {
-                          const isSubActive = pathname === subItem.href;
-                          return (
-                            <Link
-                              key={subItem.title}
-                              href={subItem.href}
-                              className={cn(
-                                "relative block rounded px-2 sm:px-3 py-0.5 sm:py-1 text-xs sm:text-base font-medium transition-colors group/mobile",
-                                isSubActive
-                                  ? "text-black"
-                                  : "text-foreground hover:text-white"
-                              )}
-                              onClick={() => {
-                                setMobileMenuOpen(false);
-                                setOpenMobileSubmenu(null);
-                              }}
-                            >
-                              <span
+                        aria-expanded={openMobileSubmenu === item.title}
+                        aria-controls={`submenu-${item.title}`}
+                      >
+                        {item.title}
+                        <ChevronDown
+                          className={cn(
+                            "h-4 w-4 transition-transform",
+                            openMobileSubmenu === item.title ? "rotate-180" : ""
+                          )}
+                        />
+                      </button>
+                      {openMobileSubmenu === item.title && (
+                        <div id={`submenu-${item.title}`} className="space-y-1 border-l-2 border-ci-green pl-4 ml-2 bg-gray-100 rounded-md">
+                          {item.submenu.map((subItem) => {
+                            const isSubActive = pathname === subItem.href;
+                            return (
+                              <Link
+                                key={subItem.title}
+                                href={subItem.href}
                                 className={cn(
-                                  "absolute inset-0 bg-ci-green ease-out",
+                                  "block rounded px-2 py-2 text-sm font-medium transition-colors",
                                   isSubActive
-                                    ? "scale-x-100"
-                                    : "scale-x-0 group-hover/mobile:scale-x-100"
+                                    ? "text-ci-green bg-white"
+                                    : "text-foreground hover:text-ci-green hover:bg-white"
                                 )}
-                                aria-hidden="true"
-                              />
-                              <span className="relative z-10">{subItem.title}</span>
-                            </Link>
-                          );
-                        })}
-                      </div>
+                                onClick={() => {
+                                  setMobileMenuOpen(false);
+                                  setOpenMobileSubmenu(null);
+                                }}
+                              >
+                                {subItem.title}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className={cn(
+                      "py-2 px-2 rounded-md text-base font-medium transition-colors hover:text-ci-orange hover:bg-gray-50",
+                      isActive ? "text-ci-orange" : "text-foreground"
                     )}
-                  </div>
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
                 );
-              }
-              return (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className={cn(
-                    "py-0.5 sm:py-1 text-sm sm:text-base font-medium transition-colors hover:text-ci-orange",
-                    isActive ? "text-ci-orange" : "text-foreground"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.title}
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
+              })}
+            </nav>
+          </div>
+        </>
       )}
     </div>
   );

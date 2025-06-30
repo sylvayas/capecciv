@@ -143,14 +143,14 @@ const seniorResearchers = [
     id: "7",
     name: "Dr Féissal ASSOUM",
     title: "Chercheur et Economiste du développement à la  (CAPEC)",
-    photo: "/images/photoscapec/photosb/photob5.jpg",
+    photo: "/images/converted_img3.png",
     expertise: ["Economie",]
   },
   {
     id: "8",
     name: "Dr BONI",
     title: "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
-    photo: "/images/photoscapec/photosc/photoc2.jpg",
+    photo: "/images/converted_img4.png",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
   },
   {
