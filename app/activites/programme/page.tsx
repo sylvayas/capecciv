@@ -63,10 +63,8 @@ const annualPrograms = [
   { id: "program2016", title: "Programme d'Activités 2016", year: "2016", pdfUrl: "/images/programme activités/activité 2016.pdf" },
   { id: "program2015", title: "Programme d'Activités 2015", year: "2015", pdfUrl: "/images/programme activités/activité2015.pdf" },
   { id: "program2014", title: "Programme d'Activités 2014", year: "2014", pdfUrl: "/images/programme activités/activite2014.pdf" },
-  { id: "program2013", title: "Programme d'Activités 2013", year: "2013", pdfUrl: "/images/programme activités/.pdf" },
   { id: "program2012", title: "Programme d'Activités 2012", year: "2012", pdfUrl: "/images/programme activités/activite2012.pdf" },
   { id: "program2011", title: "Programme d'Activités 2011", year: "2011", pdfUrl: "/images/programme activités/activite2011.pdf" },
-  { id: "program2010", title: "Programme d'Activités 2010", year: "2010", pdfUrl: "/images/programme activités/.pdf" },
   { id: "program2009", title: "Programme d'Activités 2009", year: "2009", pdfUrl: "/images/programme activités/activite2009.pdf" },
   { id: "program2008", title: "Programme d'Activités 2008", year: "2008", pdfUrl: "/images/programme activités/activite2008.pdf" },
 ]
