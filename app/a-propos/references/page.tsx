@@ -33,7 +33,7 @@ export default function ReferencesPage() {
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
             <TabsTrigger value="internationales">Institutions Internationales</TabsTrigger>
             <TabsTrigger value="regionales">Institutions Régionales</TabsTrigger>
-            <TabsTrigger value="nationales-public">Institutions Public</TabsTrigger>
+            <TabsTrigger value="nationales-public">Institutions Publiques</TabsTrigger>
             <TabsTrigger value="prive"> Secteur Privé</TabsTrigger>
             <TabsTrigger value="civile"> Société Civile</TabsTrigger>
           </TabsList>
