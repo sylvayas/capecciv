@@ -196,12 +196,12 @@ export function Footer() {
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
               {/* Sous-menus dynamiques */}
               <div className="flex flex-col gap-2">
-                <Link href="/a-propos/historique-objectif" className="hover:text-ci-orange transition-colors">Historique et Objectif</Link>
+                <Link href="/a-propos/historique-objectif" className="hover:text-ci-orange transition-colors">Historiques et Objectifs</Link>
                 <Link href="/a-propos/organigramme" className="hover:text-ci-orange transition-colors">Organigramme</Link>
                 <Link href="/a-propos/nos-activites" className="hover:text-ci-orange transition-colors">Nos Activités</Link>
                 <Link href="/a-propos/capec-en-chiffres" className="hover:text-ci-orange transition-colors">La CAPEC en Chiffres</Link>
                 <Link href="/a-propos/references" className="hover:text-ci-orange transition-colors">Quelques Références</Link>
-                <Link href="/ressources/recherches" className="hover:text-ci-orange transition-colors">Projet de recherches</Link>
+                <Link href="/ressources/recherches" className="hover:text-ci-orange transition-colors">Projets de recherches</Link>
                 <Link href="/ressources/etudes" className="hover:text-ci-orange transition-colors">Etudes</Link>
               </div>
               <div className="flex flex-col gap-2">
@@ -210,8 +210,8 @@ export function Footer() {
                 <Link href="/activites/compte-rendu" className="hover:text-ci-orange transition-colors">CR d'actualités</Link>
                 <Link href="/activites/interview" className="hover:text-ci-orange transition-colors">Interview - Question</Link>
                 <Link href="/activites/actualites" className="hover:text-ci-orange transition-colors">Actualités</Link>
-                <Link href="/media/photothèques" className="hover:text-ci-orange transition-colors">Photothèques</Link>
-                <Link href="/media/vidéothèques" className="hover:text-ci-orange transition-colors">Vidéothèques</Link>
+                <Link href="/medias/photothèques" className="hover:text-ci-orange transition-colors">Photothèques</Link>
+                <Link href="/medias/vidéothèques" className="hover:text-ci-orange transition-colors">Vidéothèques</Link>
                
               </div>
             </div>
@@ -274,9 +274,7 @@ export function Footer() {
             <Link href="#" aria-label="twitter">
               <Twitter className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
-            <Link href="#" aria-label="Instagram">
-              <Instagram className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
-            </Link>
+         
           </div>
           {/* Copyright */}
           <div className="text-xs text-gray-100 text-center">

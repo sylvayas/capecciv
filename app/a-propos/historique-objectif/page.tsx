@@ -11,7 +11,7 @@ export default function HistoriqueObjectifPage() {
       <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Historique et Objectif</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Historiques et Objectifs</h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
         </div>
 
@@ -157,7 +157,7 @@ export default function HistoriqueObjectifPage() {
                       œuvre des politiques économiques, la CAPEC connait une mutation institutionnelle.
                       Elle aura besoin de plus de ressources de l’Etat, mais souhaite préserver son autonomie afin de permettre aux chercheurs
                       d’avoir des contributions plus pertinentes à l’analyse de la politique économique en CI.En attendant cette mutation, 
-                      la CAPEC se présente à ce jour, 
+                      la CAPEC se présente à ce jour,comme 
 
                     </p>
                     <div className="mt-4 flex items-center">
@@ -166,11 +166,17 @@ export default function HistoriqueObjectifPage() {
                         Une référence dans le domaine de l'analyse et de gestion des politiques macroéconomiques en Côte
                         d'Ivoire
                       </p>
+                    
+                    </div>
+                    <div className="mt-4 flex items-center">
+                      <Award className="h-6 w-6 text-ci-green mr-2" />
+                      <p className="text-base font-medium">
+                      un précieux organe de référence dans la maîtrise du développement économique de la Côte d'Ivoire.
+                      </p>
+                    
                     </div>
                     <p className="text-base mt-8 text-muted-foreground">
-                    Elle se signale, comme un précieux organe de référence dans la maîtrise du développement économique de la Côte d'Ivoire. 
                     Cette performance est à mettre sur le compte de la qualité de ses produits. Produits en tant que résultats de la recherche et produits en tant que Producteurs de la Recherche.
-
                     </p>
                   </div>
                 </div>

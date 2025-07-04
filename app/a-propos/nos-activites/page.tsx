@@ -38,7 +38,7 @@ export default function NosActivitesPage() {
     {
       icon: <Calendar className="h-6 w-6 text-ci-orange" />,
       bgColor: "bg-orange-100",
-      title: "Projet d'étude",
+      title: "Etude",
       description:
         "l'Elaboration  de l'etude de la SMRT",
       imageSrc: "/images/Nos_activités/Elaboration_de_la_SRMT.jpeg",

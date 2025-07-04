@@ -15,7 +15,7 @@ export default function NewsPage() {
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Actualités</h1>
           <p className="text-muted-foreground md:text-xl max-w-[800px]">
-            Restez informé des derniers événements, annonces et activités de la CAPEC.
+            Restez informés des derniers événements, annonces et activités de la CAPEC.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ const featuredNews = {
   id: "1",
   title: "30e anniversaire de la CAPEC",
   excerpt:
-    "Les 8 et 9 octobre 2024, la CAPEC a célébré ses 30 ans d’existence à Abidjan. L'événement, placé sous le haut patronage du Vice-Président de la République, Tiémoko Meyliet Koné, a été l'occasion de faire le bilan des contributions de la CAPEC à la transformation structurelle de la Côte d'Ivoire et à l'intégration sous-régionale entre 1993 et 2023.",
+    "Les 8 et 9 octobre 2024, la CAPEC a célébrée ses 30 ans d’existence à Abidjan. L'événement, placé sous le haut patronage du Vice-Président de la République, Tiémoko Meyliet Koné, a été l'occasion de faire le bilan des contributions de la CAPEC à la transformation structurelle de la Côte d'Ivoire et à l'intégration sous-régionale entre 1993 et 2023.",
   date: "Publié le 8 et 9 octobre 2024",
 }
 

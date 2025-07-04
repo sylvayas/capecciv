@@ -86,14 +86,7 @@ export function MainNav() {
                 )}
               />
             </Link>
-            <Link href="#" target="_blank">
-              <Instagram
-                className={cn(
-                  "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
-                  isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"
-                )}
-              />
-            </Link>
+           
           </div>
         </div>
       </div>

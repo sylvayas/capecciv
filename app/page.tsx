@@ -113,7 +113,7 @@ const recentNews = [
     id: "2",
     title: "Diner des 30ᵉ anniversaire de la CAPEC",
     excerpt:
-      "Joyeux 30e anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
+      "Joyeux 30ᵉ anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
     date: "9 octobre 2024",
     image: "/images/19.jpg",
   },
@@ -248,9 +248,10 @@ export default function Home() {
                   Notre Mission
                 </h2>
                 <p className="max-w-[1090px] text-left sm:text-justify  text-black  text-base sm:text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  La CAPEC a pour mission de fournir des analyses économiques approfondies pour éclairer les décisions de politique publique en Côte d'Ivoire. 
-                  Nous œuvrons au renforcement des capacités des acteurs nationaux en matière de gestion économique, de planification stratégique et de mise en œuvre de réformes. 
-                  Parallèlement, nous encourageons la recherche appliquée et l'innovation afin de promouvoir une croissance inclusive et durable, en répondant aux défis économiques locaux.
+                La CAPEC a pour mission de fournir des analyses économiques approfondies afin d’éclairer les décisions de politique publique en Côte d'Ivoire.
+                Nous œuvrons au renforcement des capacités des acteurs nationaux en matière de gestion économique, de planification stratégique et de mise en œuvre des réformes.
+                Parallèlement, nous encourageons la recherche appliquée et l'innovation afin de promouvoir une croissance inclusive et durable, répondant aux défis économiques locaux.
+
                 </p>
               </div>
             </motion.div>
@@ -333,7 +334,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Projets de recherche Récente</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Projets de recherche Récents</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Découvrez nos dernier projets de recherches.
               </p>
@@ -383,7 +384,7 @@ export default function Home() {
             >
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Actualités</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Restez informé des derniers événements et annonces de la CAPEC.
+                Restez informés des derniers événements et annonces de la CAPEC.
               </p>
             </motion.div>
             <motion.div
@@ -436,7 +437,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">La CAPEC en images</h2>
               <div className="w-20 h-1 bg-ci-orange mx-auto my-2"></div>
               <p className="max-w-[700px] text-muted-foreground">
-                Découvrez nos activités, nos événements et notre équipe à travers cette galerie d'images.
+              Découvrez nos activités, nos événements et notre équipe à travers cette galerie d’images.
               </p>
             </motion.div>
             <motion.div
