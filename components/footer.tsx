@@ -210,8 +210,8 @@ export function Footer() {
                 <Link href="/activites/compte-rendu" className="hover:text-ci-orange transition-colors">CR d'actualités</Link>
                 <Link href="/activites/interview" className="hover:text-ci-orange transition-colors">Interview - Question</Link>
                 <Link href="/activites/actualites" className="hover:text-ci-orange transition-colors">Actualités</Link>
-                <Link href="/medias/photothèques" className="hover:text-ci-orange transition-colors">Photothèques</Link>
-                <Link href="/medias/vidéothèques" className="hover:text-ci-orange transition-colors">Vidéothèques</Link>
+                <Link href="/medias/phototheque" className="hover:text-ci-orange transition-colors">Photothèques</Link>
+                <Link href="/medias/videotheque" className="hover:text-ci-orange transition-colors">Vidéothèques</Link>
                
               </div>
             </div>
