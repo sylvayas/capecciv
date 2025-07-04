@@ -144,7 +144,7 @@ export default function HistoriqueObjectifPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                       <div className="p-4 text-white">
-                        <p className="text-base font-medium">Plus de 30 ans d'expertise en analyse économique</p>
+                        <p className="text-base font-medium">VISITE DU PROF.ESTHER DUFLO,PRIX NOBEL DE L'ECONOMIE 2019</p>
                       </div>
                     </div>
                   </div>

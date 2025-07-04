@@ -13,14 +13,14 @@ import ReferencesPage from "./a-propos/references/page";
 // Carousel events data
 const carouselEvents = [
   {
-    title: "10e SOMMET DES THINKS TANK d'Afrique",
+    title: "10e SOMMET DES THINK TANKS d'Afrique",
     date: "8 au 11 Octobre 2024",
     image: "/images/10esommetdesthinkstankdafrique.jpg",
     learnMoreLink: "/activites/programme#event1",
     registerLink: "/activites/programme/inscription",
   },
   {
-    title: "Conference JAPAN CORNER-CAPEC-TODA CORPORATION-JICA",
+    title: "Conférence JAPAN CORNER-CAPEC-TODA CORPORATION-JICA",
     image: "/images/Conference JAPAN CORNER-CAPEC-TODA CORPORATION-JICA 4 MARS2025.jpg",
     date: "4 mars 2025",
     learnMoreLink: "/formations/econometrie",
@@ -28,7 +28,7 @@ const carouselEvents = [
   },
 
   {
-    title: "Conference JICA-JAPAN CORNER-CAPEC",
+    title: "Conférence JICA-JAPAN CORNER-CAPEC",
     date: "22 Février 2024",
     image: "/images/japan.jpg",
     learnMoreLink: "/formations/econometrie",
@@ -264,7 +264,7 @@ export default function Home() {
               {[
                 {
                   icon: FileText,
-                  title: "Recherche",
+                  title: "Projet de recherche",
                   description: "Conduire des recherches de haute qualité sur les questions économiques africaines à fort impact développemental.",
                   image: "/images/actua2.jpg?text=Recherche+Économique&height=120&width=240",
                   alt: "Recherche économique",
@@ -272,7 +272,7 @@ export default function Home() {
                 {
                   icon: Users,
                   title: "Formation",
-                  description: "Évaluation d'impact de l'insertion socio-économique des jeunes vulnérables en Côte d'Ivoire.",
+                  description: "Formation des agents de la DGI",
                   image: "/images/Formation Agent DGI.jpg?text=Recherche+Économique&height=120&width=240",
                   alt: "Formation académique",
                 },
@@ -333,9 +333,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Publications Récentes</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Projets de recherche Récente</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Découvrez nos dernières études et publications.
+                Découvrez nos dernier projets de recherches.
               </p>
             </motion.div>
             <motion.div
@@ -356,9 +356,9 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <Link href="/publication">
+              <Link href="/ressources/recherches">
                 <Button variant="outline" className="border-ci-green text-ci-green hover:bg-green-100">
-                  Voir toutes les publications
+                  Voir tous les projets de recherche
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>

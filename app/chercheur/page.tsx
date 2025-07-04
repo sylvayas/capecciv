@@ -106,56 +106,56 @@ const seniorResearchers = [
   },
   {
     id: "2",
-    name: "Prof KIMOU ASSI JOSE CARLOS",
+    name: "Prof KIMOU Assi Jose Carlos",
     title: "Directeur Adjoint de la CAPEC",
     photo: "/images/directeuradjointdelacapec.jpg",
     expertise: ["Macroéconomie", "Développement", "Analyse économique"]
   },
   {
     id: "3",
-    name: "Dr KRAMO GERMAIN",
+    name: "Dr KRAMO Germain",
     title: "Chercheur- Responsable de la Gestion administrative",
     photo: "/images/chercheurresponsabledelagestionadministrative.jpg?text=Dr.+Jean+Touré&height=100&width=300",
     expertise: ["Administration", "Gestion", "Organisation"]
   },
   {
     id: "4",
-    name: "Dr Isabelle BECHO-N’DRI  ",
+    name: "Dr BECHO-N’DRI Isabelle   ",
     title: "Chercheuse à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
     photo: "/images/Dr BECHO .jpg?text=Dr.+Jean+Touré&height=100&width=300",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
   },
   {
     id: "5",
-    name: "Prof BEKE TITE E.",
+    name: "Prof BEKE Tite E.",
     title: "Economiste de l’Environnement et Chercheur Senior à la CAPEC.",
     photo: "/images/converted_img1.png",
     expertise: ["Economie"]
   },
   {
     id: "6",
-    name: "Dr Nohoua TRAORE",
+    name: "Dr TRAORE Nohoua",
     title: "Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques  du  Cires (CAPEC). ",
     photo: "/images/converted_img5.png",
     expertise: ["Economie"]
   },
   {
     id: "7",
-    name: "Dr Féissal ASSOUM",
+    name: "Dr ASSOUM Féissal",
     title: "Chercheur et Economiste du développement à la  (CAPEC)",
     photo: "/images/converted_img3.png",
     expertise: ["Economie",]
   },
   {
     id: "8",
-    name: "Dr BONI",
+    name: "Dr KOUADIO Boniface",
     title: "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
     photo: "/images/converted_img4.png",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
   },
   {
     id: "9",
-    name: "Dr KACOU YVES THIERRY KACOU",
+    name: "Dr KACOU Yves Thierry Kacou",
     title: "Chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
     photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
     expertise: ["Macroéconomie",]

@@ -22,7 +22,7 @@ export const navItems: NavItem[] = [
         href: "/a-propos/mot-du-directeur",
       },
       {
-        title: "Historique et Objectif",
+        title: "Historiques et Objectifs",
         href: "/a-propos/historique-objectif",
       },
       {
@@ -48,17 +48,17 @@ export const navItems: NavItem[] = [
     href: "",
     submenu: [
       {
-        title: "Recherches",
+        title: "Projets de recherches",
         href: "/ressources/recherches",
       },
       {
-        title: "Etudes",
+        title: "Etudes commandités",
         href: "/ressources/etudes",
       },
     ],
   },
   {
-    title: "PUBLICATION",
+    title: "PUBLICATIONS",
     href: "/publication",
   },
   {
@@ -66,11 +66,11 @@ export const navItems: NavItem[] = [
     href: "",
     submenu: [
       {
-        title: "Programme d'activités",
+        title: "Programmes d'activités",
         href: "/activites/programme",
       },
       {
-        title: "Rapport d'activités",
+        title: "Rapports d'activités",
         href: "/activites/rapport",
       },
       {
@@ -92,11 +92,11 @@ export const navItems: NavItem[] = [
     href: "",
     submenu: [
       {
-        title: "Photothèque",
+        title: "Photothèques",
         href: "/medias/phototheque",
       },
       {
-        title: "Vidéothèque",
+        title: "Vidéothèques",
         href: "/medias/videotheque",
       },
     ],

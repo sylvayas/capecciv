@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Facebook, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Linkedin, Youtube, MapPin, Phone, Smartphone, Mail, Twitter, Instagram } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 // Types pour les partenaires 
 interface Partner {
@@ -23,6 +24,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle");
+  const pathname = usePathname();
 
   // Gestion de la soumission du formulaire
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,149 +42,250 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white py-12">
-      <div className="container mx-auto px-4 md:px-6">
-        {/* Section Partenaires */}
-        <section className="mb-12">
-          <h3 className="text-sm font-bold uppercase mb-6 text-center md:text-left text-ci-orange">
-            Nos partenaires institutionnels
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
-            {partners.map((partner, index) => (
-              <div key={index} className="group flex justify-center">
-                <Link
-                  href={partner.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center"
-                  aria-label={`Visiter le site de ${partner.name}`}
-                >
-                  <div className="relative h-20 w-20 mb-3 transform group-hover:scale-105 transition-transform duration-300">
-                    <Image
-                      src={partner.logo}
-                      alt={`Logo ${partner.name}`}
-                      fill
-                      loading="lazy"
-                      className="object-contain group-hover:opacity-90 transition-opacity duration-300"
-                      sizes="(max-width: 768px) 50vw, 160px"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-300 text-center font-medium group-hover:text-ci-orange transition-colors duration-300">
-                    {partner.name}
-                  </span>
-                </Link>
+    <footer className="bg-[#114232] text-white pt-0 pb-0">
+      {/* PARTENAIRES : défilement horizontal en haut dans un fond blanc, uniquement sur la page d'accueil */}
+      {pathname === "/" && (
+        <div className="bg-white w-full">
+          <section className="w-full py-6">
+            <h3 className="text-xl font-bold text-center text-[#114232] mb-6">Nos principaux partenaires</h3>
+            <div className="overflow-x-hidden">
+              <div className="flex gap-12 min-w-[600px] justify-center items-center animate-scroll-partners">
+                {/* Logos partenaires */}
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/bankmondiale.jpg" alt="Banque Mondiale" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/BAD.jpg" alt="BAD" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/afdrouge.png" alt="AFD" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/IDRC.jpg" alt="IDRC/CRDI" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/PNUD.jpg" alt="PNUD" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/UGECI.png" alt="UGECI" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/CSCI.png" alt="CSCI" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/MEC.jpg" alt="MEC" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/MFBCI.jpg" alt="MFBCI" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/MCLU.png" alt="MCLU" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/DOUANE.jpg" alt="DOUANE" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/CGECI.jpg" alt="CGECI" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/DGI.jpg" alt="DGI" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/MMPE.jpg" alt="MMPE" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/MFFE.jpg" alt="MFFE" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/UEMOA.jpg" alt="UEMOA" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/CEDEAO.webp" alt="CEDEAO" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/CEA.png" alt="CEA" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/republiqueducongo.webp" alt="République du Congo" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/BCR-logo-1024x543.png" alt="BCR" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/BCR.png" alt="BCR" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/UN-Women.png" alt="UN Women" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/UNICEF.png" alt="UNICEF" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/pam.png" alt="PAM" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/FAO.webp" alt="FAO" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/JAPANFUNDATION.webp" alt="Japan Foundation" width={100} height={60} className="object-contain mb-2" />
+                </div>
+                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
+                  <Image src="/images/partenaires/jica.webp" alt="JICA" width={100} height={60} className="object-contain mb-2" />
+                </div>
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
+          {/* Animation CSS pour le défilement horizontal */}
+          <style jsx global>{`
+            @keyframes scroll-partners {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-scroll-partners {
+              display: flex;
+              animation: scroll-partners 30s linear infinite;
+              will-change: transform;
+            }
+          `}</style>
+        </div>
+      )}
 
-        {/* Contenu principal */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-20">
-          {/* Bloc logo et description */}
-          <div className="flex flex-col gap-4 md:w-1/3 mb-8">
-            <Link href="/" className="flex items-center space-x-3">
+      <div className="container mt-8 mx-auto px-4 md:px-8">
+        {/* Grille principale : Contacts / Découvrez / Newsletter */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 items-start">
+          {/* Colonne 1 : Contacts + logo */}
+          <div className="flex flex-col items-center md:items-start">
+            <div className="mb-4">
               <Image
                 src="/images/logocapec.png"
                 alt="Logo de la CAPEC"
-                width={100}
+                width={120}
                 height={100}
-                priority
-                loading="eager"
+                className="mx-auto md:mx-0 border bg-white rounded-xl mb-2"
               />
-              <span className="text-xl font-semibold text-ci-orange">CAPEC</span>
-            </Link>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              La Cellule d'Analyse de Politiques Économiques du CIRES (CAPEC) produit des analyses pour appuyer la prise de décision en matière de développement en Côte d'Ivoire.
-            </p>
+            </div>
+           
+            <div className="text-sm text-gray-100 mb-4 text-center md:text-left">
+              Abidjan, Cocody boulevard des martyrs,
+              en face de l'hôtel communal
+            </div>
+            <a href="https://maps.app.goo.gl/2iQ82grwVVgQTdyW7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ci-orange font-semibold mb-2 hover:underline">
+              <MapPin className="h-5 w-5" />
+              Localisation Google map
+            </a>
+            <ul className="text-sm text-gray-100 flex flex-col gap-2 w-full">
+              <li className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                (225) 27 22 400 040
+              </li>
+              <li className="flex items-center gap-2">
+                <Smartphone className="h-5 w-5" />
+                (225) 05 55 000 322
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                <a href="mailto:info@capec.ci" className="hover:text-ci-orange transition-colors">infos@capecci.com</a>
+              </li>
+            </ul>
           </div>
 
-          {/* Bloc newsletter */}
-          <div className="md:w-1/3">
-            <h3 className="text-sm font-bold uppercase mb-2">Abonnez-vous à notre infolettre</h3>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-2"
-              aria-describedby="newsletter-description"
-            >
+          {/* Colonne 2 : Découvrez (sous-menus) */}
+          <div className="self-center mt-10 w-full">
+            <h3 className="text-lg font-bold uppercase mb-2">NOS SOUS MENUS</h3>
+            <div className="w-10 h-1 bg-ci-orange mb-4" />
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
+              {/* Sous-menus dynamiques */}
+              <div className="flex flex-col gap-2">
+                <Link href="/a-propos/historique-objectif" className="hover:text-ci-orange transition-colors">Historique et Objectif</Link>
+                <Link href="/a-propos/organigramme" className="hover:text-ci-orange transition-colors">Organigramme</Link>
+                <Link href="/a-propos/nos-activites" className="hover:text-ci-orange transition-colors">Nos Activités</Link>
+                <Link href="/a-propos/capec-en-chiffres" className="hover:text-ci-orange transition-colors">La CAPEC en Chiffres</Link>
+                <Link href="/a-propos/references" className="hover:text-ci-orange transition-colors">Quelques Références</Link>
+                <Link href="/ressources/recherches" className="hover:text-ci-orange transition-colors">Projet de recherches</Link>
+                <Link href="/ressources/etudes" className="hover:text-ci-orange transition-colors">Etudes</Link>
+              </div>
+              <div className="flex flex-col gap-2">
+                <Link href="/activites/programme" className="hover:text-ci-orange transition-colors">Programmes d'activités</Link>
+                <Link href="/activites/rapport" className="hover:text-ci-orange transition-colors">Rapports d'activités</Link>
+                <Link href="/activites/compte-rendu" className="hover:text-ci-orange transition-colors">CR d'actualités</Link>
+                <Link href="/activites/interview" className="hover:text-ci-orange transition-colors">Interview - Question</Link>
+                <Link href="/activites/actualites" className="hover:text-ci-orange transition-colors">Actualités</Link>
+                <Link href="/media/photothèques" className="hover:text-ci-orange transition-colors">Photothèques</Link>
+                <Link href="/media/vidéothèques" className="hover:text-ci-orange transition-colors">Vidéothèques</Link>
+               
+              </div>
+            </div>
+          </div>
+
+          {/* Colonne 3 : Newsletter */}
+          <div className="self-center w-full">
+            <h3 className="text-lg font-bold uppercase mb-2">NEWSLETTER</h3>
+            <div className="w-10 h-1 bg-ci-orange mb-4" />
+            <p className="text-sm text-gray-100 mb-4">Abonnez-vous à notre newsletter pour obtenir des nouvelles importantes dans le domaine de la recherche et des politiques publiques :</p>
+            <form onSubmit={handleSubmit} className="flex border border-gray-400 rounded overflow-hidden w-full max-w-md">
               <input
                 type="email"
-                placeholder="Votre adresse email"
+                placeholder="Entrez votre Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="px-4 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-ci-orange w-full"
+                className="px-4 py-2 text-black w-full focus:outline-none"
                 required
                 aria-label="Adresse email pour l'infolettre"
               />
               <button
                 type="submit"
-                className="bg-ci-orange text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors duration-300"
+                className="bg-ci-orange text-white px-4 py-2 font-bold hover:bg-orange-600 transition-colors duration-300"
                 disabled={formStatus !== "idle"}
               >
-                S'abonner
+                &gt;
               </button>
             </form>
-            <p
-              id="newsletter-description"
-              className={`text-xs mt-2 transition-opacity duration-300 ${
-                formStatus === "success"
-                  ? "text-green-400"
-                  : formStatus === "error"
-                  ? "text-red-400"
-                  : "text-gray-500"
-              }`}
-            >
+            <p className={`text-xs mt-2 min-h-[20px] ${
+              formStatus === "success"
+                ? "text-green-400"
+                : formStatus === "error"
+                ? "text-red-400"
+                : "text-gray-300"
+            }`}>
               {formStatus === "success"
                 ? "Inscription réussie !"
                 : formStatus === "error"
                 ? "Erreur lors de l'inscription. Réessayez."
-                : "Recevez nos dernières mises à jour et publications."}
+                : ""}
             </p>
           </div>
-
-          {/* Bloc navigation */}
-          <nav aria-label="Navigation secondaire" className="md:w-1/3">
-            <div className="flex flex-col gap-3 text-sm text-gray-400">
-              <Link href="/a-propos/nos-activites" className="hover:text-white transition-colors duration-300">
-                Nos activités
-              </Link>
-              <Link href="/ressources/recherches" className="hover:text-white transition-colors duration-300">
-                Recherche
-              </Link>
-              <Link href="/medias/videotheque" className="hover:text-white transition-colors duration-300">
-                Nos vidéos
-              </Link>
-              
-            </div>
-          </nav>
-        
         </div>
-         <div className="flex gap-3">
-          <Link href="https://www.facebook.com/share/16AVcaiiqa/" target="_blank">
-            <Facebook
-              className="h-8 w-8 rounded-xl bg-white  p-[4px] text-orange-500 transform hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
-          <Link href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/">
-            <Linkedin
-              className="h-8 w-8 rounded-xl bg-white  p-[4px] text-orange-500 transform hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
-          <Link href="https://www.youtube.com/@capeccotedivoire8917">
-            <Youtube
-              className="h-8 w-8 rounded-xl bg-white p-[4px] text-orange-500 transform hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
-        </div>
-        {/* Copyright */}
-        <div className="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500">
-          © {year} CAPEC - CIRES. Tous droits réservés.
-          <Link href={"https://www.aitech-ci.com/"} target="_blank"> 
-           <p className="font-bold text-gray-300 underline">By AITECH-CI</p>
-          </Link>
-        </div>
-       
       </div>
-        
+
+      {/* BANDEAU BAS : Réseaux sociaux + copyright */}
+      <div className="bg-[#114232] border-t border-gray-800 py-4 mt-0">
+        <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Réseaux sociaux */}
+          <div className="flex gap-4 mb-2 md:mb-0">
+            <Link href="https://www.facebook.com/share/16AVcaiiqa/" target="_blank" aria-label="Facebook">
+              <Facebook className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/" aria-label="LinkedIn">
+              <Linkedin className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+            </Link>
+            <Link href="https://www.youtube.com/@capeccotedivoire8917" aria-label="YouTube">
+              <Youtube className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+            </Link>
+            <Link href="#" aria-label="twitter">
+              <Twitter className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+            </Link>
+            <Link href="#" aria-label="Instagram">
+              <Instagram className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+            </Link>
+          </div>
+          {/* Copyright */}
+          <div className="text-xs text-gray-100 text-center">
+            <span>© {year} CAPEC - CIRES. Tous droits réservés.</span>
+            <span className="mx-2">|</span>
+            <Link href={"https://www.aitech-ci.com/"} target="_blank" className="font-bold text-gray-300 underline hover:text-ci-orange transition-colors duration-300">By AITECH-CI</Link>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

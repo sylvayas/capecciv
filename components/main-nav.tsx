@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { ChevronDown, Facebook, Linkedin, Youtube } from "lucide-react";
+import { ChevronDown, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import { navItems } from "./navItems";
 
 export type NavItem = {
@@ -47,7 +47,7 @@ export function MainNav() {
         <div className="flex w-full items-center justify-between sm:justify-end px-2 sm:px-0">
           {isRootPath && (
             <p className="text-white italic text-xs sm:text-sm md:text-base sm:ml-auto max-w-[50%] sm:max-w-none break-words">
-              la recherche au service du développement
+              La Recherche au Service du Développement
             </p>
           )}
           <div className={cn("flex items-center gap-2 sm:gap-3", isRootPath ? "ml-auto sm:ml-4" : "sm:ml-auto")}>
@@ -72,6 +72,22 @@ export function MainNav() {
             </Link>
             <Link href="https://www.youtube.com/@capeccotedivoire8917" target="_blank">
               <Youtube
+                className={cn(
+                  "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
+                  isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"
+                )}
+              />
+            </Link>
+            <Link href="#" target="_blank">
+              <Twitter
+                className={cn(
+                  "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
+                  isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"
+                )}
+              />
+            </Link>
+            <Link href="#" target="_blank">
+              <Instagram
                 className={cn(
                   "h-4 w-4 sm:h-5 md:h-6 sm:w-5 md:w-6",
                   isRootPath ? "text-white hover:text-ci-orange" : "text-white hover:text-white"

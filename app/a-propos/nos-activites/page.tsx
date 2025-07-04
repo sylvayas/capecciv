@@ -19,7 +19,7 @@ export default function NosActivitesPage() {
     {
       icon: <FileText className="h-6 w-6 text-ci-orange" />,
       bgColor: "bg-orange-100",
-      title: "Recherche",
+      title: "Projet de recherche",
       description:
         "Lien entre extremiste violent et activités illicites dans la région du folon ",
       imageSrc:
@@ -38,7 +38,7 @@ export default function NosActivitesPage() {
     {
       icon: <Calendar className="h-6 w-6 text-ci-orange" />,
       bgColor: "bg-orange-100",
-      title: "Étude",
+      title: "Projet d'étude",
       description:
         "l'Elaboration  de l'etude de la SMRT",
       imageSrc: "/images/Nos_activités/Elaboration_de_la_SRMT.jpeg",
@@ -49,7 +49,7 @@ export default function NosActivitesPage() {
       bgColor: "bg-orange-100",
       title: "Conférences",
       description:
-        "Conference international JAPAN CORNER-JICA-CAPEC ",
+        "Conference international JAPAN CORNER-JICA-CAPEC 2024 ",
       imageSrc:
         "/images/japanconferencecapec.jpg",
       alt: "Conférences économiques",
@@ -59,8 +59,8 @@ export default function NosActivitesPage() {
   // Data for calendar events
   const calendarEvents = [
     {
-      title: "Conférence JAPAN CORNER- JICA -CAPEC",
-      date: "4 Mars 2025",
+      title: "Conférence JAPAN CORNER- JICA -CAPEC 2024",
+      date: "4 Mars 2024",
       description:
         "Faire progresser l'industrialisation et améliorer la productivité du travail:une voie pour le développement de l'économie ivoirienne  ",
     },
@@ -127,7 +127,7 @@ export default function NosActivitesPage() {
         {/* Calendar Section */}
         <section className="mt-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Calendrier des Activités
+            Agenda des Activités
           </h2>
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <div className="grid gap-8 md:grid-cols-2">

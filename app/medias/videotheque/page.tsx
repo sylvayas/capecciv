@@ -19,7 +19,7 @@ interface Video {
 const videos: Video[] = [
   {
     id: "1",
-    title: "Cérémonie de lancement du projet CRDI III portant sur '' Analyse de l'effet de l'employabilité des jeunes sur la violence urbaine en période post-conflit en Côte d'Ivoire''",
+    title: "Cérémonie de lancement du projet CRDI portant sur '' Analyse de l'effet de l'employabilité des jeunes sur la violence urbaine en période post-conflit en Côte d'Ivoire''",
     date: "16 Déc, 2020",
     url: "https://www.youtube.com/watch?v=OMc1kgqh2Nk",
     thumbnail: "/images/img1 jt03.png",
@@ -59,7 +59,7 @@ export default function VideoList() {
   <>
   <MainNav/>
     <div className="container mx-auto px-4 py-8 ">
-      <h1 className="text-3xl font-bold mb-6 mt-8">Vidéothèque</h1>
+      <h1 className="text-3xl font-bold mb-6 mt-8">Vidéothèques</h1>
       <p className="text-muted-foreground md:text-xl max-w-[800px] mb-10">Découvrez notre vidéo de conférence de la CAPEC.</p>
     <div className="grid grid-cols-1 md unwittingly, md:grid-cols-2 lg:grid-cols-3 mb-52 gap-6">
   {videos.map((video) => (

@@ -255,7 +255,7 @@ export default function OrganigrammePage() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Prof. BALLO ZIE</span>
+                  <span>Prof. BALLO Zie</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
@@ -306,31 +306,31 @@ export default function OrganigrammePage() {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Prof. BEKE EHUITCHE TITE</span>
+                  <span>Prof. BEKE Ehuitche Tite</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Dr TRAORE NOHOUA</span>
+                  <span>Dr TRAORE Nohoua</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Dr BECHO ISABELLE EPSE N’DRI</span>
+                  <span>Dr BECHO Isabelle EPSE N’DRI</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Dr KACOU KACOU YVES THIERRY</span>
+                  <span>Dr KACOU KACOU Yves Thierry</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Dr KOUADIO BONIFACE</span>
+                  <span>Dr KOUADIO Boniface</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Dr TOURE TALNAN</span>
+                  <span>Dr TOURE Talnan</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>Dr ASSOUM FEISSAL</span>
+                  <span>Dr ASSOUM Féissal</span>
                 </li>
               </ul>
             </CardContent>
@@ -358,11 +358,11 @@ export default function OrganigrammePage() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>M. LAMOUA KOUAKOU KOUADIO AIME</span>
+                  <span>M. LAMOUA Kouakou Kouadio Aime</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>
-                  <span>M. BAYALA ALEXANDRE</span>
+                  <span>M. BAYALA Alexandre</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-ci-orange"></div>

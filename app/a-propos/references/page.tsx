@@ -13,7 +13,7 @@ export default function ReferencesPage() {
     ...nationalPublicInstitutions,
     ...privateSectorInstitutions,
     ...civilSocietyInstitutions,
-    ...nationalInstitutions,
+   
   ]
 
   return (
@@ -30,13 +30,12 @@ export default function ReferencesPage() {
         </div>
 
         <Tabs defaultValue="internationales" className="mt-12">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
-            <TabsTrigger value="internationales">Institution Internationales</TabsTrigger>
-            <TabsTrigger value="regionales">Institution Régionales</TabsTrigger>
-            <TabsTrigger value="nationales-public">Institution Nationales (Public)</TabsTrigger>
-            <TabsTrigger value="prive">Institution Secteur (Privé)</TabsTrigger>
-            <TabsTrigger value="civile">Institution Société (Civile)</TabsTrigger>
-            <TabsTrigger value="gouvernementales">Institution Gouvernementales</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            <TabsTrigger value="internationales">Institutions Internationales</TabsTrigger>
+            <TabsTrigger value="regionales">Institutions Régionales</TabsTrigger>
+            <TabsTrigger value="nationales-public">Institutions Public</TabsTrigger>
+            <TabsTrigger value="prive"> Secteur Privé</TabsTrigger>
+            <TabsTrigger value="civile"> Société Civile</TabsTrigger>
           </TabsList>
 
           <TabsContent value="internationales" className="mt-6">
@@ -79,13 +78,7 @@ export default function ReferencesPage() {
             </div>
           </TabsContent>
 
-          <TabsContent value="gouvernementales" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {nationalInstitutions.map((institution) => (
-                <ReferenceCard key={institution.id} reference={institution} />
-              ))}
-            </div>
-          </TabsContent>
+         
         </Tabs>
       </div>
       <Footer />
@@ -109,85 +102,85 @@ function ReferenceCard({ reference }: { reference: { id: string; name: string; t
 const internationalInstitutions = [
   {
     id: "ii1",
-    name: "Groupe de la BANQUE MONDIALE",
+    name: "",
     type: "",
     logo: "/images/partenaires/bankmondiale.jpg",
   },
   {
     id: "ii2",
-    name: "BAD",
+    name: "",
     type: "",
     logo: "/images/partenaires/BAD.jpg",
   },
   {
     id: "ii3",
-    name: "JICA",
+    name: "",
     type: "",
     logo: "/images/partenaires/jica.webp",
   },
   {
     id: "ii4",
-    name: "JAPAN FUNDATION",
+    name: "",
     type: "",
     logo: "/images/partenaires/JAPANFUNDATION.webp",
   },
   {
     id: "ii5",
-    name: "AFD",
+    name: "",
     type: "",
     logo: "/images/partenaires/afdrouge.png",
   },
   {
     id: "ii6",
-    name: "IDRC/CRDI",
+    name: "",
     type: "",
     logo: "/images/partenaires/IDRC.jpg",
   },
   {
     id: "ii7",
-    name: "ACBF",
+    name: "",
     type: "",
     logo: "/images/partenaire_de_la_CAPEC/acbflogo.jpg",
   },
   {
     id: "ii8",
-    name: "PNUD",
+    name: "",
     type: "",
     logo: "/images/partenaires/PNUD.jpg",
   },
   {
     id: "ii9",
-    name: "FAO",
+    name: "",
     type: "",
     logo: "/images/partenaires/FAO.webp",
   },
   {
     id: "ii10",
-    name: "PAM",
+    name: "",
     type: "",
     logo: "/images/partenaires/pam.png",
   },
   {
     id: "ii11",
-    name: "UNICEF",
+    name: "",
     type: "",
     logo: "/images/partenaires/UNICEF.png",
   },
   {
     id: "ii12",
-    name: "ONUFEMME",
+    name: "",
     type: "",
     logo: "/images/partenaires/UN-Women.png",
   },
   {
     id: "ii13",
-    name: "BCR-SNUD",
+    name: "",
     type: "",
     logo: "/images/partenaires/BCR.png",
   },
   {
     id: "ii14",
-    name: "Commission économique Africaine (CEA)",
+    name: "",
     type: "",
     logo: "/images/partenaires/CEA.png",
   },
@@ -197,13 +190,13 @@ const internationalInstitutions = [
 const regionalInstitutions = [
   {
     id: "ir1",
-    name: "COMMISSION DE LA CEDEAO",
+    name: "",
     type: "",
     logo: "/images/partenaires/CEDEAO.webp",
   },
   {
     id: "ir2",
-    name: "COMMISSION DE L'UEMOA",
+    name: "",
     type: "",
     logo: "/images/partenaires/UEMOA.jpg",
   },
@@ -221,7 +214,7 @@ const nationalPublicInstitutions = [
     id: "nps2",
     name: "Ministère en charge de la femme, famille et enfants",
     type: "",
-    logo: "/images/partenaires/MFFE.jpg",
+    logo: "/images/partenaires/MEC.jpg",
   },
   {
     id: "nps3",
@@ -237,7 +230,7 @@ const nationalPublicInstitutions = [
   },
   {
     id: "nps5",
-    name: "Ministère du pétrole et de l'Energie",
+    name: "Ministère des Mines, du Pétrole et de l’Énergie",
     type: "",
     logo: "/images/partenaires/MMPE.jpg",
   },
@@ -245,7 +238,7 @@ const nationalPublicInstitutions = [
     id: "nps6",
     name: "Ministère de la construction et de l'urbanisation",
     type: "",
-    logo: "/images/partenaires/MCLU.png",
+    logo: "/images/partenaires/MEC.jpg",
   },
   {
     id: "nps7",
@@ -259,19 +252,43 @@ const nationalPublicInstitutions = [
     type: "",
     logo: "/images/partenaires/DGI.jpg",
   },
+  {
+    id: "ni1",
+    name: "",
+    type: "",
+    logo: "/images/partenaire_de_la_CAPEC/LOGO BNETD.jpg",
+  },
+  {
+    id: "ni2",
+    name: "",
+    type: "",
+    logo: "/images/partenaire_de_la_CAPEC/LOGO UNIVERSITE.jpg",
+  },
+  {
+    id: "ni3",
+    name: "",
+    type: "",
+    logo: "/images/partenaire_de_la_CAPEC/LOGO CIRES.jpg",
+  },
+  {
+    id: "ni4",
+    name: "",
+    type: "",
+    logo: "/images/partenaire_de_la_CAPEC/acbflogo.jpg",
+  },
 ]
 
 // Secteur Privé
 const privateSectorInstitutions = [
   {
     id: "ps1",
-    name: "CGECI",
+    name: "",
     type: "",
     logo: "/images/partenaires/CGECI.jpg",
   },
   {
     id: "ps2",
-    name: "UGECI",
+    name: "",
     type: "",
     logo: "/images/partenaires/UGECI.png",
   },
@@ -281,37 +298,37 @@ const privateSectorInstitutions = [
 const civilSocietyInstitutions = [
   {
     id: "cs1",
-    name: "CSCI",
+    name: "",
     type: "",
     logo: "/images/partenaires/CSCI.png",
   },
 ]
 
 // Sample data - Institutions existantes
-const nationalInstitutions = [
-  {
-    id: "ni1",
-    name: "Bureau national d'études techniques et de développement",
-    type: "",
-    logo: "/images/partenaire_de_la_CAPEC/LOGO BNETD.jpg",
-  },
-  {
-    id: "ni2",
-    name: "Université Felix Houphouet Boigny",
-    type: "",
-    logo: "/images/partenaire_de_la_CAPEC/LOGO UNIVERSITE.jpg",
-  },
-  {
-    id: "ni3",
-    name: "Centre Ivoirien Recherches Economiques",
-    type: "",
-    logo: "/images/partenaire_de_la_CAPEC/LOGO CIRES.jpg",
-  },
-  {
-    id: "ni4",
-    name: "Fondation pour le renforcement des capacités en Afrique",
-    type: "",
-    logo: "/images/partenaire_de_la_CAPEC/acbflogo.jpg",
-  },
-]
+// const nationalInstitutions = [
+//   {
+//     id: "ni1",
+//     name: "Bureau national d'études techniques et de développement",
+//     type: "",
+//     logo: "/images/partenaire_de_la_CAPEC/LOGO BNETD.jpg",
+//   },
+//   {
+//     id: "ni2",
+//     name: "Université Felix Houphouet Boigny",
+//     type: "",
+//     logo: "/images/partenaire_de_la_CAPEC/LOGO UNIVERSITE.jpg",
+//   },
+//   {
+//     id: "ni3",
+//     name: "Centre Ivoirien Recherches Economiques",
+//     type: "",
+//     logo: "/images/partenaire_de_la_CAPEC/LOGO CIRES.jpg",
+//   },
+//   {
+//     id: "ni4",
+//     name: "Fondation pour le renforcement des capacités en Afrique",
+//     type: "",
+//     logo: "/images/partenaire_de_la_CAPEC/acbflogo.jpg",
+//   },
+// ]
 
