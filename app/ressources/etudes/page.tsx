@@ -377,10 +377,7 @@ export default function EtudePage() {
                         >
                           METHODES ET TECHNIQUES MARKETING : DES CADRES DU BNETD A L'ECOLE DE LA CAPEC
                         </a>
-                        <div className="flex items-center text-sm text-gray-600">
-                          <MessageCircle className="w-4 h-4 mr-2 text-orange-500" />
-                          <span>3 participants</span>
-                        </div>
+                      
                       </div>
                     </div>
                     <div className="bg-white rounded-lg shadow-sm overflow-hidden">
@@ -393,10 +390,7 @@ export default function EtudePage() {
                         >
                           Un atelier de méthodologie et d'écriture scientifique s'est tenu à Abidjan du 1er au 05 avril
                         </a>
-                        <div className="flex items-center text-sm text-gray-600">
-                          <MessageCircle className="w-4 h-4 mr-2 text-orange-500" />
-                          <span>50 participants</span>
-                        </div>
+                      
                       </div>
                     </div>
                     <div className="bg-white rounded-lg shadow-sm overflow-hidden">
@@ -409,10 +403,7 @@ export default function EtudePage() {
                         >
                           DEVELOPPEMENT INDUSTRIEL: Des cadres outillés à l'Analyse de filières et aux techniques d'élaboration et de mise en œuvre
                         </a>
-                        <div className="flex items-center text-sm text-gray-600">
-                          <MessageCircle className="w-4 h-4 mr-2 text-orange-500" />
-                          <span>101 participants</span>
-                        </div>
+                      
                       </div>
                     </div>
                   </div>
@@ -435,7 +426,7 @@ export default function EtudePage() {
                       CELEBRATION DES 30 ANS DE LA CAPEC
                     </a>
                   </h6>
-                  <p className="text-sm text-gray-600">10 Août, 2024</p>
+                  <p className="text-sm text-gray-600">8 et 9 octobre, 2024</p>
                 </div>
                 <div className="border-b border-gray-200 pb-4">
                   <h6 className="text-base font-semibold mb-1">
@@ -443,10 +434,10 @@ export default function EtudePage() {
                       className="text-blue-600 hover:underline"
                       href="/activites/actualites"
                     >
-                      CONFERENCE DE HAUT NIVEAU
+                   REUNION DE VALIDATION DU PROJET DE VISION 2050 PAR LES EXPERT DES ETATS MEMBRES DE LA CEDAO, du 10 au 12 Septembre 2021, Accra/Ghana
                     </a>
                   </h6>
-                  <p className="text-sm text-gray-600">06 Mai, 2022</p>
+                  <p className="text-sm text-gray-600">du 10 au 12 Septembre 2021</p>
                 </div>
                 <div className="border-b border-gray-200 pb-4">
                   <h6 className="text-base font-semibold mb-1">
@@ -454,10 +445,10 @@ export default function EtudePage() {
                       className="text-blue-600 hover:underline"
                       href="/activites/actualites"
                     >
-                      RECRUTEMENT DE DEUX (2) CHERCHEURS JUNIORS...
+                    Conférence internationale de cloture, Abidjan du projet de recherche sur 'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal
                     </a>
                   </h6>
-                  <p className="text-sm text-gray-600">22 Avr, 2022</p>
+                  <p className="text-sm text-gray-600"> 23 Mars 2023</p>
                 </div>
              
               </div>

@@ -90,14 +90,7 @@ const recentPublications = [
     date: "20 avril 2023",
     coverImage: "/images/constructiondunindiceetsousindicesendogènesdesuividelagouvenci.jpg?text=Marché+du+Travail&height=340&width=600",
   },
-  {
-    id: "3",
-    title: "Évaluation des politiques de développement durable",
-    excerpt:
-      "Cette publication examine l'efficacité des politiques de développement durable et propose des recommandations.",
-    date: "5 décembre 2022",
-    coverImage: "/images/pr3.jpg?text=Développement+Durable&height=340&width=600",
-  },
+ 
 ];
 
 const recentNews = [
@@ -105,7 +98,7 @@ const recentNews = [
     id: "1",
     title: "Leçon inaugurale du 30ᵉ anniversaire de la CAPEC faite par M. AHOUTOU KOFFI EMMANUEL",
     excerpt:
-      "La CAPEC a célébré ses 30 ans les 8 et 9 octobre 2024 à Abidjan, en présence du Ministre Directeur de Cabinet du Vice-Président, M. Emmanuel Ahoutou KOFFI, qui a prononcé une leçon inaugurale marquante. Il a salué l’impact de la CAPEC sur les politiques publiques en Côte d’Ivoire et dans l’UEMOA-CEDEAO, tout en l’invitant à innover face aux défis climatiques, technologiques et industriels. Cet anniversaire a été l’occasion de dresser le bilan de trois décennies d’expertise et de tracer des perspectives pour un développement durable inclusif.",
+      "La CAPEC a célébré ses 30 ans les 8 et 9 octobre 2024 à Abidjan, en présence du Ministre Directeur de Cabinet du Vice-Président, M. Emmanuel Ahoutou KOFFI, qui a prononcé une leçon inaugurale marquante. Il a salué l'impact de la CAPEC sur les politiques publiques en Côte d'Ivoire et dans l'UEMOA-CEDEAO, tout en l'invitant à innover face aux défis climatiques, technologiques et industriels. Cet anniversaire a été l'occasion de dresser le bilan de trois décennies d'expertise et de tracer des perspectives pour un développement durable inclusif.",
     date: "8 octobre 2024",
     image: "/images/img1 (1).jpg",
   },
@@ -113,7 +106,7 @@ const recentNews = [
     id: "2",
     title: "Diner des 30ᵉ anniversaire de la CAPEC",
     excerpt:
-      "Joyeux 30ᵉ anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
+      "Joyeux 30ᵉ anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d'Ivoire !",
     date: "9 octobre 2024",
     image: "/images/19.jpg",
   },
@@ -143,7 +136,7 @@ function PublicationCard({ publication }: { publication: Publication }) {
       transition={{ duration: 0.3 }}
     >
       <Card className="overflow-hidden">
-        <div className="aspect-video w-full overflow-hidden">
+        <div className="aspect-[16/9] w-full overflow-hidden">
           <motion.div
             initial={{ scale: 1 }}
             animate={{ scale: 1 }}
@@ -152,8 +145,8 @@ function PublicationCard({ publication }: { publication: Publication }) {
             <Image
               src={publication.coverImage || "/placeholder.svg"}
               alt={publication.title}
-              width={600}
-              height={340}
+              width={800}
+              height={450}
               placeholder="blur"
               blurDataURL="/placeholder.svg"
               className="object-cover w-full h-full"
@@ -202,8 +195,8 @@ function NewsCard({ news }: { news: News }) {
         <CardContent className="p-6">
           <div className="space-y-2">
             <span className="text-xs text-muted-foreground">{news.date}</span>
-            <h3 className="font-bold">{news.title}</h3>
-            <p className="text-muted-foreground">{news.excerpt}</p>
+            <h3 className={news.id === '1' ? "font-bold" : undefined}>{news.title}</h3>
+            {news.excerpt && <p className="text-muted-foreground">{news.excerpt}</p>}
           </div>
         </CardContent>
       </Card>
@@ -248,7 +241,7 @@ export default function Home() {
                   Notre Mission
                 </h2>
                 <p className="max-w-[1090px] text-left sm:text-justify  text-black  text-base sm:text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                La CAPEC a pour mission de fournir des analyses économiques approfondies afin d’éclairer les décisions de politique publique en Côte d'Ivoire.
+                La CAPEC a pour mission de fournir des analyses économiques approfondies afin d'éclairer les décisions de politique publique en Côte d'Ivoire.
                 Nous œuvrons au renforcement des capacités des acteurs nationaux en matière de gestion économique, de planification stratégique et de mise en œuvre des réformes.
                 Parallèlement, nous encourageons la recherche appliquée et l'innovation afin de promouvoir une croissance inclusive et durable, répondant aux défis économiques locaux.
 
@@ -340,14 +333,14 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-8 justify-center"
               variants={cardContainerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {recentPublications.map((pub) => (
-                <motion.div key={pub.id} variants={cardVariants}>
+                <motion.div key={pub.id} variants={cardVariants} className="flex justify-center">
                   <PublicationCard publication={pub} />
                 </motion.div>
               ))}
@@ -437,7 +430,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">La CAPEC en images</h2>
               <div className="w-20 h-1 bg-ci-orange mx-auto my-2"></div>
               <p className="max-w-[700px] text-muted-foreground">
-              Découvrez nos activités, nos événements et notre équipe à travers cette galerie d’images.
+              Découvrez nos activités, nos événements et notre équipe à travers cette galerie d'images.
               </p>
             </motion.div>
             <motion.div

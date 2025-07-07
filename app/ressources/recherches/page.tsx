@@ -307,20 +307,24 @@ export default function RecherchesPage() {
       link: "/activites/actualites",
     },
     {
-      title: "CONFERENCE DE HAUT NIVEAU",
-      date: "06 Mai, 2022",
+      
+      title: "REUNION DE VALIDATION DU PROJET DE VISION 2050 PAR LES EXPERT DES ETATS MEMBRES DE LA CEDAO, du 10 au 12 Septembre 2021, Accra/Ghana", 
+      date: "du 10 au 12 Septembre 2021",
       link: "/activites/actualites",
     },
     {
-      title: "RECRUTEMENT DE DEUX (2) CHERCHEURS JUNIORS...",
-      date: "22 Avr, 2022",
+      
+      title: "Conférence internationale de cloture, Abidjan du projet de recherche sur 'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
+     
+      date: "Publié le 23 Mars 2023",
       link: "/activites/actualites",
     },
     {
-      title: "La CAPEC se félicite pour la validation de la vision prospectrice 2050 de la CEDEAO.",
-      date:"21 Dec, 2021",
-      link:"/activites/actualites",
-    }
+    
+      title: "Reunion du Comité indépendant de lecture et 4ème réunion du Comité de pilotage de l'Etude relative a l'Elaboration de la vision 2040 de l'UEMOA, 10 au 16 septembre 2023 –Ouagadougou/Burkina Faso",
+      date: "10 au 16 septembre 2023",
+      link: "/activites/actualites",
+    },
   ];
 
   // Gérer l'affichage des études
@@ -347,12 +351,8 @@ export default function RecherchesPage() {
           {/* Left Column */}
           <div className="lg:w-2/3">
             {/* Title */}
-            <h1 className="text-2xl font-bold text-black border-b-1 border-orange-500 pb-2 mb-6">
-                Recherches individuelles
-            </h1>
-            <div className="h-1 w-12 bg-orange-500 mb-6"></div>
-
-            {/* Search and Filters */}
+            
+            
             <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-6">
               <h5 className="text-lg font-semibold mb-4">Recherche</h5>
               <div className="flex flex-col md:flex-row gap-4 items-center">

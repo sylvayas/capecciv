@@ -38,7 +38,7 @@ export default function NewsPage() {
                     <span>{featuredNews.date}</span>
                   </div>
                   <h2 className="text-2xl font-bold">{featuredNews.title}</h2>
-                  <p className="text-muted-foreground">{featuredNews.excerpt}</p>
+                  <p className="text-muted-foreground text-justify">{featuredNews.excerpt}</p>
                   {/* <Link href={`/actualites/${featuredNews.id}`}>
                     <Button className="bg-ci-orange mt-5 hover:bg-orange-600 text-white">
                       Lire l'article complet
@@ -109,8 +109,8 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
             <Calendar className="mr-2 h-4 w-4" />
             <span>{news.date}</span>
           </div>
-          <h3 className="font-bold">{news.title}</h3>
-          <p className="text-sm text-muted-foreground line-clamp-3">{news.excerpt}</p>
+          <h3 className="font-base">{news.title}</h3>
+          <p className="text-sm text-muted-foreground line-clamp-3 text-justify">{news.excerpt}</p>
           <div className="pt-2">
             {/* <Link href={`/actualites/${news.id}`}>
               <Button variant="link" className="p-0 h-auto">
@@ -130,35 +130,127 @@ const featuredNews = {
   id: "1",
   title: "30e anniversaire de la CAPEC",
   excerpt:
-    "Les 8 et 9 octobre 2024, la CAPEC a célébrée ses 30 ans d’existence à Abidjan. L'événement, placé sous le haut patronage du Vice-Président de la République, Tiémoko Meyliet Koné, a été l'occasion de faire le bilan des contributions de la CAPEC à la transformation structurelle de la Côte d'Ivoire et à l'intégration sous-régionale entre 1993 et 2023.",
+    "Les 8 et 9 octobre 2024, la CAPEC a célébrée ses 30 ans d'existence à Abidjan. L'événement, placé sous le haut patronage du Vice-Président de la République, Tiémoko Meyliet Koné, a été l'occasion de faire le bilan des contributions de la CAPEC à la transformation structurelle de la Côte d'Ivoire et à l'intégration sous-régionale entre 1993 et 2023.",
   date: "Publié le 8 et 9 octobre 2024",
 }
 
 const newsList = [
+  // {
+  //   id: "2",
+  //   title: "CONFERENCE DE HAUT NIVEAU",
+  //   excerpt:
+  //     "La Banque Africaine de Développement (BAD), avec l'appui de la Cellule d'Analyse de Politiques Economiques du CIRES organise, le mardi 10 mai de 10h00 à 12h30.",
+  //   date: "Publié le 06 Mai, 2022",
+  //   image: "/images/conf2.jpg?text=Partenariat+Université+Paris-Saclay&height=340&width=600",
+  // },
+  // {
+  //   id: "3",
+  //   title: "La CAPEC se félicite pour la validation de la vision prospectrice 2050 de la CEDEAO.",
+  //   excerpt:
+  //     "A la suite de plusieurs rencontres de validation technique puis de validation par le Conseil des Ministres de la CEDEAO (le 10 décembre 2021).",
+  //   date: "Publié le 21 Déc, 2021",
+  //   image: "/images/actua1.jpg?text=Rapport+Annuel+Économie&height=340&width=600",
+  // },
+  // {
+  //   id: "4",
+  //   title: "RECRUTEMENT DE DEUX CHERCHEURS JUNIORS MICROECONOMISTES ET D'UN CHERCHEUR JUNIOR MACROECONOMISTE",
+  //   excerpt:
+  //     "Ce recrutement visait à renforcer l'équipe de recherche de la CAPEC en intégrant de jeunes talents spécialisés en microéconomie et macroéconomie.",
+  //   date: "Publié le 22 Avr, 2022",
+  //   image: "/images/recrutement.png?text=Séminaire+Analyse+Données&height=340&width=600",
+  // },
   {
-    id: "2",
-    title: "CONFERENCE DE HAUT NIVEAU",
+    id: "14",
+    title: "REUNION DE VALIDATION DU PROJET DE VISION 2050 PAR LES EXPERT DES ETATS MEMBRES DE LA CEDAO, du 10 au 12 Septembre 2021, Accra/Ghana",
     excerpt:
-      "La Banque Africaine de Développement (BAD), avec l’appui de la Cellule d’Analyse de Politiques Economiques du CIRES organise, le mardi 10 mai de 10h00 à 12h30.",
-    date: "Publié le 06 Mai, 2022",
-    image: "/images/conf2.jpg?text=Partenariat+Université+Paris-Saclay&height=340&width=600",
+      "",
+    date: "du 10 au 12 Septembre 2021",
+    image: "/images/TOUTES LES ACTUALITES/REUNION DE VALIDATION DU PROJET DE VISION.jpg",
   },
   {
-    id: "3",
-    title: "La CAPEC se félicite pour la validation de la vision prospectrice 2050 de la CEDEAO.",
+    id: "9",
+    title: "Conférence internationale de cloture, Abidjan du projet de recherche sur 'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
     excerpt:
-      "A la suite de plusieurs rencontres de validation technique puis de validation par le Conseil des Ministres de la CEDEAO (le 10 décembre 2021).",
-    date: "Publié le 21 Déc, 2021",
-    image: "/images/actua1.jpg?text=Rapport+Annuel+Économie&height=340&width=600",
+      "",
+    date: "Publié le 23 Mars 2023",
+    image: "/images/TOUTES LES ACTUALITES/Conferenceinternationale.jpg",
   },
   {
-    id: "4",
-    title: "RECRUTEMENT DE DEUX CHERCHEURS JUNIORS MICROECONOMISTES ET D'UN CHERCHEUR JUNIOR MACROECONOMISTE",
+    id: "15",
+    title: "Reunion du Comité indépendant de lecture et 4ème réunion du Comité de pilotage de l'Etude relative a l'Elaboration de la vision 2040 de l'UEMOA, 10 au 16 septembre 2023 –Ouagadougou/Burkina Faso",
     excerpt:
-      "Ce recrutement visait à renforcer l'équipe de recherche de la CAPEC en intégrant de jeunes talents spécialisés en microéconomie et macroéconomie.",
-    date: "Publié le 22 Avr, 2022",
-    image: "/images/recrutement.png?text=Séminaire+Analyse+Données&height=340&width=600",
+      "",
+    date: "10 au 16 septembre 2023",
+    image: "/images/TOUTES LES ACTUALITES/ReunionComite.jpg",
   },
+  {
+    id: "5",
+    title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises ",
+    excerpt:
+      "",
+    date: "09  fev 23",
+    image: "/images/TOUTES LES ACTUALITES/conference.jpg",
+  },
+  {
+    id: "6",
+    title: "9ème édition Africa Think Thank ACBF",
+    excerpt:
+      "",
+    date: "",
+    image: "/images/TOUTES LES ACTUALITES/ACBF.jpeg",
+  },
+  {
+    id: "7",
+    title: "Cérémonie d'ouverture officiel du JAPAN CORNER de l'UFHB",
+    excerpt:
+      "",
+    date: "Publié le 1er Juin 2023",
+    image: "/images/TOUTES LES ACTUALITES/Ceremonie.jpg",
+  },
+  {
+    id: "8",
+    title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire,",
+    excerpt:
+      "",
+    date: "Publié le 21 Oct 2021",
+    image: "/images/TOUTES LES ACTUALITES/",
+  },
+ 
+  // {
+  //   id: "10",
+  //   title: "INAUGURATION JAPAN CORNER",
+  //   excerpt:
+  //     "Ce recrutement visait à renforcer l'équipe de recherche de la CAPEC en intégrant de jeunes talents spécialisés en microéconomie et macroéconomie.",
+  //   date: "Publié le 22 Avr, 2022",
+  //   image: "/images/TOUTES LES ACTUALITES/INAUGURATION JAPAN CORNER.jpg",
+  // },
+  {
+    id: "11",
+    title: "LANCEMENT CRDI 05",
+    excerpt:
+      "",
+    date: "",
+    image: "/images/TOUTES LES ACTUALITES/LANCEMENT CRDI 05.jpg",
+  },
+  {
+    id: "12",
+    title: "panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
+    excerpt:
+      "",
+    date: "",
+    image: "/images/TOUTES LES ACTUALITES/panel.jpg",
+  },
+  {
+    id: "13",
+    title: "RESTITUTION BUDGET",
+    excerpt:
+      "",
+    date: "",
+    image: "/images/TOUTES LES ACTUALITES/RESTITUTION BUDGET.jpg",
+  },
+
+
+ 
   
  
   

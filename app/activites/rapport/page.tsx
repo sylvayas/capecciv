@@ -19,7 +19,7 @@ export default function RapportActivitePage() {
             <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Rapports d'Activité</h1>
             <div className="w-24 h-1 bg-orange-400 mx-auto mt-2 rounded-full"></div>
             <p className="mt-4 text-gray-600 max-w-xl mx-auto text-lg">
-              Explorez les rapports d'activités de la CAPEC de 2007 à 2019.
+              Explorez les rapports d'activités de la CAPEC de 2007 à 2024.
             </p>
           </div>
 
@@ -70,6 +70,10 @@ export default function RapportActivitePage() {
 }
 
 const annualReports = [
+  { id: "report2024", title: "Rapports d'Activité 2024", year: "2024", pdfUrl: "/images/rapport activite/rapport 2024.pdf" },
+  { id: "report2022", title: "Rapports d'Activité 2022", year: "2022", pdfUrl: "/images/rapport activite/rapport 2022.pdf" },
+  { id: "report2021", title: "Rapports d'Activité 2021", year: "2021", pdfUrl: "/images/rapport activite/rapport 2021.pdf" },
+  { id: "report2020", title: "Rapports d'Activité 2020", year: "2020", pdfUrl: "/images/rapport activite/rapport 2020.pdf" },
   { id: "report2019", title: "Rapports d'Activité 2019", year: "2019", pdfUrl: "/images/rapport activite/rapport 2019.pdf" },
   { id: "report2018", title: "Rapports d'Activité 2018", year: "2018", pdfUrl: "/images/rapport activite/rapport 2018.pdf" },
   { id: "report2017", title: "Rapports d'Activité 2017", year: "2017", pdfUrl: "/images/rapport activite/rapport 2017.pdf" },
