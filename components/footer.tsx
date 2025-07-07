@@ -111,9 +111,7 @@ export function Footer() {
                 <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
                   <Image src="/images/partenaires/BCR-logo-1024x543.png" alt="BCR" width={100} height={60} className="object-contain mb-2" />
                 </div>
-                <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
-                  <Image src="/images/partenaires/BCR.png" alt="BCR" width={100} height={60} className="object-contain mb-2" />
-                </div>
+               
                 <div className="flex flex-col items-center px-6 py-4 min-w-[180px]">
                   <Image src="/images/partenaires/UN-Women.png" alt="UN Women" width={100} height={60} className="object-contain mb-2" />
                 </div>
