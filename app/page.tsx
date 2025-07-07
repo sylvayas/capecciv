@@ -104,7 +104,7 @@ const recentNews = [
   },
   {
     id: "2",
-    title: "Diner des 30ᵉ anniversaire de la CAPEC",
+    title: "Diner du 30ᵉ anniversaire de la CAPEC",
     excerpt:
       "Joyeux 30ᵉ anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d'Ivoire !",
     date: "9 octobre 2024",

@@ -164,8 +164,7 @@ export function Footer() {
             </div>
            
             <div className="text-base text-gray-100 mb-4 text-center md:text-left">
-              Abidjan, Cocody boulevard des martyrs,
-              en face de l'hôtel communal
+            Bd Latrille, CIRES, Près du Lycée Classique d'Abidjan 08 BP 1295 Abidjan 08 Abidjan-Cote d'Ivoire
             </div>
             <a href="https://maps.app.goo.gl/2iQ82grwVVgQTdyW7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ci-orange font-semibold mb-2 hover:underline">
               <MapPin className="h-5 w-5" />
@@ -174,15 +173,12 @@ export function Footer() {
             <ul className="text-base text-gray-100 flex flex-col gap-2 w-full">
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
-                (225) 27 22 400 040
+                (225) 27 22 44 41 24/
               </li>
-              <li className="flex items-center gap-2">
-                <Smartphone className="h-5 w-5" />
-                (225) 05 55 000 322
-              </li>
+             
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5" />
-                <a href="mailto:info@capec.ci" className="hover:text-ci-orange transition-colors">infos@capecci.com</a>
+                <a href="mailto:info@capec.ci" className="hover:text-ci-orange transition-colors">info@capec-ci.org</a>
               </li>
             </ul>
           </div>
@@ -194,7 +190,7 @@ export function Footer() {
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-base">
               {/* Sous-menus dynamiques */}
               <div className="flex flex-col gap-2">
-                <Link href="/a-propos/historique-objectif" className="hover:text-ci-orange transition-colors">Historiques et Objectifs</Link>
+                <Link href="/a-propos/historique-objectif" className="hover:text-ci-orange transition-colors">Historique et Objectifs</Link>
                 <Link href="/a-propos/organigramme" className="hover:text-ci-orange transition-colors">Organigramme</Link>
                 <Link href="/a-propos/nos-activites" className="hover:text-ci-orange transition-colors">Nos Activités</Link>
                 <Link href="/a-propos/capec-en-chiffres" className="hover:text-ci-orange transition-colors">La CAPEC en Chiffres</Link>

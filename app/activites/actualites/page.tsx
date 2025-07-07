@@ -193,10 +193,10 @@ const newsList = [
   },
   {
     id: "6",
-    title: "9ème édition Africa Think Thank ACBF",
+    title: "9ème édition Africa Think Tanks… ACBF 08 au 10 Novembre 2023, Lusaka/ZAMBIE.",
     excerpt:
       "",
-    date: "",
+    date: " 08 au 10 Novembre 2023",
     image: "/images/TOUTES LES ACTUALITES/ACBF.jpeg",
   },
   {
@@ -212,7 +212,7 @@ const newsList = [
     title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire,",
     excerpt:
       "",
-    date: "Publié le 21 Oct 2021",
+    date: "Publié le 8 et 9 octobre, 2024",
     image: "/images/TOUTES LES ACTUALITES/",
   },
  
@@ -226,10 +226,10 @@ const newsList = [
   // },
   {
     id: "11",
-    title: "LANCEMENT CRDI 05",
+    title: "Cérémonie de lancement du Projet de recherche sur «Impact des programmes socio-éducatifs communautaires d’encadrement de la petite enfance sur l’autonomisation des femmes dans les zones défavorisées su Burkina Faso et de la Côte d’Ivoire » Abidjan 22 juillet 2021",
     excerpt:
       "",
-    date: "",
+    date: " 22 juillet 2021",
     image: "/images/TOUTES LES ACTUALITES/LANCEMENT CRDI 05.jpg",
   },
   {
@@ -237,15 +237,15 @@ const newsList = [
     title: "panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
     excerpt:
       "",
-    date: "",
+    date: "08 octobre 2024",
     image: "/images/TOUTES LES ACTUALITES/panel.jpg",
   },
   {
     id: "13",
-    title: "RESTITUTION BUDGET",
+    title: "Restitution des 03 études sur «La problématique du changement du taux de l’impôt BIC » , « La rationalisation du code des investissements ».Abidjan, 02 Février 2023",
     excerpt:
       "",
-    date: "",
+    date: "02 Février 2023",
     image: "/images/TOUTES LES ACTUALITES/RESTITUTION BUDGET.jpg",
   },
 
