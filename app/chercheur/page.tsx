@@ -161,13 +161,13 @@ const seniorResearchers = [
     expertise: ["Macroéconomie",]
   },
  
-  // {
-  //   id: "11",
-  //   name: "Dr TOURÉ Talnan Aboulaye",
-  //   title: "chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
-  //   photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
-  //   expertise: ["l’économie monétaire, bancaire et financière","la politique fiscale"]
-  // },
+  {
+    id: "11",
+    name: "Dr TOURÉ Talnan Aboulaye",
+    title: "Chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
+    photo: "/images/PHOTO TOURE.jpg",
+    expertise: ["l’économie monétaire, bancaire et financière","la politique fiscale"]
+  },
   
 
 ]

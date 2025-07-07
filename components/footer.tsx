@@ -47,7 +47,7 @@ export function Footer() {
       {pathname === "/" && (
         <div className="bg-white w-full">
           <section className="w-full py-6">
-            <h3 className="text-xl font-bold text-center text-[#114232] mb-6">Nos principaux partenaires</h3>
+            <h3 className="text-xl font-bold text-center text-[#114232] mb-6 font-policy-brief">Nos principaux partenaires</h3>
             <div className="overflow-x-hidden">
               <div className="flex gap-12 min-w-[600px] justify-center items-center animate-scroll-partners">
                 {/* Logos partenaires */}
@@ -165,7 +165,7 @@ export function Footer() {
               />
             </div>
            
-            <div className="text-sm text-gray-100 mb-4 text-center md:text-left">
+            <div className="text-base text-gray-100 mb-4 text-center md:text-left">
               Abidjan, Cocody boulevard des martyrs,
               en face de l'hôtel communal
             </div>
@@ -173,7 +173,7 @@ export function Footer() {
               <MapPin className="h-5 w-5" />
               Localisation Google map
             </a>
-            <ul className="text-sm text-gray-100 flex flex-col gap-2 w-full">
+            <ul className="text-base text-gray-100 flex flex-col gap-2 w-full">
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 (225) 27 22 400 040
@@ -191,9 +191,9 @@ export function Footer() {
 
           {/* Colonne 2 : Découvrez (sous-menus) */}
           <div className="self-center mt-10 w-full">
-            <h3 className="text-lg font-bold uppercase mb-2">NOS SOUS MENUS</h3>
+            <h3 className="text-lg font-bold uppercase mb-2 font-policy-brief">NOS SOUS MENUS</h3>
             <div className="w-10 h-1 bg-ci-orange mb-4" />
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-base">
               {/* Sous-menus dynamiques */}
               <div className="flex flex-col gap-2">
                 <Link href="/a-propos/historique-objectif" className="hover:text-ci-orange transition-colors">Historiques et Objectifs</Link>
@@ -219,16 +219,16 @@ export function Footer() {
 
           {/* Colonne 3 : Newsletter */}
           <div className="self-center w-full">
-            <h3 className="text-lg font-bold uppercase mb-2">NEWSLETTER</h3>
+            <h3 className="text-lg font-bold uppercase mb-2 font-policy-brief">NEWSLETTER</h3>
             <div className="w-10 h-1 bg-ci-orange mb-4" />
-            <p className="text-sm text-gray-100 mb-4">Abonnez-vous à notre newsletter pour obtenir des nouvelles importantes dans le domaine de la recherche et des politiques publiques :</p>
+            <p className="text-base text-gray-100 mb-4">Abonnez-vous à notre newsletter pour obtenir des nouvelles importantes dans le domaine de la recherche et des politiques publiques :</p>
             <form onSubmit={handleSubmit} className="flex border border-gray-400 rounded overflow-hidden w-full max-w-md">
               <input
                 type="email"
                 placeholder="Entrez votre Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="px-4 py-2 text-black w-full focus:outline-none"
+                className="px-4 py-2 text-black w-full focus:outline-none text-base"
                 required
                 aria-label="Adresse email pour l'infolettre"
               />
@@ -240,7 +240,7 @@ export function Footer() {
                 &gt;
               </button>
             </form>
-            <p className={`text-xs mt-2 min-h-[20px] ${
+            <p className={`text-sm mt-2 min-h-[20px] ${
               formStatus === "success"
                 ? "text-green-400"
                 : formStatus === "error"
@@ -262,7 +262,7 @@ export function Footer() {
         <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Réseaux sociaux */}
           <div className="flex gap-4 mb-2 md:mb-0">
-            <Link href="https://www.facebook.com/share/16AVcaiiqa/" target="_blank" aria-label="Facebook">
+            <Link href="https://www.facebook.com/capec.officiel/friends_likes/" target="_blank" aria-label="Facebook">
               <Facebook className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
             <Link href="https://www.linkedin.com/in/cellule-d-analyse-de-politiques-economiques-du-cires-3993b0238/" aria-label="LinkedIn">
@@ -271,13 +271,13 @@ export function Footer() {
             <Link href="https://www.youtube.com/@capeccotedivoire8917" aria-label="YouTube">
               <Youtube className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
-            <Link href="#" aria-label="twitter">
-              <Twitter className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:scale-110 hover:bg-ci-orange hover:text-white transition-all duration-300" />
+            <Link href="https://x.com/info_capec/header_photo" aria-label="twitter">
+              <Twitter className="h-8 w-8 rounded-xl bg-white p-[4px] text-ci-orange shadow hover:bg-ci-orange hover:text-white transition-all duration-300" />
             </Link>
          
           </div>
           {/* Copyright */}
-          <div className="text-xs text-gray-100 text-center">
+          <div className="text-sm text-gray-100 text-center">
             <span>© {year} CAPEC - CIRES. Tous droits réservés.</span>
             <span className="mx-2">|</span>
             <Link href={"https://www.aitech-ci.com/"} target="_blank" className="font-bold text-gray-300 underline hover:text-ci-orange transition-colors duration-300">By AITECH-CI</Link>
