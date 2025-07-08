@@ -28,11 +28,6 @@ interface News {
 }
 
 export default function RecherchesPage() {
-  const [selectedType, setSelectedType] = useState<string>("Analyse d'impact économique");
-  const [selectedYear, setSelectedYear] = useState<string>("Sélectionnez l’année");
-  const [showEtude, setShowEtude] = useState<boolean>(false);
-  const [currentEtude, setCurrentEtude] = useState<Etude[]>([]);
-
   // Données des études par catégorie et année (de EtudePage)
   const etudesByCategory: { [key: string]: { [key: string]: Etude[] } } = {
     "Analyse d'impact économique": {
@@ -277,6 +272,44 @@ export default function RecherchesPage() {
     },
   };
 
+  // Nouvelle structure : toutes les études dans CRDI et PEP
+  const allEtudes: { [key: string]: { [key: string]: Etude[] } } = {
+    "Analyse d'impact économique": etudesByCategory["Analyse d'impact économique"],
+    "Institution et gouvernance": etudesByCategory["Institution et gouvernance"],
+    "Transformation structurelle, croissance, développement et financement de l'économie": etudesByCategory["Transformation structurelle, croissance, développement et financement de l'économie"],
+    "Finance publique et convergence économique": etudesByCategory["Finance publique et convergence économique"],
+    "Entreprenariat et modèles d'affaire inclusifs": etudesByCategory["Entreprenariat et modèles d'affaire inclusifs"],
+    "Pauvrété, inégalité et rédistribution": etudesByCategory["Pauvrété, inégalité et rédistribution"],
+    "Agriculture, Nutrition et Sécurité alimentaire, Changement Climatique et ressources Naturelles": etudesByCategory["Agriculture, Nutrition et Sécurité alimentaire, Changement Climatique et ressources Naturelles"],
+    "Suivi et évaluation de projet": etudesByCategory["Suivi et évaluation de projet"],
+    "Modélisation économique": etudesByCategory["Modélisation économique"],
+    "Commerce international": etudesByCategory["Commerce international"],
+  };
+
+  const regroupedEtudesByCategory: { [key: string]: { [key: string]: Etude[] } } = {
+    CRDI: Object.assign({}, ...Object.values(allEtudes)),
+    PEP: Object.assign({}, ...Object.values(allEtudes)),
+  };
+
+  // On utilise maintenant regroupedEtudesByCategory au lieu de etudesByCategory
+  const [selectedType, setSelectedType] = useState<string>("CRDI");
+  const [selectedYear, setSelectedYear] = useState<string>("Sélectionnez l’année");
+  const [showEtude, setShowEtude] = useState<boolean>(false);
+  const [currentEtude, setCurrentEtude] = useState<Etude[]>([]);
+
+  // Gérer l'affichage des études
+  const handleShowEtude = () => {
+    if (selectedYear === "Sélectionnez l’année") {
+      setShowEtude(false);
+      setCurrentEtude([]);
+      return;
+    }
+
+    const etudesForType = regroupedEtudesByCategory[selectedType]?.[selectedYear] || [];
+    setCurrentEtude(etudesForType);
+    setShowEtude(etudesForType.length > 0);
+  };
+
   // Données des comptes rendus d'activités
   const activities: Activity[] = [
     {
@@ -327,19 +360,6 @@ export default function RecherchesPage() {
     },
   ];
 
-  // Gérer l'affichage des études
-  const handleShowEtude = () => {
-    if (selectedYear === "Sélectionnez l’année") {
-      setShowEtude(false);
-      setCurrentEtude([]);
-      return;
-    }
-
-    const etudesForType = etudesByCategory[selectedType]?.[selectedYear] || [];
-    setCurrentEtude(etudesForType);
-    setShowEtude(etudesForType.length > 0);
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -365,7 +385,7 @@ export default function RecherchesPage() {
                   }}
                   className="w-full md:w-1/2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 >
-                  {Object.keys(etudesByCategory).map((type) => (
+                  {Object.keys(regroupedEtudesByCategory).map((type) => (
                     <option key={type} value={type}>
                       {type}
                     </option>
@@ -377,7 +397,7 @@ export default function RecherchesPage() {
                   className="w-full md:w-1/4 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 >
                   <option>Sélectionnez l’année</option>
-                  {[...new Set(Object.keys(etudesByCategory[selectedType] || {}))].map((year) => (
+                  {[...new Set(Object.keys(regroupedEtudesByCategory[selectedType] || {}))].map((year) => (
                     <option key={year} value={year}>
                       {year}
                     </option>
@@ -449,7 +469,7 @@ export default function RecherchesPage() {
           {/* Sidebar */}
           <div className="lg:w-1/3">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="text-xl font-semibold mb-4">Actualités Infos</h4>
+              <h4 className="text-xl font-semibold mb-4">Actualités</h4>
               {newsItems.map((news, index) => (
                 <div key={index} className="flex py-3 border-b last:border-b-0">
                   <div>

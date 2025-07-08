@@ -22,7 +22,7 @@ export const navItems: NavItem[] = [
         href: "/a-propos/mot-du-directeur",
       },
       {
-        title: "Historiques et Objectifs",
+        title: "Historique et Objectifs",
         href: "/a-propos/historique-objectif",
       },
       {

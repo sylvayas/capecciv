@@ -79,7 +79,7 @@ const recentPublications = [
     title: "Présentation des résultats des deux études financées par le PAGDS",
     excerpt:
       "Cette étude analyse l'impact des différentes politiques fiscales sur la croissance économique à long terme.",
-    date: "15 mars 2023",
+    date: "",
     coverImage: "/images/presentationdesresultatsdesdeuxétudesfinanceesparlepagds.jpg?text=Politiques+Fiscales&height=340&width=600",
   },
   {
@@ -87,7 +87,7 @@ const recentPublications = [
     title: "Construction d'un indice et sous-indices endogènes de suivi de la gouvernance en Côte d'Ivoire",
     excerpt:
       "Une étude approfondie des dynamiques du marché du travail et des facteurs contribuant aux inégalités salariales.",
-    date: "20 avril 2023",
+    date: "",
     coverImage: "/images/constructiondunindiceetsousindicesendogènesdesuividelagouvenci.jpg?text=Marché+du+Travail&height=340&width=600",
   },
  
@@ -195,7 +195,7 @@ function NewsCard({ news }: { news: News }) {
         <CardContent className="p-6">
           <div className="space-y-2">
             <span className="text-xs text-muted-foreground">{news.date}</span>
-            <h3 className={news.id === '1' ? "font-bold" : undefined}>{news.title}</h3>
+            <h3 className={news.id === '1' || news.id === '2' ? "font-bold" : undefined}>{news.title}</h3>
             {news.excerpt && <p className="text-muted-foreground">{news.excerpt}</p>}
           </div>
         </CardContent>
@@ -249,7 +249,7 @@ export default function Home() {
               </div>
             </motion.div>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 items-stretch"
               variants={cardContainerVariants}
               initial="hidden"
               whileInView="visible"
@@ -279,8 +279,8 @@ export default function Home() {
                 },
               ].map((item, index) => (
                 <motion.div key={index} variants={cardVariants}>
-                  <Card className="max-w-xs mx-auto h-min bg-white border-l-4 rounded-lg">
-                    <CardContent className="p-3 flex flex-col items-center text-center gap-2">
+                  <Card className="max-w-xs mx-auto h-full bg-white border-l-4 rounded-lg flex flex-col">
+                    <CardContent className="p-3 flex flex-col items-center text-center gap-2 flex-1">
                       <motion.div
                         className="p-2 rounded-full bg-orange-100"
                         whileHover={{ scale: 1.1 }}
@@ -291,6 +291,7 @@ export default function Home() {
                       <h3 className="text-lg font-bold">{item.title}</h3>
                       <p className="text-sm text-gray-700 leading-tight mb-4">{item.description}</p>
                       <motion.div
+                        className="w-full flex-1 flex items-end"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                       >
@@ -301,7 +302,8 @@ export default function Home() {
                           height={150}
                           placeholder="blur"
                           blurDataURL="/placeholder.svg"
-                          className="w-full h-auto rounded-md object-cover"
+                          className="w-full h-full rounded-md object-cover"
+                          style={{ minHeight: 0 }}
                         />
                       </motion.div>
                     </CardContent>

@@ -109,7 +109,7 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
             <Calendar className="mr-2 h-4 w-4" />
             <span>{news.date}</span>
           </div>
-          <h3 className="font-base">{news.title}</h3>
+          <h3 className="font-bold">{news.title}</h3>
           <p className="text-sm text-muted-foreground line-clamp-3 text-justify">{news.excerpt}</p>
           <div className="pt-2">
             {/* <Link href={`/actualites/${news.id}`}>
@@ -161,7 +161,7 @@ const newsList = [
   // },
   {
     id: "14",
-    title: "REUNION DE VALIDATION DU PROJET DE VISION 2050 PAR LES EXPERT DES ETATS MEMBRES DE LA CEDAO, du 10 au 12 Septembre 2021, Accra/Ghana",
+    title: "Réunion de validation du projet de vision 2050 par les expert des etats membres de la CEDAO, du 10 au 12 Septembre 2021, Accra/Ghana",
     excerpt:
       "",
     date: "du 10 au 12 Septembre 2021",
@@ -226,7 +226,7 @@ const newsList = [
   // },
   {
     id: "11",
-    title: "Cérémonie de lancement du Projet de recherche sur «Impact des programmes socio-éducatifs communautaires d’encadrement de la petite enfance sur l’autonomisation des femmes dans les zones défavorisées su Burkina Faso et de la Côte d’Ivoire » Abidjan 22 juillet 2021",
+    title: "Cérémonie de lancement du Projet de recherche sur «Impact des programmes socio-éducatifs communautaires d’encadrement de la petite enfance sur l’autonomisation des femmes dans les zones défavorisées sur Burkina Faso et de la Côte d’Ivoire » Abidjan 22 juillet 2021",
     excerpt:
       "",
     date: " 22 juillet 2021",

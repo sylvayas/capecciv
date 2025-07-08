@@ -153,7 +153,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 items-start">
           {/* Colonne 1 : Contacts + logo */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4">
+            <div className="mb-4 mt-6">
               <Image
                 src="/images/logocapec.png"
                 alt="Logo de la CAPEC"
@@ -184,7 +184,7 @@ export function Footer() {
           </div>
 
           {/* Colonne 2 : Découvrez (sous-menus) */}
-          <div className="self-center mt-10 w-full">
+          <div className="self-center mt-12 w-full">
             <h3 className="text-lg font-bold uppercase mb-2 font-policy-brief">NOS SOUS MENUS</h3>
             <div className="w-10 h-1 bg-ci-orange mb-4" />
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-base">
