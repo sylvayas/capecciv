@@ -99,7 +99,7 @@ function NewsCard({ news } : { news: { id: string; title: string; excerpt: strin
             alt={news.title}
             width={600}
             height={340}
-            className="object-cover w-full h-full"
+            className={`object-cover w-full h-full${news.image === "/images/converted_img7.png" ? " object-top" : ""}`}
           />
         </div>
       )}
@@ -185,7 +185,7 @@ const newsList = [
   },
   {
     id: "5",
-    title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises ",
+    title: "4ème Edition des Conférences internationales  sur les Etudes Japonaises 09 fev 23 ",
     excerpt:
       "",
     date: "09  fev 23",
@@ -201,7 +201,7 @@ const newsList = [
   },
   {
     id: "7",
-    title: "Cérémonie d'ouverture officiel du JAPAN CORNER de l'UFHB",
+    title: "Cérémonie d'ouverture officiel du JAPAN CORNER de l'UFHB - 1er Juin 2023",
     excerpt:
       "",
     date: "Publié le 1er Juin 2023",
@@ -209,11 +209,11 @@ const newsList = [
   },
   {
     id: "8",
-    title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire,",
+    title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire, Abidjan, 21 Oct 2021",
     excerpt:
       "",
     date: "Publié le 8 et 9 octobre, 2024",
-    image: "/images/TOUTES LES ACTUALITES/",
+    image: "/images/conferencedecloture.jpeg",
   },
  
   // {
@@ -230,7 +230,7 @@ const newsList = [
     excerpt:
       "",
     date: " 22 juillet 2021",
-    image: "/images/TOUTES LES ACTUALITES/LANCEMENT CRDI 05.jpg",
+    image: "/images/converted_img6.png",
   },
   {
     id: "12",
@@ -238,7 +238,7 @@ const newsList = [
     excerpt:
       "",
     date: "08 octobre 2024",
-    image: "/images/TOUTES LES ACTUALITES/panel.jpg",
+    image: "/images/converted_img7.png",
   },
   {
     id: "13",

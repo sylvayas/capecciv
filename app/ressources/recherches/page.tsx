@@ -31,13 +31,13 @@ export default function RecherchesPage() {
   // Données des études par catégorie et année (de EtudePage)
   const etudesByCategory: { [key: string]: { [key: string]: Etude[] } } = {
     "Analyse d'impact économique": {
-      "2020": [
-        {
-          title: "CRIME, SELF PROTECTION AND BUSINESS GROWTH IN COTE D'IVOIRE",
-          date: "2020",
-          pdfLink: "/images/ETUDE PDF/Analyse d'impact/2020/crime self.pdf",
-        },
-      ],
+      // "2020": [
+      //   {
+      //     title: "CRIME, SELF PROTECTION AND BUSINESS GROWTH IN COTE D'IVOIRE",
+      //     date: "2020",
+      //     pdfLink: "/",
+      //   },
+      // ],
       "2018": [
         {
           title: "ETUDE DE L'IMPACT DES INVESTISSEMENTS DANS LES SECTEURS DES HYDROCARBURES ET DE L'ENERGIE SUR L'ECONOMIE IVOIRIENNE",
