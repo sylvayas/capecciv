@@ -41,7 +41,7 @@ export default function PhotothequePage() {
     setCurrentIndex(newIndex)
   }
 
-  const allPhotos = [...conferencesPhotos, ...seminairesPhotos, ...formationsPhotos, ...equipesPhotos]
+  const allPhotos = [...conferencesPhotos, ...seminairesPhotos, ...formationsPhotos, ...equipesPhotos,...panelPhotos]
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -54,13 +54,14 @@ export default function PhotothequePage() {
           </p>
         </div>
 
-        <Tabs defaultValue="all" className="mt-8">
-          <TabsList className="grid grid-cols-5 w-full">
+        <Tabs defaultValue="all" className="mt-8 mb-32">
+          <TabsList className="grid grid-cols-6 w-full">
             <TabsTrigger value="all">Toutes les photos</TabsTrigger>
             <TabsTrigger value="conferences">Conférences</TabsTrigger>
             <TabsTrigger value="seminaires">Séminaires</TabsTrigger>
             <TabsTrigger value="formations">Formations</TabsTrigger>
             <TabsTrigger value="equipes">Équipes</TabsTrigger>
+            <TabsTrigger value="panel">Panels</TabsTrigger>
           </TabsList>
           <TabsContent value="all" className="mt-6">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -192,6 +193,32 @@ export default function PhotothequePage() {
               ))}
             </div>
           </TabsContent>
+          <TabsContent value="panel" className="mt-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {panelPhotos.map((photo, index) => (
+                <div
+                  key={photo.id}
+                  className="overflow-hidden rounded-lg shadow-md cursor-pointer group"
+                  onClick={() => openLightbox(photo, panelPhotos.indexOf(photo))}
+                >
+                  <div className="relative aspect-square">
+                    <Image
+                      src={photo.src || "/placeholder.svg"}
+                      alt={photo.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-3 text-white">
+                        <h3 className="font-medium text-sm">{photo.title}</h3>
+                        <p className="text-xs text-white/80">{photo.date}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </TabsContent>
         </Tabs>
       </div>
 
@@ -239,13 +266,7 @@ export default function PhotothequePage() {
 
 // Sample data
 const conferencesPhotos = [
-  {
-    id: "conf1",
-    title: "Conférence annuelle de la CAPEC 2023",
-    date: "15 mars 2023",
-    description: "Conférence internationale sur les politiques économiques post-pandémie organisée par le CAPEC.",
-    src: "/images/estherubo.jpg?text=Conférence+Annuelle+2023&height=600&width=600",
-  },
+ 
   {
     id: "conf2",
     title: "Forum économique régional",
@@ -262,12 +283,19 @@ const conferencesPhotos = [
   },
   {
     id: "conf4",
-    title: "Conférence Internationnal Japan Corner ",
+    title: "LA CONFERENCE JAPAN CORNER-JICA-TODA CORPORATION-CAPEC 2025 ",
     date: "22 février 2024",
-    description: "Faire progresser l'indistrualisation et améliorer la productivité du travail.",
+    description: "",
     src: "/images/japanconferencecapec.jpg?text=Forum+Économique+Régional&height=600&width=600",
   },
-
+  {
+    id: "conf5",
+    title: "Prof. Alban AHOURE nominé au Who's who in Cote d'Ivoire 2024",
+    date: "",
+    description: "",
+    src: "/images/Alban.jpg",
+    
+  },
 ]
 
 const seminairesPhotos = [
@@ -279,58 +307,71 @@ const seminairesPhotos = [
       "Séminaire d'experts sur l'optimisation des politiques fiscales pour stimuler la croissance économique.",
     src: "/images/paneldehautniveau5.jpg?text=Séminaire+Politiques+Fiscales&height=600&width=600",
   },
+ 
   {
     id: "sem2",
-    title: "Atelier sur l'analyse des données économiques",
-    date: "12 janvier 2023",
-    description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
-    src: "/images/paneldehautniveau4.jpg?text=Atelier+Analyse+Données&height=600&width=600",
-  },
-  {
-    id: "sem3",
     title: "Atelier sur l'analyse des données économiques",
     date: "12 janvier 2023",
     description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
     src: "/images/sem3.jpg?text=Atelier+Analyse+Données&height=600&width=600",
   },
   {
-    id: "sem4",
+    id: "sem3",
     title: "Atelier sur l'analyse des données économiques",
     date: "12 janvier 2023",
     description: "Atelier de formation sur les méthodes avancées d'analyse des données économiques.",
     src: "/images/sem4.jpg?text=Atelier+Analyse+Données&height=600&width=600",
+   
+  },
+  {
+    id: "sem4",
+    title: "FORUM EPA EN PARTENARIAT AVEC L'ACED du 6 au 7 Novembre 2024",
+    date: "6 au 7 Novembre 2024",
+    description: "",
+    src: "/images/FORUM.jpg",
+ 
   },
  
 ]
 
 const formationsPhotos = [
+ 
   {
     id: "form1",
-    title: "Formation en modélisation économétrique",
-    date: "5 mars 2023",
-    description: "Formation avancée sur les techniques de modélisation économétrique pour les chercheurs.",
-    src: "/images/paneldeauniveaus2.jpg?text=Formation+Économétrie&height=600&width=600",
-  },
-  {
-    id: "form2",
-    title: "Diner des 30ᵉ anniversaire de la CAPEC",
+    title: "Céremonie des 30 ans de la CAPEC",
     date: "09 octobre 2024",
-    description: "Joyeux 30e anniversaire à la CAPEC, une institution phare au service du développement économique et social de la Côte d’Ivoire !",
+    description: "",
     src: "/images/28.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
   },
   {
-    id: "form3",
+    id: "form2",
     title: "Formation avec les coréens",
     date: "18 janvier 2023",
     description: "Atelier pratique sur les méthodes d'évaluation d'impact des politiques publiques.",
     src: "/images/capec_image/coree.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
   },
   {
-    id: "form4",
-    title: "Atelier sur l'évaluation des politiques publiques",
-    date: "18 janvier 2023",
-    description: "Atelier pratique sur les méthodes d'évaluation d'impact des politiques publiques.",
+    id: "form3",
+    title: "Le seminaire de rentrée de la CAPEC, du jeudi 11 au samedi 13 Janvier 2024 à Mondoukou Bassam",
+    date: "11 au samedi 13 Janvier 2024",
+    description: "",
     src: "/images/capec_image/reunion.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
+  },
+  {
+    id: "form4",
+    title: "ATELIER DE LANCEMENT DU PROJET SPIA CÔTE D’IVOIRE",
+    date: "",
+    description: "",
+    src: "/images/Atelier.jpg",
+
+  },
+  {
+    id: "form5",
+    title: "Stand d'exposition de la CAPEC a la celebration du 30ème anniversaire de la CAPEC et le 10ème sommet",
+    date: "",
+    description: "",
+    src: "/images/stand.jpg",
+
   },
   
   
@@ -346,27 +387,77 @@ const equipesPhotos = [
   },
   {
     id: "eq2",
-    title: "Équipe de recherche en économie du développement",
-    date: "10 décembre 2022",
-    description: "L'équipe de chercheurs spécialisés en économie du développement lors d'une réunion de travail.",
+    title: "Directeur de la CAPEC PROF;AHOURE Alban pendant la conférence JAPAN CORNER-JICA-TODA CORPORATION-CAPEC 2025",
+    date: "",
+    description: "",
     src: "/images/dgcapec.jpg?text=Équipe+Recherche+Développement&height=600&width=600",
   },
+ 
+ 
   {
     id: "eq3",
-    title: "Équipe de recherche en économie du développement",
-    date: "10 décembre 2022",
-    description: "L'équipe de chercheurs spécialisés en économie du développement lors d'une réunion de travail.",
-    src: "/images/img1 (1).jpg?text=Équipe+Recherche+Développement&height=600&width=600",
-  },
-  
-  {
-    id: "eq4",
-    title: "Équipe de recherche en économie du développement",
-    date: "10 décembre 2022",
-    description: "L'équipe de chercheurs spécialisés en économie du développement lors d'une réunion de travail.",
+    title: "Visite d'Edther DUFLO a la CAPEC  Prix Nobel de l'Economie 2019",
+    date: "",
+    description: "",
     src: "/images/estherubo.jpg?text=Équipe+Recherche+Développement&height=600&width=600",
   },
-  
+  {
+    id: "eq4",
+    title: "Diner Des 30e anniversaire de la CAPEC 9 OCTOBRE 2024",
+    date: "9 OCTOBRE 2024",
+    description: "",
+    src: "/images/Diner.jpg",
+  },
  
 ]
 
+
+const panelPhotos = [
+  {
+    id: "pan1",
+    title: "Panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
+    date: "",
+    description: "",
+    src: "/images/chercheurs/panel de haut niveau (5).jpg",
+  },
+  {
+    id: "pan2",
+    title: "Panel de haut niveau",
+    date: "",
+    description: "",
+    src: "/images/chercheurs/panel de haut niveau.jpg",
+  },
+ 
+ 
+  {
+    id: "pan3",
+    title: "Panel de haut niveau",
+    date: "",
+    description: "",
+    src: "/images/chercheurs/panel de haut niveau (6).jpg",
+  },
+  
+  {
+    id: "pan4",
+    title: "Panel de haut niveau",
+    date: "",
+    description: "",
+    src: "/images/chercheurs/panel de haut niveau (4).jpg",
+  },
+
+  {
+    id: "pan5",
+    title: "Panel de haut niveau",
+    date: "",
+    description: "",
+    src: "/images/chercheurs/panel de haut niveau (2).jpg",
+  },
+  {
+    id: "pan6",
+    title: "Panel de haut niveau",
+    date: "",
+    description: "",
+    src: "/images/chercheurs/panel de haut niveau (3).jpg",
+  },
+ 
+]
