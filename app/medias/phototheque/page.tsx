@@ -276,8 +276,8 @@ const conferencesPhotos = [
   },
   {
     id: "conf3",
-    title: "restitution budget",
-    date: "12 janvier 2023",
+    title: "3 ETUDES D'EVALUATION D'IMPACT DES MESURES FISCALES",
+    date: "",
     description: "",
     src: "/images/restitutionbudget1.jpg?text=Forum+Économique+Régional&height=600&width=600",
   },
@@ -338,17 +338,17 @@ const formationsPhotos = [
  
   {
     id: "form1",
-    title: "Céremonie des 30 ans de la CAPEC",
+    title: "Remise des trophées 30 ans de la CAPEC - Awards de la politique économique",
     date: "09 octobre 2024",
     description: "",
     src: "/images/28.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
   },
   {
     id: "form2",
-    title: "Formation avec les coréens",
-    date: "18 janvier 2023",
-    description: "Atelier pratique sur les méthodes d'évaluation d'impact des politiques publiques.",
-    src: "/images/capec_image/coree.jpg?text=Atelier+Évaluation+Politiques&height=600&width=600",
+    title: "VISITE D'UNE DELEGATION DE SOPHIA UNIVERSITY DE TOKYO CONDUITE PAR LE PROF. ERI YAMAZAKI",
+    date: "",
+    description: "",
+    src: "/images/tokyo.jpeg",
   },
   {
     id: "form3",
@@ -396,7 +396,7 @@ const equipesPhotos = [
  
   {
     id: "eq3",
-    title: "Visite d'Edther DUFLO a la CAPEC  Prix Nobel de l'Economie 2019",
+    title: "Visite d'Esther DUFLO,prix Nobel de l'Economie 2019",
     date: "",
     description: "",
     src: "/images/estherubo.jpg?text=Équipe+Recherche+Développement&height=600&width=600",

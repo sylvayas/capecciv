@@ -453,7 +453,7 @@ export default function Home() {
                 ],
                 [
                   { src: "/images/actua2.jpg", alt: "", height: "h-48 md:h-64" },
-                  { src: "/images/img1 (1).jpg", alt: "", height: "h-64 md:h-80" },
+                  { src: "/images/japanconferencecapec.jpg?text=Forum+Économique+Régional&height=600&width=600", alt: "", height: "h-64 md:h-80" },
                 ],
                 [
                   { src: "/images/img1 (2).jpg?text=Équipe+de+Recherche&height=400&width=300", alt: "", height: "h-64 md:h-80" },

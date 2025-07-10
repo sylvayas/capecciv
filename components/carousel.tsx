@@ -75,9 +75,9 @@ export function EventCarousel({ events }: {
                   <h2 className="text-5xl md:text-4xl font-bold text-white mb-4">{event.title}</h2>
                   <p className="text-white/90 mb-6 max-w-2xl text-sm md:text-base">{event.description}</p>
                   <div className="flex flex-wrap gap-3">
-                      <Link href="/publication">
+                      <Link href="/activites/actualites">
                         <Button className="flex flex-col gap-2 min-[400px]:flex-row">
-                          Découvrir nos publications
+                          Découvrir toutes nos actualités
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>

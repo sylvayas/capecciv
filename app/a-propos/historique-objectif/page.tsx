@@ -11,7 +11,7 @@ export default function HistoriqueObjectifPage() {
       <MainNav />
       <div className="container px-4 py-12 md:px-6 md:py-24 flex-grow">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Historiques et Objectifs</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Historique et Objectifs</h1>
           <div className="w-20 h-1 bg-ci-orange"></div>
         </div>
 
