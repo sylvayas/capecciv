@@ -293,7 +293,7 @@ const conferencesPhotos = [
     title: "Prof. Alban AHOURE nominé au Who's who in Cote d'Ivoire 2024",
     date: "",
     description: "",
-    src: "/images/Alban.jpg",
+    src: "/images/photo/converted_img_j.png",
     
   },
 ]
@@ -328,7 +328,7 @@ const seminairesPhotos = [
     title: "FORUM EPA EN PARTENARIAT AVEC L'ACED du 6 au 7 Novembre 2024",
     date: "6 au 7 Novembre 2024",
     description: "",
-    src: "/images/FORUM.jpg",
+    src: "/images/photo/converted_img_c.png",
  
   },
  
@@ -370,7 +370,7 @@ const formationsPhotos = [
     title: "Stand d'exposition de la CAPEC a la celebration du 30ème anniversaire de la CAPEC et le 10ème sommet",
     date: "",
     description: "",
-    src: "/images/stand.jpg",
+    src: "/images/photo/converted_img_k.png",
 
   },
   
@@ -406,7 +406,7 @@ const equipesPhotos = [
     title: "Diner Des 30e anniversaire de la CAPEC 9 OCTOBRE 2024",
     date: "9 OCTOBRE 2024",
     description: "",
-    src: "/images/Diner.jpg",
+    src: "/images/photo/converted_img_b (1).png",
   },
  
 ]
@@ -418,14 +418,14 @@ const panelPhotos = [
     title: "Panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
     date: "",
     description: "",
-    src: "/images/chercheurs/panel de haut niveau (5).jpg",
+    src: "/images/photo/converted_img_h.png",
   },
   {
     id: "pan2",
     title: "Panel de haut niveau",
     date: "",
     description: "",
-    src: "/images/chercheurs/panel de haut niveau.jpg",
+    src: "/images/photo/panel de haut niveau.png",
   },
  
  
@@ -434,7 +434,7 @@ const panelPhotos = [
     title: "Panel de haut niveau",
     date: "",
     description: "",
-    src: "/images/chercheurs/panel de haut niveau (6).jpg",
+    src: "/images/photo/converted_img_g.png",
   },
   
   {
@@ -442,7 +442,7 @@ const panelPhotos = [
     title: "Panel de haut niveau",
     date: "",
     description: "",
-    src: "/images/chercheurs/panel de haut niveau (4).jpg",
+    src: "/images/photo/panel de haut niveau (4).png",
   },
 
   {
@@ -450,14 +450,14 @@ const panelPhotos = [
     title: "Panel de haut niveau",
     date: "",
     description: "",
-    src: "/images/chercheurs/panel de haut niveau (2).jpg",
+    src: "/images/photo/panel de haut niveau (2).png",
   },
   {
     id: "pan6",
     title: "Panel de haut niveau",
     date: "",
     description: "",
-    src: "/images/chercheurs/panel de haut niveau (3).jpg",
+    src: "/images/photo/converted_img_e.png",
   },
  
 ]

@@ -169,10 +169,10 @@ const newsList = [
   },
   {
     id: "9",
-    title: "Conférence internationale de cloture, Abidjan du projet de recherche sur 'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
+    title: "Conférence internationale de cloture, Abidjan du projet de recherche sur l'impacts des politiques publiques liées à la pandemie de la Covid-19 sur les entreprises, les femmes et les jeunes: cas du Burkina  Faso, Cameroun, Cote d'Ivoire et du Sénégal'",
     excerpt:
       "",
-    date: "Publié le 23 Mars 2023",
+    date: "",
     image: "/images/TOUTES LES ACTUALITES/Conferenceinternationale.jpg",
   },
   {
@@ -212,7 +212,7 @@ const newsList = [
     title: "Conférence de cloture du Projet de Recherche PEP sur l'impact socio-economique des jeunes vulnérables en Cote d'Ivoire, Abidjan, 21 Oct 2021",
     excerpt:
       "",
-    date: "Publié le 8 et 9 octobre, 2024",
+    date: "Publié le 21 Oct 2021",
     image: "/images/conferencedecloture.jpeg",
   },
  
@@ -237,7 +237,7 @@ const newsList = [
     title: "panel de haut niveau Lors de la celebration des 30 ans de la CAPEC",
     excerpt:
       "",
-    date: "08 octobre 2024",
+    date: "",
     image: "/images/converted_img7.png",
   },
   {

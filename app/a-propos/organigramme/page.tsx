@@ -23,47 +23,13 @@ export default function OrganigrammePage() {
             <h2 className="text-2xl font-bold mb-8 text-center">Structure organisationnelle de la CAPEC</h2>
 
             {/* Organigramme visuel */}
-            <div className="relative w-full h-[600px] mb-8 hidden md:block">
+            <div className="relative w-full h-[300px] md:h-[600px] mb-8 block">
               <Image
                 src="/images/organigramme_CAPEC.png"
                 alt="Organigramme de la CAPEC"
                 fill
                 className="object-contain"
               />
-            </div>
-
-            {/* Version mobile de l'organigramme */}
-            <div className="space-y-6 md:hidden">
-              <div className="bg-ci-orange text-white p-4 rounded-lg text-center">
-                <h3 className="font-bold">Direction</h3>
-                <p>Dr. Amadou aminata - Directeur</p>
-                <p>Dr. Marie Koné - Directrice Adjointe</p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-ci-green text-white p-4 rounded-lg text-center">
-                  <h3 className="font-bold">Administration</h3>
-                  <p>Gestion administrative</p>
-                  <p>Finances</p>
-                </div>
-                <div className="bg-ci-green text-white p-4 rounded-lg text-center">
-                  <h3 className="font-bold">Communication</h3>
-                  <p>Relations publiques</p>
-                  <p>Publications</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-2">
-                <div className="bg-gray-200 p-3 rounded-lg text-center text-sm">
-                  <h3 className="font-bold">Équipe Macroéconomie</h3>
-                </div>
-                <div className="bg-gray-200 p-3 rounded-lg text-center text-sm">
-                  <h3 className="font-bold">Équipe Développement</h3>
-                </div>
-                <div className="bg-gray-200 p-3 rounded-lg text-center text-sm">
-                  <h3 className="font-bold">Équipe Politiques Sociales</h3>
-                </div>
-              </div>
             </div>
           </div>
         </div>
