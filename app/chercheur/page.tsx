@@ -101,63 +101,63 @@ const seniorResearchers = [
     id: "1",
     name: "Prof AHOURE ALBAN ALPHONSE EMMANUEL",
     title: "Directeur de la CAPEC",
-    photo: "/images/profahourealbanalphonseemmanueldirecteurdelacapec.jpg?t&height=200&width=1200&object-cover",
+    photo: "/images/chercheurs/profahourealbanalphonseemmanueldirecteurdelacapec.jpg?t&height=200&width=1200&object-cover",
     expertise: ["Économie", "Gestion", "Politiques publiques"]
   },
   {
     id: "2",
     name: "Prof KIMOU Assi Jose Carlos",
     title: "Directeur Adjoint de la CAPEC",
-    photo: "/images/directeuradjointdelacapec.jpg",
+    photo: "/images/chercheurs/directeuradjointdelacapec.jpg",
     expertise: ["Macroéconomie", "Développement", "Analyse économique"]
   },
   {
     id: "3",
     name: "Dr KRAMO Germain",
     title: "Chercheur- Responsable de la Gestion administrative",
-    photo: "/images/chercheurresponsabledelagestionadministrative.jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    photo: "/images/chercheurs/chercheurresponsabledelagestionadministrative.jpg?text=Dr.+Jean+Touré&height=100&width=300",
     expertise: ["Administration", "Gestion", "Organisation"]
   },
   {
     id: "4",
     name: "Dr BECHO-N’DRI Isabelle   ",
     title: "Chercheuse à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
-    photo: "/images/Dr BECHO .jpg?text=Dr.+Jean+Touré&height=100&width=300",
+    photo: "/images/chercheurs/Dr BECHO .jpg?text=Dr.+Jean+Touré&height=100&width=300",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
   },
   {
     id: "5",
     name: "Prof BEKE Tite E.",
     title: "Economiste de l’Environnement et Chercheur Senior à la CAPEC.",
-    photo: "/images/converted_img1.png",
+    photo: "/images/chercheurs/converted_img1.png",
     expertise: ["Economie"]
   },
   {
     id: "6",
     name: "Dr TRAORE Nohoua",
     title: "Economiste Chercheur à la Cellule d'Analyse de Politiques Économiques  du  Cires (CAPEC). ",
-    photo: "/images/converted_img5.png",
+    photo: "/images/chercheurs/converted_img5.png",
     expertise: ["Economie"]
   },
   {
     id: "7",
     name: "Dr ASSOUM Féissal",
     title: "Chercheur et Economiste du développement à la  (CAPEC)",
-    photo: "/images/converted_img3.png",
+    photo: "/images/chercheurs/converted_img3.png",
     expertise: ["Economie",]
   },
   {
     id: "8",
     name: "Dr KOUADIO Boniface",
     title: "Chercheur à la Cellule d’Analyse de politique economique du CIRES (CAPEC)",
-    photo: "/images/converted_img4.png",
+    photo: "/images/chercheurs/converted_img4.png",
     expertise: ["Microéconomie", "Analyse des données", "méthodologie"]
   },
   {
     id: "9",
     name: "Dr KACOU Yves Thierry Kacou",
     title: "Chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
-    photo: "/images/Dr KACOU.png?text=Dr.+Jean+Touré&",
+    photo: "/images/chercheurs/Dr KACOU.png?text=Dr.+Jean+Touré&",
     expertise: ["Macroéconomie",]
   },
  
@@ -165,7 +165,7 @@ const seniorResearchers = [
     id: "11",
     name: "Dr TOURÉ Talnan Aboulaye",
     title: "Chercheur junior macroéconomiste à la Cellule d’Analyse de Politiques Économiques du CIRES (CAPEC)",
-    photo: "/images/PHOTO TOURE.jpg",
+    photo: "/images/chercheurs/PHOTO TOURE.jpg",
     expertise: ["l’économie monétaire, bancaire et financière","la politique fiscale"]
   },
   
